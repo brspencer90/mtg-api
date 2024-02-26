@@ -1,0 +1,176 @@
+Deck
+1 Rakdos, Patron of Chaos (MKM) 224
+1 Festerleech (MKM) 85
+1 Leyline of the Guildpact (MKM) 217
+1 Toxin Analysis (MKM) 107
+1 Leering Onlooker (MKM) 91
+1 Long Goodbye (MKM) 92
+1 Presumed Dead (MKM) 100
+1 Repeat Offender (MKM) 101
+1 Murder (MKM) 95
+1 Vein Ripper (MKM) 110
+1 Raucous Theater (MKM) 266
+1 Sanguine Savior (MKM) 230
+2 Public Thoroughfare (MKM) 265
+1 Forum Familiar (MKM) 16
+1 Novice Inspector (MKM) 29
+1 Wrench (MKM) 37
+1 Auspicious Arrival (MKM) 5
+1 Call a Surprise Witness (MKM) 6
+1 Seasoned Consultant (MKM) 33
+1 Sanctuary Wall (MKM) 32
+1 Not on My Watch (MKM) 28
+1 Marketwatch Phantom (MKM) 24
+1 Case of the Pilfered Proof (MKM) 9
+1 Delney, Streetwise Lookout (MKM) 12
+1 Due Diligence (MKM) 14
+1 Inside Source (MKM) 19
+1 Makeshift Binding (MKM) 23
+1 Make Your Move (MKM) 22
+1 Haazda Vigilante (MKM) 18
+1 Essence of Antiquity (MKM) 15
+1 On the Job (MKM) 30
+1 No Witnesses (MKM) 27
+1 Griffnaut Tracker (MKM) 17
+1 Defenestrated Phantom (MKM) 11
+1 Behind the Mask (MKM) 39
+1 Case of the Filched Falcon (MKM) 44
+1 Curious Inquiry (MKM) 51
+1 Bubble Smuggler (MKM) 41
+1 Jaded Analyst (MKM) 62
+1 Fae Flight (MKM) 56
+1 Eliminate the Impossible (MKM) 54
+1 Deduce (MKM) 52
+1 Burden of Proof (MKM) 42
+1 Reasonable Doubt (MKM) 69
+1 Unauthorized Exit (MKM) 74
+1 Crimestopper Sprite (MKM) 49
+1 Cryptic Coat (MKM) 50
+1 Dramatic Accusation (MKM) 53
+1 Surveillance Monitor (MKM) 73
+1 Sudden Setback (MKM) 72
+1 Out Cold (MKM) 66
+1 Cold Case Cracker (MKM) 46
+1 Projektor Inspector (MKM) 68
+1 Benthic Criminologists (MKM) 40
+1 Intrude on the Mind (MKM) 61
+1 Agency Outfitter (MKM) 38
+1 Hotshot Investigators (MKM) 60
+1 Conspiracy Unraveler (MKM) 47
+1 Snarling Gorehound (MKM) 105
+1 Lead Pipe (MKM) 90
+1 Case of the Gorgon's Kiss (MKM) 79
+1 Lost in the Maze (MKM) 64
+1 Extract a Confession (MKM) 84
+1 Clandestine Meddler (MKM) 82
+1 Cerebral Confiscation (MKM) 81
+1 Alley Assailant (MKM) 76
+1 Unscrupulous Agent (MKM) 109
+1 Macabre Reconstruction (MKM) 93
+1 Nightdrinker Moroii (MKM) 96
+1 Rot Farm Mortipede (MKM) 102
+1 Soul Enervation (MKM) 106
+1 Persuasive Interrogators (MKM) 98
+1 Basilica Stalker (MKM) 78
+1 Undercity Eliminator (MKM) 108
+1 Polygraph Orb (MKM) 99
+1 Agency Coroner (MKM) 75
+1 Slice from the Shadows (MKM) 103
+1 Outrageous Robbery (MKM) 97
+1 Convenient Target (MKM) 119
+1 Felonious Rage (MKM) 125
+1 Demand Answers (MKM) 122
+1 Shock (MKM) 144
+1 Knife (MKM) 134
+1 Goblin Maskmaker (MKM) 130
+1 Frantic Scapegoat (MKM) 126
+1 Expedited Inheritance (MKM) 123
+1 Expose the Culprit (MKM) 124
+1 Galvanize (MKM) 128
+1 Innocent Bystander (MKM) 133
+1 Reckless Detective (MKM) 141
+1 The Chase Is On (MKM) 116
+1 Gearbane Orangutan (MKM) 129
+1 Crime Novelist (MKM) 121
+1 Vengeful Tracker (MKM) 147
+1 Red Herring (MKM) 142
+1 Harried Dronesmith (MKM) 131
+1 Krenko's Buzzcrusher (MKM) 136
+1 Person of Interest (MKM) 139
+1 Caught Red-Handed (MKM) 115
+1 Cornered Crook (MKM) 120
+1 Incinerator of the Guilty (MKM) 132
+1 Bolrac-Clan Basher (MKM) 112
+1 Suspicious Detonation (MKM) 145
+1 Rubblebelt Braggart (MKM) 143
+1 Offender at Large (MKM) 138
+1 Get a Leg Up (MKM) 161
+1 Hard-Hitting Question (MKM) 164
+1 Hedge Whisperer (MKM) 165
+1 Pick Your Poison (MKM) 170
+1 Rope (MKM) 173
+1 Sharp-Eyed Rookie (MKM) 176
+1 Nervous Gardener (MKM) 169
+1 Flourishing Bloom-Kin (MKM) 160
+1 Fanatical Strength (MKM) 159
+1 Aftermath Analyst (MKM) 148
+1 Tunnel Tipster (MKM) 180
+1 Vitu-Ghazi Inspector (MKM) 183
+1 Airtight Alibi (MKM) 149
+1 Case of the Trampled Garden (MKM) 156
+1 Pompous Gadabout (MKM) 171
+1 Bite Down on Crime (MKM) 154
+1 Undergrowth Recon (MKM) 181
+1 They Went This Way (MKM) 178
+1 Slime Against Humanity (MKM) 177
+1 Sample Collector (MKM) 175
+1 Greenbelt Radical (MKM) 163
+1 Loxodon Eavesdropper (MKM) 168
+1 Culvert Ambusher (MKM) 158
+1 Vengeful Creeper (MKM) 182
+1 Topiary Panther (MKM) 179
+1 Granite Witness (MKM) 206
+1 Private Eye (MKM) 223
+1 Officious Interrogation (MKM) 222
+1 No More Lies (MKM) 221
+1 The Pride of Hull Clade (MKM) 172
+1 Ezrim, Agency Chief (MKM) 202
+1 Etrata, Deadly Fugitive (MKM) 200
+1 Faerie Snoop (MKM) 203
+1 Meticulous Archive (MKM) 264
+1 Curious Cadaver (MKM) 194
+1 Detective's Satchel (MKM) 196
+1 Kylox's Voltstrider (MKM) 215
+1 Shadowy Backstreet (MKM) 268
+1 Lazav, Wearer of Faces (MKM) 216
+1 Gadget Technician (MKM) 204
+1 Kylox, Visionary Inventor (MKM) 214
+1 Shady Informant (MKM) 231
+1 Anzrag, the Quake-Mole (MKM) 186
+1 Urgent Necropsy (MKM) 240
+1 Rakish Scoundrel (MKM) 225
+1 Kraul Whipcracker (MKM) 213
+1 Insidious Roots (MKM) 208
+1 Yarus, Roar of the Old Gods (MKM) 245
+1 Riftburst Hellion (MKM) 228
+1 Dog Walker (MKM) 197
+1 Agrus Kos, Spirit of Justice (MKM) 184
+1 Meddling Youths (MKM) 219
+1 Evidence Examiner (MKM) 201
+1 Tolsimir, Midnight's Light (MKM) 236
+1 Crowd-Control Warden (MKM) 193
+1 Buried in the Garden (MKM) 191
+1 Sumala Sentry (MKM) 233
+1 Vannifar, Evolved Enigma (MKM) 241
+1 Undercover Crocodelf (MKM) 239
+1 Push // Pull (MKM) 250
+1 Fuss // Bother (MKM) 248
+1 Flotsam // Jetsam (MKM) 247
+1 Sanitation Automaton (MKM) 256
+1 Gravestone Strider (MKM) 252
+1 Cryptex (MKM) 251
+1 Thinking Cap (MKM) 257
+1 Magnifying Glass (MKM) 255
+1 Lumbering Laundry (MKM) 253
+1 Magnetic Snuffler (MKM) 254
+4 Escape Tunnel (MKM) 261
