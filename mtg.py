@@ -1,8 +1,6 @@
 # %%
 import requests as req
-import time
-import json
-import csv
+import time, json, gzip, csv
 import pandas as pd
 import re
 from sklearn.preprocessing import MultiLabelBinarizer
@@ -32,64 +30,83 @@ def parse_mtga_export(fn='mtga_export.txt'):
 
     return id_r
 
-def pull_parse_file(fn='Deck.txt',set_id='mkm'):
+def pull_parse_file(source:str = 'custom',set_id='mkm'):
+
+    assert source in ['custom','mtga'], "invalid source input, valid inputs are : ['custom', 'mtga']"
 
     list_set = []
 
-    id_r = open(fn,'r').read().split('\n')
+    if source == 'custom':
+        fn = 'Deck.txt'
+        id_r = open(fn,'r').read().split('\n')
 
-    for id in id_r: #range(1,287):
-        time.sleep(.1)
-        card_json = json.loads(req.get(f'https://api.scryfall.com/cards/{set_id}/{id}').text)
+        for id in id_r:
+            list_card = get_card_info(id,set_id)
+            list_set.append(list_card)
 
-        if 'card_faces' in card_json:
-            name = [card['name'] for card in card_json['card_faces']]
-            type_line = [card['type_line'] for card in card_json['card_faces']]
-            oracle_text = [card['oracle_text'] for card in card_json['card_faces']]
-        else:
-            name = card_json['name']
-            type_line = card_json['type_line']
-            oracle_text = card_json['oracle_text']
+    elif source == 'mtga':
+        df = pd.DataFrame(parse_mtga_export(),columns=['qty','name','deck','id'])
 
-        # Enocde types
-        type_creature = 0
-        type_noncreature = 0
-        type_land = 0
+        for idx in list(df.index):
+            id = df.loc[idx,'id']
+            set_id = df.loc[idx,'deck'].lower()
 
-        if 'Creature' in type_line:
-            type_creature = 1
-        elif 'Land' in type_line:
-            type_land = 1
-        else:
-            type_noncreature = 1
-
-        # One-hot encode colours
-        colours = card_json['colors']
-
-        if len(colours) == 0: # ['B','W','R','G','U']:
-            card_json['colors'] = ['N']
-            
-
-        if ('power' in card_json) | ('toughness' in card_json):
-            power = card_json['power']
-            toughness = card_json['toughness']
-        else:
-            power = ''
-            toughness = ''
-
-        price_std = card_json['prices']['usd']
-        price_foil = card_json['prices']['usd_foil']
-        price_etch = card_json['prices']['usd_etched']
-
-        list_card = [name,card_json['mana_cost'],card_json['cmc'],power,toughness,
-                        type_line,type_creature,type_noncreature,type_land,oracle_text,
-                        card_json['colors'],card_json['color_identity'],card_json['keywords'],card_json['rarity'],card_json['collector_number'],
-                        price_std,price_foil,price_etch]
-        
-        list_gf = [card_json['name'],set_id,card_json['set_name'],1,'','']
-        list_set.append(list_card)
+            list_card = get_card_info(id,set_id)
+            list_set.append(list_card)
 
     return pd.DataFrame(columns=c.col,data=list_set)
+
+def get_card_info(id,set_id):
+    time.sleep(.1)
+    card_json = json.loads(req.get(f'https://api.scryfall.com/cards/{set_id}/{id}').text)
+
+    if 'card_faces' in card_json:
+        name = [card['name'] for card in card_json['card_faces']]
+        type_line = [card['type_line'] for card in card_json['card_faces']]
+        oracle_text = [card['oracle_text'] for card in card_json['card_faces']]
+    else:
+        name = card_json['name']
+        type_line = card_json['type_line']
+        oracle_text = card_json['oracle_text']
+
+    # Enocde types
+    type_creature = 0
+    type_noncreature = 0
+    type_land = 0
+
+    if 'Creature' in type_line:
+        type_creature = 1
+    elif 'Land' in type_line:
+        type_land = 1
+    else:
+        type_noncreature = 1
+
+    # One-hot encode colours
+    colours = card_json['colors']
+
+    if len(colours) == 0: # ['B','W','R','G','U']:
+        card_json['colors'] = ['N']
+        
+
+    if ('power' in card_json) | ('toughness' in card_json):
+        power = card_json['power']
+        toughness = card_json['toughness']
+    else:
+        power = ''
+        toughness = ''
+
+    price_std = card_json['prices']['usd']
+    price_foil = card_json['prices']['usd_foil']
+    price_etch = card_json['prices']['usd_etched']
+
+    list_card = [name,card_json['mana_cost'],card_json['cmc'],power,toughness,
+                    type_line,type_creature,type_noncreature,type_land,oracle_text,
+                    card_json['colors'],card_json['color_identity'],card_json['keywords'],card_json['rarity'],card_json['collector_number'],
+                    price_std,price_foil,price_etch]
+    
+    list_gf = [card_json['name'],set_id,card_json['set_name'],1,'','']
+
+    return list_card
 
 def encode_features(df):
 
@@ -155,7 +172,6 @@ def visualize_deck(df):
     fig.show()
 
 
-
     # Explore mana curve by colour
     df_colourmana_creatures_gb = df[df['Card Type'] == 'Creature'].groupby('CMC')[c.list_colour].sum().T
     df_colourmana_noncreatures_gb = df[df['Card Type'] == 'Non-Creature'].groupby('CMC')[c.list_colour].sum().T
@@ -174,3 +190,12 @@ def visualize_deck(df):
         fig.show()
 
 # %%
+def get_all_from_set(set_id):
+    list_set = []
+    try:
+        for id in range(1,500):
+            list_card = get_card_info(id,set_id)
+            list_set.append(list_card)
+            df = pd.DataFrame(columns=c.col,data=list_set)
+    except:
+        return encode_features(df)
