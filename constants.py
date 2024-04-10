@@ -1,3 +1,5 @@
+import pandas as pd
+
 class Constants():
     col = ['Name','Mana Cost','CMC','Power','Toughness','Type','Creature','Non-Creature','Land','Text','Colours','Colour Identity','Keywords','Rarity','Collector No.','Price STD','Price Foil','Price Etched']
 
@@ -22,3 +24,5 @@ class Constants():
     list_card_type = ['Creature','Non-Creature','Land']
 
     col_gf = ['Card','Set ID','Set Name','Quantity','Foil','Variation']
+
+    expansion_list = list(pd.read_csv('card_data.csv')['expansion'].unique())
