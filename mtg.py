@@ -30,7 +30,7 @@ def parse_mtga_export(fn='mtga_export.txt'):
 
     return id_r
 
-def pull_parse_file(source:str = 'custom',set_id='mkm'):
+def pull_parse_file(source:str = 'custom',set_id='otj'):
 
     assert source in ['custom','mtga'], "invalid source input, valid inputs are : ['custom', 'mtga']"
 
@@ -99,9 +99,30 @@ def get_card_info(id,set_id):
     price_foil = card_json['prices']['usd_foil']
     price_etch = card_json['prices']['usd_etched']
 
+    keywords = card_json['keywords']
+
+    # otj specific : 
+    # add keyword for outlaw definition
+    if any([True for outlaw in ['Assassin','Mercenary','Warlock','Pirate','Rogue','Warlock'] if outlaw in type_line]):
+        keywords.append('Outlaw')
+
+    # clean text from parentheticals, keywords
+    clean_text = re.sub(r'\([^)]*\)', '', oracle_text)
+
+    for r in c.on_crime_regex_list:
+        clean_text = re.sub(r,'',clean_text)
+
+    # add keyword for cause_crime
+    if 'target' in clean_text:
+        keywords.append('Do Crime')
+
+    # add keyword for on_crime
+    if any([True for x in ['committed a crime','commit a crime'] if x in clean_text]):
+        keywords.append('On Crime')
+
     list_card = [name,card_json['mana_cost'],card_json['cmc'],power,toughness,
                     type_line,type_creature,type_noncreature,type_land,oracle_text,
-                    card_json['colors'],card_json['color_identity'],card_json['keywords'],card_json['rarity'],card_json['collector_number'],
+                    card_json['colors'],card_json['color_identity'],keywords,card_json['rarity'],card_json['collector_number'],
                     price_std,price_foil,price_etch]
     
     list_gf = [card_json['name'],set_id,card_json['set_name'],1,'','']
@@ -199,3 +220,14 @@ def get_all_from_set(set_id):
             df = pd.DataFrame(columns=c.col,data=list_set)
     except:
         return encode_features(df)
+    
+def get_scores(df,set_id):
+    df_scores = pd.read_csv('otj_pre-release_scores_lr.csv')
+    df_merge = pd.merge(df,df_scores[['Card name','Score by Marshall','Score by Luis']],how='left',left_on='Name',right_on=['Card name'])
+
+    df['Score Combined'] = df_merge['Score by Marshall'].str.split('/')+ (df_merge['Score by Luis'].str.split('/'))
+
+    for idx in df_merge['Score Combined'].dropna().index.to_list():
+        df.loc[idx,'GPA Average'] = np.mean([c.dict_scores[x] for x in df_merge.loc[idx,'Score Combined']])
+
+# %%
