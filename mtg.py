@@ -228,6 +228,6 @@ def get_scores(df,set_id):
     df['Score Combined'] = df_merge['Score by Marshall'].str.split('/')+ (df_merge['Score by Luis'].str.split('/'))
 
     for idx in df_merge['Score Combined'].dropna().index.to_list():
-        df.loc[idx,'GPA Average'] = np.mean([c.dict_scores[x] for x in df_merge.loc[idx,'Score Combined']])
+        df.loc[idx,'GPA Average'] = np.mean([c.dict_scores[x] for x in df.loc[idx,'Score Combined']])
 
 # %%
