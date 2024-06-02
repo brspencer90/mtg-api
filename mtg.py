@@ -41,7 +41,7 @@ def pull_parse_file(source:str = 'custom',set_id='otj'):
         id_r = open(fn,'r').read().split('\n')
 
         for id in id_r:
-            list_card = get_card_info(id,set_id)
+            list_card = get_card_info(int(id),set_id)
             list_set.append(list_card)
 
     elif source == 'mtga':
@@ -160,9 +160,10 @@ def encode_features(df):
     return df
 
 def visualize_deck(df):
-    df_colour = df[c.list_colour].sum()
 
     # Explore by colour
+    df_colour = df[c.list_colour].sum()
+
     fig = go.Figure(
             data=go.Pie(values=df_colour.values,labels=df_colour.index,marker_colors=[c.dict_colour_map[x] for x in df_colour.index])
     )
@@ -182,33 +183,95 @@ def visualize_deck(df):
     fig.show()
 
     # Explore rarity by colour
-    df_colourtype_gb = df.groupby('Rarity')[c.list_colour].sum().T
-    df_colourtype_gb_labels = df_colourtype_gb.index
+    #df_colourtype_gb = df.groupby('Rarity')[c.list_colour].sum().T
+    #df_colourtype_gb_labels = df_colourtype_gb.index
+
+    #fig = go.Figure(
+    #    [go.Bar(name=x,x=df_colourtype_gb_labels,y=df_colourtype_gb[x]) for x in c.list_rarity]
+    #)
+    #fig.update_layout(height = 600, width = 800,barmode='stack')
+    #fig.update(layout_title_text='Rarity by Colours')
+    #fig.show()
+
+    # Explore by Outlaw
+    df_outlaw_gb = df[df['Key_Outlaw'] == 1][c.list_colour].sum().T
+    df_outlaw_gb_labels = df_outlaw_gb.index
 
     fig = go.Figure(
-        [go.Bar(name=x,x=df_colourtype_gb_labels,y=df_colourtype_gb[x]) for x in c.list_rarity]
+        go.Bar(x=df_outlaw_gb_labels,y=df_outlaw_gb)
     )
     fig.update_layout(height = 600, width = 800,barmode='stack')
-    fig.update(layout_title_text='Rarity by Colours')
+    fig.update(layout_title_text='Outlaw by Colours')
     fig.show()
 
+    # Explore Crime by Colours
+    df_do_crime_gb = df[df['Key_Do Crime'] == 1][c.list_colour].sum().T
+    df_on_crime_gb = df[df['Key_On Crime'] == 1][c.list_colour].sum().T
+    df_crime_labels = c.list_colour 
+
+    fig = go.Figure(
+        [
+            go.Bar(name='Do Crime',x=df_crime_labels,y=df_do_crime_gb),
+            go.Bar(name='On Crime',x=df_crime_labels,y=df_on_crime_gb)
+        ]
+    )
+    fig.update_layout(height = 600, width = 800,barmode='group')
+    fig.update(layout_title_text='Crimeness by Colours')
+
+    fig.show()
+
+    # Explore Plot by Creatures & Colours
+    df_plot_gb = df[df['Key_Plot'] == 1][c.list_colour].sum().T
+    df_plot_creatures = df[(df['Key_Plot']== 1) & (df['Card Type'] == 'Creature')][c.list_colour].sum().T
+    df_plot_noncreatures = df[(df['Key_Plot']== 1) & (df['Card Type'] == 'Non-Creature')][c.list_colour].sum().T
+
+    df_plot_labels = c.list_colour 
+
+    fig = go.Figure(
+        [
+            go.Bar(name='Creatures Plot',x=df_plot_labels,y=df_plot_creatures),
+            go.Bar(name='Non-Creatures Plot',x=df_plot_labels,y=df_plot_noncreatures),
+        ]
+    )
+    fig.update_layout(height = 600, width = 800,barmode='group')
+    fig.update(layout_title_text='Plot by Colours')
+
+    fig.show()
 
     # Explore mana curve by colour
     df_colourmana_creatures_gb = df[df['Card Type'] == 'Creature'].groupby('CMC')[c.list_colour].sum().T
     df_colourmana_noncreatures_gb = df[df['Card Type'] == 'Non-Creature'].groupby('CMC')[c.list_colour].sum().T
-    list_cmc = list(np.arange(0.,df['CMC'].max()))
+    list_cmc = list(np.arange(1,df['CMC'].max()+1))
 
     for color in c.list_colour[:-1]:
         df_creatures = df_colourmana_creatures_gb.loc[color,:]
-        df_noncreatures = df_colourmana_creatures_gb.loc[color,:]
+        df_noncreatures = df_colourmana_noncreatures_gb.loc[color,:]
 
         fig = go.Figure(
-            [go.Bar(name='Creatures',x=df_creatures.index,y=df_creatures.values,marker_color='slategrey'),
-            go.Bar(name='Non-Creatures',x=df_noncreatures,y=df_noncreatures.values,marker_color='crimson')]
+            [go.Bar(name='Creatures',x=list_cmc,y=df_creatures.values,marker_color='slategrey'),
+            go.Bar(name='Non-Creatures',x=list_cmc,y=df_noncreatures.values,marker_color='crimson')]
         )
+
         fig.update_layout(height = 600, width = 1000,barmode='stack')
         fig.update(layout_title_text=f'Mana Curve by Colour : {color}')
         fig.show()
+
+    # Explore combined mana curve
+    df_colourmana_creatures_gb = df[df['Card Type'] == 'Creature'].groupby('CMC')[c.list_colour].sum().T
+    df_colourmana_noncreatures_gb = df[df['Card Type'] == 'Non-Creature'].groupby('CMC')[c.list_colour].sum().T
+    list_cmc = list(np.arange(1,df['CMC'].max()+1))
+
+    df_creatures = df_colourmana_creatures_gb.sum()
+    df_noncreatures = df_colourmana_noncreatures_gb.sum()
+
+    fig = go.Figure(
+        [go.Bar(name='Creatures',x=list_cmc,y=df_creatures.values,marker_color='slategrey'),
+        go.Bar(name='Non-Creatures',x=list_cmc,y=df_noncreatures.values,marker_color='crimson')]
+    )
+
+    fig.update_layout(height = 600, width = 1000,barmode='stack')
+    fig.update(layout_title_text=f'Overall Mana Curve by Colour')
+    fig.show()
 
 # %%
 def get_all_from_set(set_id):
@@ -227,7 +290,7 @@ def get_scores(df,set_id):
 
     df['Score Combined'] = df_merge['Score by Marshall'].str.split('/')+ (df_merge['Score by Luis'].str.split('/'))
 
-    for idx in df_merge['Score Combined'].dropna().index.to_list():
+    for idx in df['Score Combined'].dropna().index.to_list():
         df.loc[idx,'GPA Average'] = np.mean([c.dict_scores[x] for x in df.loc[idx,'Score Combined']])
 
 # %%
