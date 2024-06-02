@@ -10,7 +10,7 @@ from constants import Constants as c
 import itertools
 import plotly.graph_objects as go
 import numpy as np
-
+import nltk
 # %%
 def parse_mtga_export(fn='mtga_export.txt'):
     list_card = open(fn,'r').read().split('\n')[1:]
@@ -54,7 +54,7 @@ def pull_parse_file(source:str = 'deck',set_id='otj'):
 
     return pd.DataFrame(columns=c.col,data=list_set)
 
-def get_card_info(id,set_id,foil,etch):
+def get_card_info(id,set_id,foil=False,etch=False):
     time.sleep(.1)
     card_json = json.loads(req.get(f'https://api.scryfall.com/cards/{set_id}/{id}').text)
 
@@ -297,8 +297,6 @@ def get_all_from_set(set_id):
 
         id += 1
 
-        print(card_count,id,cons_errors)
-    
     return encode_features(df)
     
 def get_scores(df,set_id):
@@ -310,11 +308,25 @@ def get_scores(df,set_id):
     for idx in df_merge['Score Combined'].dropna().index.to_list():
         df.loc[idx,'GPA Average'] = np.mean([c.dict_scores[x] for x in df.loc[idx,'Score Combined']])
 
+def get_word_frequency(df):
+    text = df['Text'].str.lower().replace(r'\n',' ',regex=True).str.cat(sep=' ')
+    words = nltk.tokenize.word_tokenize(text)
+    words_no_punc = [x for x in words if re.compile(r'\w+').match(x)]
+
+    word_dist = nltk.FreqDist(words_no_punc)
+
+    stopwords = nltk.corpus.stopwords.words('english')
+    words_except_stop_dist = nltk.FreqDist(w for w in words_no_punc if w not in stopwords) 
+
+    rslt = pd.DataFrame(words_except_stop_dist.most_common(10),
+                        columns=['Word', 'Frequency']).set_index('Word')
+
 # %%
 
 
-Additional keywords : 
-    'Energy': 'Pay {E}'
-    'Modified':'Equipment, auras you control, and counters are modifications'
-    'Devoid':'Card has no color' ### ---???? black collector #58
-    'Bestow': #????????????
+#Additional keywords : 
+    #'Energy': 'Pay {E}'
+    #'Modified':'Equipment, auras you control, and counters are modifications'
+    #'Devoid':'Card has no color' ### ---???? black collector #58
+    #'Colourless':
+    #'Bestow': #????????????
