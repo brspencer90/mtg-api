@@ -310,7 +310,9 @@ def get_scores(df,set_id):
 
 def get_word_frequency(df):
     text = df['Text'].str.lower().replace(r'\n',' ',regex=True).str.cat(sep=' ')
-    words = nltk.tokenize.word_tokenize(text)
+    text_no_paranth = re.sub(r'\([^)]*\)', '', text)
+    text_no_bracket = re.sub(r'\{[^}]*}', '', text_no_paranth)
+    words = nltk.tokenize.word_tokenize(text_no_bracket)
     words_no_punc = [x for x in words if re.compile(r'\w+').match(x)]
 
     word_dist = nltk.FreqDist(words_no_punc)
@@ -320,6 +322,11 @@ def get_word_frequency(df):
 
     rslt = pd.DataFrame(words_except_stop_dist.most_common(10),
                         columns=['Word', 'Frequency']).set_index('Word')
+
+def get_list_of_sets():
+    from datetime import datetime as dt 
+    set_json = json.loads(req.get(f'https://api.scryfall.com/sets').text)
+    [x['parent_set_code'] for x in set_json['data'] if ((dt.strptime(x['released_at'],'%Y-%m-%d') < dt.now()) & (x['set_type'] == 'expansion'))]    
 
 # %%
 
