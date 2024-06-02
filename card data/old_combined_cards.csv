@@ -1,0 +1,503 @@
+,Name,Mana Cost,CMC,Power,Toughness,Type,Creature,Non-Creature,Land,Text,Colours,Colour Identity,Keywords,Rarity,Collector No.,Price STD,Price Foil,Price Etched,Set,Price_STD
+0,Prey Upon,{G},1.0,,,Sorcery,0,1,0,Target creature you control fights target creature you don't control. (Each deals damage equal to its power to the other.),['G'],['G'],"['Fight', 'Do Crime']",common,200,0.09,0.61,,isd,
+1,Spider Spawning,{4}{G},5.0,,,Sorcery,0,1,0,"Create a 1/2 green Spider creature token with reach for each creature card in your graveyard.
+Flashback {6}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",['G'],"['B', 'G']",['Flashback'],uncommon,203,0.14,1.17,,isd,
+2,Forbidden Alchemy,{2}{U},3.0,,,Instant,0,1,0,"Look at the top four cards of your library. Put one of them into your hand and the rest into your graveyard.
+Flashback {6}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",['U'],"['B', 'U']",['Flashback'],common,55,0.11,0.77,,isd,
+3,Altar's Reap,{1}{B},2.0,,,Instant,0,1,0,"As an additional cost to cast this spell, sacrifice a creature.
+Draw two cards.",['B'],['B'],[],common,86,0.06,1.61,,isd,
+4,Wreath of Geists,{G},1.0,,,Enchantment — Aura,0,1,0,"Enchant creature
+Enchanted creature gets +X/+X, where X is the number of creature cards in your graveyard.",['G'],['G'],['Enchant'],uncommon,211,0.14,0.5,,isd,
+5,Stromkirk Patrol,{4}{B},5.0,4.0,3.0,Creature — Vampire Soldier,1,0,0,"Whenever Stromkirk Patrol deals combat damage to a player, put a +1/+1 counter on it.",['B'],['B'],[],common,118,0.03,0.24,,isd,
+6,Silverchase Fox,{1}{W},2.0,2.0,2.0,Creature — Fox,1,0,0,"{1}{W}, Sacrifice Silverchase Fox: Exile target enchantment.",['W'],['W'],['Do Crime'],common,31,0.03,0.48,,isd,
+7,Pitchburn Devils,{4}{R},5.0,3.0,3.0,Creature — Devil,1,0,0,"When Pitchburn Devils dies, it deals 3 damage to any target.",['R'],['R'],['Do Crime'],common,156,0.02,0.22,,isd,
+8,Spare from Evil,{1}{W},2.0,,,Instant,0,1,0,Creatures you control gain protection from non-Human creatures until end of turn.,['W'],['W'],[],common,34,0.07,0.31,,isd,
+9,Travel Preparations,{1}{G},2.0,,,Sorcery,0,1,0,"Put a +1/+1 counter on each of up to two target creatures.
+Flashback {1}{W} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",['G'],"['G', 'W']",['Flashback'],common,206,0.06,0.41,,isd,
+10,Ghoulraiser,{1}{B}{B},3.0,2.0,2.0,Creature — Zombie,1,0,0,"When Ghoulraiser enters the battlefield, return a Zombie card at random from your graveyard to your hand.",['B'],['B'],[],common,102,0.1,0.65,,isd,
+11,Rotting Fensnake,{3}{B},4.0,5.0,1.0,Creature — Zombie Snake,1,0,0,,['B'],['B'],[],common,113,0.04,0.17,,isd,
+12,Dream Twist,{U},1.0,,,Instant,0,1,0,"Target player mills three cards.
+Flashback {1}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",['U'],['U'],"['Flashback', 'Mill']",common,54,0.11,1.42,,isd,
+13,Maw of the Mire,{4}{B},5.0,,,Sorcery,0,1,0,Destroy target land. You gain 4 life.,['B'],['B'],['Do Crime'],common,108,0.06,0.49,,isd,
+14,Avacyn's Pilgrim,{G},1.0,1.0,1.0,Creature — Human Monk,1,0,0,{T}: Add {W}.,['G'],"['G', 'W']",[],common,170,0.37,5.08,,isd,
+15,Disciple of Griselbrand,{1}{B},2.0,1.0,1.0,Creature — Human Cleric,1,0,0,"{1}, Sacrifice a creature: You gain life equal to the sacrificed creature's toughness.",['B'],['B'],[],uncommon,98,0.15,2.52,,isd,
+16,Rally the Peasants,{2}{W},3.0,,,Instant,0,1,0,"Creatures you control get +2/+0 until end of turn.
+Flashback {2}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",['W'],"['R', 'W']",['Flashback'],uncommon,28,0.11,0.48,,isd,
+17,Chapel Geist,{1}{W}{W},3.0,2.0,3.0,Creature — Spirit,1,0,0,Flying,['W'],['W'],['Flying'],common,7,0.04,0.22,,isd,
+18,Lost in the Mist,{3}{U}{U},5.0,,,Instant,0,1,0,Counter target spell. Return target permanent to its owner's hand.,['U'],['U'],['Do Crime'],common,63,0.04,0.25,,isd,
+19,Silent Departure,{U},1.0,,,Sorcery,0,1,0,"Return target creature to its owner's hand.
+Flashback {4}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",['U'],['U'],"['Flashback', 'Do Crime']",common,75,0.07,0.39,,isd,
+20,Chittering Rats,{1}{B}{B},3.0,2.0,2.0,Creature — Rat,1,0,0,"When Chittering Rats enters the battlefield, target opponent puts a card from their hand on top of their library.",['B'],['B'],['Do Crime'],common,39,0.35,4.35,,dst,
+21,Chittering Rats,{1}{B}{B},3.0,2.0,2.0,Creature — Rat,1,0,0,"When Chittering Rats enters the battlefield, target opponent puts a card from their hand on top of their library.",['B'],['B'],['Do Crime'],common,39,0.35,4.35,,dst,
+22,Grimclaw Bats,{1}{B},2.0,1.0,1.0,Creature — Bat,1,0,0,"Flying
+{B}, Pay 1 life: Grimclaw Bats gets +1/+1 until end of turn.",['B'],['B'],['Flying'],common,45,0.09,0.24,,dst,
+23,Chittering Rats,{1}{B}{B},3.0,2.0,2.0,Creature — Rat,1,0,0,"When Chittering Rats enters the battlefield, target opponent puts a card from their hand on top of their library.",['B'],['B'],['Do Crime'],common,39,0.35,4.35,,dst,
+24,Scavenging Scarab,{3}{B},4.0,3.0,3.0,Creature — Insect,1,0,0,Scavenging Scarab can't block.,['B'],['B'],[],common,51,0.06,,,dst,
+25,Specter's Shroud,{2},2.0,,,Artifact — Equipment,0,1,0,"Equipped creature gets +1/+0.
+Whenever equipped creature deals combat damage to a player, that player discards a card.
+Equip {1} ({1}: Attach to target creature you control. Equip only as a sorcery. This card enters the battlefield unattached and stays on the battlefield if the creature leaves.)",['N'],[],['Equip'],uncommon,142,0.22,1.99,,dst,
+26,Emissary of Despair,{1}{B}{B},3.0,2.0,1.0,Creature — Spirit,1,0,0,"Flying
+Whenever Emissary of Despair deals combat damage to a player, that player loses 1 life for each artifact they control.",['B'],['B'],['Flying'],uncommon,42,0.18,0.5,,dst,
+27,Grimclaw Bats,{1}{B},2.0,1.0,1.0,Creature — Bat,1,0,0,"Flying
+{B}, Pay 1 life: Grimclaw Bats gets +1/+1 until end of turn.",['B'],['B'],['Flying'],common,45,0.09,0.24,,dst,
+28,Murderous Spoils,{5}{B},6.0,,,Instant,0,1,0,Destroy target nonblack creature. It can't be regenerated. You gain control of all Equipment that were attached to it. (This effect lasts indefinitely.),['B'],['B'],['Do Crime'],uncommon,48,0.16,0.25,,dst,
+29,Murderous Spoils,{5}{B},6.0,,,Instant,0,1,0,Destroy target nonblack creature. It can't be regenerated. You gain control of all Equipment that were attached to it. (This effect lasts indefinitely.),['B'],['B'],['Do Crime'],uncommon,48,0.16,0.25,,dst,
+30,Emissary of Despair,{1}{B}{B},3.0,2.0,1.0,Creature — Spirit,1,0,0,"Flying
+Whenever Emissary of Despair deals combat damage to a player, that player loses 1 life for each artifact they control.",['B'],['B'],['Flying'],uncommon,42,0.18,0.5,,dst,
+31,Geth's Grimoire,{4},4.0,,,Artifact,0,1,0,"Whenever an opponent discards a card, you may draw a card.",['N'],[],[],uncommon,123,1.65,12.26,,dst,
+32,Grimclaw Bats,{1}{B},2.0,1.0,1.0,Creature — Bat,1,0,0,"Flying
+{B}, Pay 1 life: Grimclaw Bats gets +1/+1 until end of turn.",['B'],['B'],['Flying'],common,45,0.09,0.24,,dst,
+33,Geth's Grimoire,{4},4.0,,,Artifact,0,1,0,"Whenever an opponent discards a card, you may draw a card.",['N'],[],[],uncommon,123,1.65,12.26,,dst,
+34,Pulse of the Dross,{1}{B}{B},3.0,,,Sorcery,0,1,0,"Target player reveals three cards from their hand and you choose one of them. That player discards that card. Then if that player has more cards in hand than you, return Pulse of the Dross to its owner's hand.",['B'],['B'],[],rare,50,0.26,1.0,,dst,
+35,Essence Drain,{4}{B},5.0,,,Sorcery,0,1,0,Essence Drain deals 3 damage to any target and you gain 3 life.,['B'],['B'],['Do Crime'],common,43,0.18,0.28,,dst,
+36,Mephitic Ooze,{4}{B},5.0,0.0,5.0,Creature — Ooze,1,0,0,"Mephitic Ooze gets +1/+0 for each artifact you control.
+Whenever Mephitic Ooze deals combat damage to a creature, destroy that creature. The creature can't be regenerated.",['B'],['B'],[],rare,47,0.33,2.18,,dst,
+37,Dross Golem,{5},5.0,3.0,2.0,Artifact Creature — Golem,1,0,0,"Affinity for Swamps (This spell costs {1} less to cast for each Swamp you control.)
+Fear (This creature can't be blocked except by artifact creatures and/or black creatures.)",['N'],[],"['Affinity', 'Fear']",common,119,0.17,0.37,,dst,
+38,Leonin Bola,{1},1.0,,,Artifact — Equipment,0,1,0,"Equipped creature has ""{T}, Unattach Leonin Bola: Tap target creature.""
+Equip {1} ({1}: Attach to target creature you control. Equip only as a sorcery. This card enters the battlefield unattached and stays on the battlefield if the creature leaves.)",['N'],[],"['Equip', 'Do Crime']",common,127,0.16,0.85,,dst,
+39,Specter's Shroud,{2},2.0,,,Artifact — Equipment,0,1,0,"Equipped creature gets +1/+0.
+Whenever equipped creature deals combat damage to a player, that player discards a card.
+Equip {1} ({1}: Attach to target creature you control. Equip only as a sorcery. This card enters the battlefield unattached and stays on the battlefield if the creature leaves.)",['N'],[],['Equip'],uncommon,142,0.22,1.99,,dst,
+40,Dross Golem,{5},5.0,3.0,2.0,Artifact Creature — Golem,1,0,0,"Affinity for Swamps (This spell costs {1} less to cast for each Swamp you control.)
+Fear (This creature can't be blocked except by artifact creatures and/or black creatures.)",['N'],[],"['Affinity', 'Fear']",common,119,0.17,0.37,,dst,
+41,Dross Golem,{5},5.0,3.0,2.0,Artifact Creature — Golem,1,0,0,"Affinity for Swamps (This spell costs {1} less to cast for each Swamp you control.)
+Fear (This creature can't be blocked except by artifact creatures and/or black creatures.)",['N'],[],"['Affinity', 'Fear']",common,119,0.17,0.37,,dst,
+42,Golgari Signet,{2},2.0,,,Artifact,0,1,0,"{1}, {T}: Add {B}{G}.",['N'],"['B', 'G']",[],common,249,0.87,,,cmd,
+43,Doom Blade,{1}{B},2.0,,,Instant,0,1,0,Destroy target nonblack creature.,['B'],['B'],['Do Crime'],common,78,0.29,,,cmd,
+44,Fertilid,{2}{G},3.0,0.0,0.0,Creature — Elemental,1,0,0,"Fertilid enters the battlefield with two +1/+1 counters on it.
+{1}{G}, Remove a +1/+1 counter from Fertilid: Target player searches their library for a basic land card, puts it onto the battlefield tapped, then shuffles.",['G'],['G'],[],common,154,0.27,,,cmd,
+45,Penumbra Spider,{2}{G}{G},4.0,2.0,4.0,Creature — Spider,1,0,0,"Reach
+When Penumbra Spider dies, create a 2/4 black Spider creature token with reach.",['G'],['G'],['Reach'],common,167,0.4,,,cmd,
+46,Aquastrand Spider,{1}{G},2.0,0.0,0.0,Creature — Spider Mutant,1,0,0,"Graft 2 (This creature enters the battlefield with two +1/+1 counters on it. Whenever another creature enters the battlefield, you may move a +1/+1 counter from this creature onto it.)
+{G}: Target creature with a +1/+1 counter on it gains reach until end of turn. (It can block creatures with flying.)",['G'],['G'],['Graft'],common,141,0.26,,,cmd,
+47,Selesnya Sanctuary,,0.0,,,Land,0,0,1,"Selesnya Sanctuary enters the battlefield tapped.
+When Selesnya Sanctuary enters the battlefield, return a land you control to its owner's hand.
+{T}: Add {G}{W}.",['N'],"['G', 'W']",[],common,287,0.25,,,cmd,
+48,Selesnya Signet,{2},2.0,,,Artifact,0,1,0,"{1}, {T}: Add {G}{W}.",['N'],"['G', 'W']",[],common,258,1.79,,,cmd,
+49,Golgari Rot Farm,,0.0,,,Land,0,0,1,"Golgari Rot Farm enters the battlefield tapped.
+When Golgari Rot Farm enters the battlefield, return a land you control to its owner's hand.
+{T}: Add {B}{G}.",['N'],"['B', 'G']",[],common,275,0.29,,,cmd,
+50,Sakura-Tribe Elder,{1}{G},2.0,1.0,1.0,Creature — Snake Shaman,1,0,0,"Sacrifice Sakura-Tribe Elder: Search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.",['G'],['G'],[],common,169,1.2,,,cmd,
+51,Evolving Wilds,,0.0,,,Land,0,0,1,"{T}, Sacrifice Evolving Wilds: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",['N'],[],[],common,272,0.11,,,cmd,
+52,Deadly Recluse,{1}{G},2.0,1.0,2.0,Creature — Spider,1,0,0,"Reach (This creature can block creatures with flying.)
+Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)",['G'],['G'],"['Reach', 'Deathtouch']",common,149,0.32,,,cmd,
+53,Cultivate,{2}{G},3.0,,,Sorcery,0,1,0,"Search your library for up to two basic land cards, reveal those cards, put one onto the battlefield tapped and the other into your hand, then shuffle.",['G'],['G'],[],common,148,0.77,,,cmd,
+54,Tribute to the Wild,{1}{G},2.0,,,Instant,0,1,0,Each opponent sacrifices an artifact or enchantment.,['G'],['G'],[],uncommon,175,0.14,,,cmd,
+55,Barren Moor,,0.0,,,Land,0,0,1,"Barren Moor enters the battlefield tapped.
+{T}: Add {B}.
+Cycling {B} ({B}, Discard this card: Draw a card.)",['N'],['B'],['Cycling'],common,266,0.18,,,cmd,
+56,Oblivion Ring,{2}{W},3.0,,,Enchantment,0,1,0,"When Oblivion Ring enters the battlefield, exile another target nonland permanent.
+When Oblivion Ring leaves the battlefield, return the exiled card to the battlefield under its owner's control.",['W'],['W'],['Do Crime'],common,23,0.28,,,cmd,
+57,Death Mutation,{6}{B}{G},8.0,,,Sorcery,0,1,0,"Destroy target nonblack creature. It can't be regenerated. Create X 1/1 green Saproling creature tokens, where X is that creature's mana value.","['B', 'G']","['B', 'G']",['Do Crime'],uncommon,192,0.3,,,cmd,
+58,Command Tower,,0.0,,,Land,0,0,1,{T}: Add one mana of any color in your commander's color identity.,['N'],[],[],common,269,0.63,,,cmd,
+59,Monk Realist,{1}{W},2.0,1.0,1.0,Creature — Human Monk Cleric,1,0,0,"When Monk Realist enters the battlefield, destroy target enchantment.",['W'],['W'],['Do Crime'],common,20,0.24,,,cmd,
+60,Orzhov Basilica,,0.0,,,Land,0,0,1,"Orzhov Basilica enters the battlefield tapped.
+When Orzhov Basilica enters the battlefield, return a land you control to its owner's hand.
+{T}: Add {W}{B}.",['N'],"['B', 'W']",[],common,283,0.25,,,cmd,
+61,Fists of Ironwood,{1}{G},2.0,,,Enchantment — Aura,0,1,0,"Enchant creature
+When Fists of Ironwood enters the battlefield, create two 1/1 green Saproling creature tokens.
+Enchanted creature has trample.",['G'],['G'],['Enchant'],common,156,0.29,,,cmd,
+62,Yavimaya Elder,{1}{G}{G},3.0,2.0,1.0,Creature — Human Druid,1,0,0,"When Yavimaya Elder dies, you may search your library for up to two basic land cards, reveal them, put them into your hand, then shuffle.
+{2}, Sacrifice Yavimaya Elder: Draw a card.",['G'],['G'],[],common,179,0.21,,,cmd,
+63,Tranquil Thicket,,0.0,,,Land,0,0,1,"Tranquil Thicket enters the battlefield tapped.
+{T}: Add {G}.
+Cycling {G} ({G}, Discard this card: Draw a card.)",['N'],['G'],['Cycling'],common,292,0.23,,,cmd,
+64,Footbottom Feast,{2}{B},3.0,,,Instant,0,1,0,"Put any number of target creature cards from your graveyard on top of your library.
+Draw a card.",['B'],['B'],[],common,84,0.53,,,cmd,
+65,Rupture Spire,,0.0,,,Land,0,0,1,"Rupture Spire enters the battlefield tapped.
+When Rupture Spire enters the battlefield, sacrifice it unless you pay {1}.
+{T}: Add one mana of any color.",['N'],[],[],common,285,0.2,,,cmd,0.2
+66,Vivid Marsh,,0.0,,,Land,0,0,1,"Vivid Marsh enters the battlefield tapped with two charge counters on it.
+{T}: Add {B}.
+{T}, Remove a charge counter from Vivid Marsh: Add one mana of any color.",['N'],['B'],[],uncommon,296,0.74,,,cmd,0.74
+67,Squallmonger,{3}{G},4.0,3.0,3.0,Creature — Monger,1,0,0,{2}: Squallmonger deals 1 damage to each creature with flying and each player. Any player may activate this ability.,['G'],['G'],[],uncommon,173,0.15,,,cmd,0.15
+68,Vivid Grove,,0.0,,,Land,0,0,1,"Vivid Grove enters the battlefield tapped with two charge counters on it.
+{T}: Add {G}.
+{T}, Remove a charge counter from Vivid Grove: Add one mana of any color.",['N'],['G'],[],uncommon,295,0.23,,,cmd,0.23
+69,Darksteel Ingot,{3},3.0,,,Artifact,0,1,0,"Indestructible (Effects that say ""destroy"" don't destroy this artifact.)
+{T}: Add one mana of any color.",['N'],[],['Indestructible'],common,245,0.29,,,cmd,0.29
+70,Secluded Steppe,,0.0,,,Land,0,0,1,"Secluded Steppe enters the battlefield tapped.
+{T}: Add {W}.
+Cycling {W} ({W}, Discard this card: Draw a card.)",['N'],['W'],['Cycling'],common,286,0.14,,,cmd,0.14
+71,Afterlife,{2}{W},3.0,,,Instant,0,1,0,Destroy target creature. It can't be regenerated. Its controller creates a 1/1 white Spirit creature token with flying.,['W'],['W'],['Do Crime'],uncommon,2,0.18,,,cmd,0.18
+72,Necrogenesis,{B}{G},2.0,,,Enchantment,0,1,0,{2}: Exile target creature card from a graveyard. Create a 1/1 green Saproling creature token.,"['B', 'G']","['B', 'G']",['Do Crime'],uncommon,212,0.33,,,cmd,0.33
+73,Soul Snare,{W},1.0,,,Enchantment,0,1,0,"{W}, Sacrifice Soul Snare: Exile target creature that's attacking you or a planeswalker you control.",['W'],['W'],['Do Crime'],uncommon,32,0.19,,,cmd,0.19
+74,Vow of Duty,{2}{W},3.0,,,Enchantment — Aura,0,1,0,"Enchant creature
+Enchanted creature gets +2/+2, has vigilance, and can't attack you or planeswalkers you control.",['W'],['W'],['Enchant'],uncommon,36,0.18,,,cmd,0.18
+75,Vow of Malice,{2}{B},3.0,,,Enchantment — Aura,0,1,0,"Enchant creature
+Enchanted creature gets +2/+2, has intimidate, and can't attack you or planeswalkers you control. (A creature with intimidate can't be blocked except by artifact creatures and/or creatures that share a color with it.)",['B'],['B'],['Enchant'],uncommon,107,0.76,,,cmd,0.76
+76,Alliance of Arms,{W},1.0,,,Sorcery,0,1,0,"Join forces — Starting with you, each player may pay any amount of mana. Each player creates X 1/1 white Soldier creature tokens, where X is the total amount of mana paid this way.",['W'],['W'],['Join forces'],rare,4,6.35,,,cmd,6.35
+77,Symbiotic Wurm,{5}{G}{G}{G},8.0,7.0,7.0,Creature — Wurm,1,0,0,"When Symbiotic Wurm dies, create seven 1/1 green Insect creature tokens.",['G'],['G'],[],rare,174,1.84,,,cmd,1.84
+78,Bestial Menace,{3}{G}{G},5.0,,,Sorcery,0,1,0,"Create a 1/1 green Snake creature token, a 2/2 green Wolf creature token, and a 3/3 green Elephant creature token.",['G'],['G'],[],uncommon,144,0.1,,,cmd,0.1
+79,Vampire Nighthawk,{1}{B}{B},3.0,2.0,3.0,Creature — Vampire Shaman,1,0,0,"Flying, deathtouch, lifelink",['B'],['B'],"['Deathtouch', 'Flying', 'Lifelink']",uncommon,106,0.25,,,cmd,0.25
+80,Dark Hatchling,{4}{B}{B},6.0,3.0,3.0,Creature — Horror,1,0,0,"Flying
+When Dark Hatchling enters the battlefield, destroy target nonblack creature. It can't be regenerated.",['B'],['B'],"['Flying', 'Do Crime']",rare,76,0.17,,,cmd,0.17
+81,Hornet Queen,{4}{G}{G}{G},7.0,2.0,2.0,Creature — Insect,1,0,0,"Flying, deathtouch
+When Hornet Queen enters the battlefield, create four 1/1 green Insect creature tokens with flying and deathtouch.",['G'],['G'],"['Deathtouch', 'Flying']",rare,159,0.65,,,cmd,0.65
+82,Spawnwrithe,{2}{G},3.0,2.0,2.0,Creature — Elemental,1,0,0,"Trample
+Whenever Spawnwrithe deals combat damage to a player, create a token that's a copy of Spawnwrithe.",['G'],['G'],['Trample'],rare,171,0.41,,,cmd,0.41
+83,Mortify,{1}{W}{B},3.0,,,Instant,0,1,0,Destroy target creature or enchantment.,"['B', 'W']","['B', 'W']",['Do Crime'],uncommon,211,0.22,,,cmd,0.22
+84,Nemesis Trap,{4}{B}{B},6.0,,,Instant — Trap,0,1,0,"If a white creature is attacking, you may pay {B}{B} rather than pay this spell's mana cost.
+Exile target attacking creature. Create a token that's a copy of that creature. Exile it at the beginning of the next end step.",['B'],['B'],['Do Crime'],uncommon,91,0.13,,,cmd,0.13
+85,Skullclamp,{1},1.0,,,Artifact — Equipment,0,1,0,"Equipped creature gets +1/-1.
+Whenever equipped creature dies, draw two cards.
+Equip {1}",['N'],[],['Equip'],uncommon,260,7.02,,,cmd,7.02
+86,Spike Feeder,{1}{G}{G},3.0,0.0,0.0,Creature — Spike,1,0,0,"Spike Feeder enters the battlefield with two +1/+1 counters on it.
+{2}, Remove a +1/+1 counter from Spike Feeder: Put a +1/+1 counter on target creature.
+Remove a +1/+1 counter from Spike Feeder: You gain 2 life.",['G'],['G'],[],uncommon,172,1.95,,,cmd,1.95
+87,Celestial Force,{5}{W}{W}{W},8.0,7.0,7.0,Creature — Elemental,1,0,0,"At the beginning of each upkeep, you gain 3 life.",['W'],['W'],[],rare,10,1.0,,,cmd,1.0
+88,Acorn Catapult,{4},4.0,,,Artifact,0,1,0,"{1}, {T}: Acorn Catapult deals 1 damage to any target. That permanent's controller or that player creates a 1/1 green Squirrel creature token.",['N'],[],['Do Crime'],rare,241,3.81,,,cmd,3.81
+89,Golgari Guildmage,{B/G}{B/G},2.0,2.0,2.0,Creature — Elf Shaman,1,0,0,"{4}{B}, Sacrifice a creature: Return target creature card from your graveyard to your hand.
+{4}{G}: Put a +1/+1 counter on target creature.","['B', 'G']","['B', 'G']",[],uncommon,201,0.24,,,cmd,0.24
+90,Awakening Zone,{2}{G},3.0,,,Enchantment,0,1,0,"At the beginning of your upkeep, you may create a 0/1 colorless Eldrazi Spawn creature token. It has ""Sacrifice this creature: Add {C}.""",['G'],['G'],[],rare,142,1.03,,,cmd,1.03
+91,Selesnya Evangel,{G}{W},2.0,1.0,2.0,Creature — Elf Shaman,1,0,0,"{1}, {T}, Tap an untapped creature you control: Create a 1/1 green Saproling creature token.","['G', 'W']","['G', 'W']",[],common,223,0.08,,,cmd,0.08
+92,Syphon Flesh,{4}{B},5.0,,,Sorcery,0,1,0,Each other player sacrifices a creature. You create a 2/2 black Zombie creature token for each creature sacrificed this way.,['B'],['B'],[],uncommon,103,0.21,,,cmd,0.21
+93,Nantuko Husk,{2}{B},3.0,2.0,2.0,Creature — Zombie Insect,1,0,0,Sacrifice a creature: Nantuko Husk gets +2/+2 until end of turn.,['B'],['B'],[],uncommon,90,0.39,,,cmd,0.39
+94,Harmonize,{2}{G}{G},4.0,,,Sorcery,0,1,0,Draw three cards.,['G'],['G'],[],uncommon,158,0.55,,,cmd,0.55
+95,Aura Shards,{1}{G}{W},3.0,,,Enchantment,0,1,0,"Whenever a creature enters the battlefield under your control, you may destroy target artifact or enchantment.","['G', 'W']","['G', 'W']",['Do Crime'],uncommon,182,24.65,,,cmd,24.65
+96,Sol Ring,{1},1.0,,,Artifact,0,1,0,{T}: Add {C}{C}.,['N'],[],[],uncommon,261,1.28,,,cmd,1.28
+97,Lightning Greaves,{2},2.0,,,Artifact — Equipment,0,1,0,"Equipped creature has haste and shroud. (It can't be the target of spells or abilities.)
+Equip {0}",['N'],[],['Equip'],uncommon,253,4.75,,,cmd,4.75
+98,Sigil Captain,{1}{G}{W}{W},4.0,3.0,3.0,Creature — Rhino Soldier,1,0,0,"Whenever a creature enters the battlefield under your control, if that creature is 1/1, put two +1/+1 counters on it.","['G', 'W']","['G', 'W']",[],uncommon,225,0.34,,,cmd,0.34
+99,Chorus of the Conclave,{4}{G}{G}{W}{W},8.0,3.0,8.0,Legendary Creature — Dryad,1,0,0,"Forestwalk (This creature can't be blocked as long as defending player controls a Forest.)
+As an additional cost to cast creature spells, you may pay any amount of mana. If you do, that creature enters the battlefield with that many additional +1/+1 counters on it.","['G', 'W']","['G', 'W']","['Landwalk', 'Forestwalk']",rare,189,0.33,,,cmd,0.33
+100,Scavenging Ooze,{1}{G},2.0,2.0,2.0,Creature — Ooze,1,0,0,"{G}: Exile target card from a graveyard. If it was a creature card, put a +1/+1 counter on Scavenging Ooze and you gain 1 life.",['G'],['G'],['Do Crime'],rare,170,0.42,,,cmd,0.42
+101,Attrition,{1}{B}{B},3.0,,,Enchantment,0,1,0,"{B}, Sacrifice a creature: Destroy target nonblack creature.",['B'],['B'],['Do Crime'],rare,72,11.66,,,cmd,11.66
+102,Hex,{4}{B}{B},6.0,,,Sorcery,0,1,0,Destroy six target creatures.,['B'],['B'],['Do Crime'],rare,87,0.38,,,cmd,0.38
+103,Vow of Wildness,{2}{G},3.0,,,Enchantment — Aura,0,1,0,"Enchant creature
+Enchanted creature gets +3/+3, has trample, and can't attack you or planeswalkers you control.",['G'],['G'],['Enchant'],uncommon,178,0.29,,,cmd,0.29
+104,Cobra Trap,{4}{G}{G},6.0,,,Instant — Trap,0,1,0,"If a noncreature permanent under your control was destroyed this turn by a spell or ability an opponent controlled, you may pay {G} rather than pay this spell's mana cost.
+Create four 1/1 green Snake creature tokens.",['G'],['G'],[],uncommon,146,0.19,,,cmd,0.19
+105,Orzhov Signet,{2},2.0,,,Artifact,0,1,0,"{1}, {T}: Add {W}{B}.",['N'],"['B', 'W']",[],common,255,0.46,,,cmd,0.46
+106,Shriekmaw,{4}{B},5.0,3.0,2.0,Creature — Elemental,1,0,0,"Fear (This creature can't be blocked except by artifact creatures and/or black creatures.)
+When Shriekmaw enters the battlefield, destroy target nonartifact, nonblack creature.
+Evoke {1}{B} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters the battlefield.)",['B'],['B'],"['Evoke', 'Fear', 'Do Crime']",uncommon,100,0.37,,,cmd,0.37
+107,Temple of the False God,,0.0,,,Land,0,0,1,{T}: Add {C}{C}. Activate only if you control five or more lands.,['N'],[],[],uncommon,290,0.28,,,cmd,0.28
+108,Storm Herd,{8}{W}{W},10.0,,,Sorcery,0,1,0,"Create X 1/1 white Pegasus creature tokens with flying, where X is your life total.",['W'],['W'],[],rare,34,0.5,,,cmd,0.5
+109,Vivid Meadow,,0.0,,,Land,0,0,1,"Vivid Meadow enters the battlefield tapped with two charge counters on it.
+{T}: Add {W}.
+{T}, Remove a charge counter from Vivid Meadow: Add one mana of any color.",['N'],['W'],[],uncommon,297,0.27,,,cmd,0.27
+110,"Ghave, Guru of Spores",{2}{W}{B}{G},5.0,0.0,0.0,Legendary Creature — Fungus Shaman,1,0,0,"Ghave, Guru of Spores enters the battlefield with five +1/+1 counters on it.
+{1}, Remove a +1/+1 counter from a creature you control: Create a 1/1 green Saproling creature token.
+{1}, Sacrifice a creature: Put a +1/+1 counter on target creature.","['B', 'G', 'W']","['B', 'G', 'W']",[],mythic,200,1.06,,,cmd,1.06
+111,Hour of Reckoning,{4}{W}{W}{W},7.0,,,Sorcery,0,1,0,"Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)
+Destroy all nontoken creatures.",['W'],['W'],['Convoke'],rare,15,1.75,,,cmd,1.75
+112,"Teneb, the Harvester",{3}{W}{B}{G},6.0,6.0,6.0,Legendary Creature — Dragon,1,0,0,"Flying
+Whenever Teneb, the Harvester deals combat damage to a player, you may pay {2}{B}. If you do, put target creature card from a graveyard onto the battlefield under your control.","['B', 'G', 'W']","['B', 'G', 'W']","['Flying', 'Do Crime']",rare,230,0.53,,,cmd,0.53
+113,Selesnya Guildmage,{G/W}{G/W},2.0,2.0,2.0,Creature — Elf Wizard,1,0,0,"{3}{G}: Create a 1/1 green Saproling creature token.
+{3}{W}: Creatures you control get +1/+1 until end of turn.","['G', 'W']","['G', 'W']",[],uncommon,224,0.03,,,cmd,0.03
+114,"Vish Kal, Blood Arbiter",{4}{W}{B}{B},7.0,5.0,5.0,Legendary Creature — Vampire,1,0,0,"Flying, lifelink
+Sacrifice a creature: Put X +1/+1 counters on Vish Kal, Blood Arbiter, where X is the sacrificed creature's power.
+Remove all +1/+1 counters from Vish Kal: Target creature gets -1/-1 until end of turn for each +1/+1 counter removed this way.","['B', 'W']","['B', 'W']","['Flying', 'Lifelink']",rare,234,1.2,,,cmd,1.2
+115,"Karador, Ghost Chieftain",{5}{W}{B}{G},8.0,3.0,4.0,Legendary Creature — Centaur Spirit,1,0,0,"This spell costs {1} less to cast for each creature card in your graveyard.
+Once during each of your turns, you may cast a creature spell from your graveyard.","['B', 'G', 'W']","['B', 'G', 'W']",[],mythic,207,0.41,,,cmd,0.41
+116,Swat,{1}{B}{B},3.0,,,Instant,0,1,0,"Destroy target creature with power 2 or less.
+Cycling {2} ({2}, Discard this card: Draw a card.)",['B'],['B'],"['Cycling', 'Do Crime']",common,174,0.14,0.77,,ons,
+117,Cabal Slaver,{2}{B},3.0,2,1,Creature — Human Cleric,1,0,0,"Whenever a Goblin deals combat damage to a player, that player discards a card.",['B'],['B'],[],uncommon,131,0.21,1.91,,ons,
+118,Boneknitter,{1}{B},2.0,1,1,Creature — Zombie Cleric,1,0,0,"{1}{B}: Regenerate target Zombie.
+Morph {2}{B} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",['B'],['B'],"['Morph', 'Do Crime']",uncommon,128,0.25,0.88,,ons,
+119,Trickery Charm,{U},1.0,,,Instant,0,1,0,"Choose one —
+• Target creature gains flying until end of turn.
+• Target creature becomes the creature type of your choice until end of turn.
+• Look at the top four cards of your library, then put them back in any order.",['U'],['U'],[],common,119,0.3,9.02,,ons,
+120,Imagecrafter,{U},1.0,1,1,Creature — Human Wizard,1,0,0,{T}: Choose a creature type other than Wall. Target creature becomes that type until end of turn.,['U'],['U'],[],common,87,0.1,4.55,,ons,
+121,Mistform Stalker,{1}{U},2.0,1,1,Creature — Illusion,1,0,0,"{1}: Mistform Stalker becomes the creature type of your choice until end of turn.
+{2}{U}{U}: Mistform Stalker gets +2/+2 and gains flying until end of turn.",['U'],['U'],[],uncommon,98,0.09,0.29,,ons,
+122,Smother,{1}{B},2.0,,,Instant,0,1,0,Destroy target creature with mana value 3 or less. It can't be regenerated.,['B'],['B'],['Do Crime'],uncommon,170,0.3,4.07,,ons,
+123,Misery Charm,{B},1.0,,,Instant,0,1,0,"Choose one —
+• Destroy target Cleric.
+• Return target Cleric card from your graveyard to your hand.
+• Target player loses 2 life.",['B'],['B'],[],common,158,0.14,1.3,,ons,
+124,Swat,{1}{B}{B},3.0,,,Instant,0,1,0,"Destroy target creature with power 2 or less.
+Cycling {2} ({2}, Discard this card: Draw a card.)",['B'],['B'],"['Cycling', 'Do Crime']",common,174,0.14,0.77,,ons,
+125,Mistform Dreamer,{2}{U},3.0,2,1,Creature — Illusion,1,0,0,"Flying
+{1}: Mistform Dreamer becomes the creature type of your choice until end of turn.",['U'],['U'],['Flying'],common,93,0.05,0.42,,ons,
+126,Mistform Wall,{2}{U},3.0,1,4,Creature — Illusion Wall,1,0,0,"Mistform Wall has defender as long as it's a Wall.
+{1}: Mistform Wall becomes the creature type of your choice until end of turn.",['U'],['U'],[],common,99,0.1,0.48,,ons,
+127,Imagecrafter,{U},1.0,1,1,Creature — Human Wizard,1,0,0,{T}: Choose a creature type other than Wall. Target creature becomes that type until end of turn.,['U'],['U'],[],common,87,0.1,4.55,,ons,
+128,Imagecrafter,{U},1.0,1,1,Creature — Human Wizard,1,0,0,{T}: Choose a creature type other than Wall. Target creature becomes that type until end of turn.,['U'],['U'],[],common,87,0.1,4.55,,ons,
+129,Frightshroud Courier,{2}{B},3.0,2,1,Creature — Zombie,1,0,0,"You may choose not to untap Frightshroud Courier during your untap step.
+{2}{B}, {T}: Target Zombie creature gets +2/+2 and has fear for as long as Frightshroud Courier remains tapped. (It can't be blocked except by artifact creatures and/or black creatures.)",['B'],['B'],[],uncommon,149,0.13,0.65,,ons,
+130,Fallen Cleric,{4}{B},5.0,4,2,Creature — Zombie Cleric,1,0,0,"Protection from Clerics
+Morph {4}{B} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",['B'],['B'],"['Morph', 'Protection']",common,145,0.05,0.25,,ons,
+131,Mistform Wall,{2}{U},3.0,1,4,Creature — Illusion Wall,1,0,0,"Mistform Wall has defender as long as it's a Wall.
+{1}: Mistform Wall becomes the creature type of your choice until end of turn.",['U'],['U'],[],common,99,0.1,0.48,,ons,
+132,Barren Moor,,0.0,,,Land,0,0,1,"Barren Moor enters the battlefield tapped.
+{T}: Add {B}.
+Cycling {B} ({B}, Discard this card: Draw a card.)",['N'],['B'],['Cycling'],common,312,0.29,11.47,,ons,
+133,Information Dealer,{1}{U},2.0,1,1,Creature — Human Wizard,1,0,0,"{T}: Look at the top X cards of your library, where X is the number of Wizards on the battlefield, then put them back in any order.",['U'],['U'],[],common,88,0.13,3.22,,ons,
+134,Ghosthelm Courier,{2}{U},3.0,2,1,Creature — Human Wizard,1,0,0,"You may choose not to untap Ghosthelm Courier during your untap step.
+{2}{U}, {T}: Target Wizard creature gets +2/+2 and has shroud for as long as Ghosthelm Courier remains tapped. (It can't be the target of spells or abilities.)",['U'],['U'],[],uncommon,85,0.12,0.52,,ons,
+135,Boneknitter,{1}{B},2.0,1,1,Creature — Zombie Cleric,1,0,0,"{1}{B}: Regenerate target Zombie.
+Morph {2}{B} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",['B'],['B'],"['Morph', 'Do Crime']",uncommon,128,0.25,0.88,,ons,
+136,Mistform Mutant,{4}{U}{U},6.0,3,4,Creature — Illusion Mutant,1,0,0,{1}{U}: Choose a creature type other than Wall. Target creature becomes that type until end of turn.,['U'],['U'],[],uncommon,95,0.17,0.95,,ons,
+137,Mistform Wall,{2}{U},3.0,1,4,Creature — Illusion Wall,1,0,0,"Mistform Wall has defender as long as it's a Wall.
+{1}: Mistform Wall becomes the creature type of your choice until end of turn.",['U'],['U'],[],common,99,0.1,0.48,,ons,
+138,Imagecrafter,{U},1.0,1,1,Creature — Human Wizard,1,0,0,{T}: Choose a creature type other than Wall. Target creature becomes that type until end of turn.,['U'],['U'],[],common,87,0.1,4.55,,ons,
+139,Crown of Suspicion,{1}{B},2.0,,,Enchantment — Aura,0,1,0,"Enchant creature
+Enchanted creature gets +2/-1.
+Sacrifice Crown of Suspicion: Enchanted creature and other creatures that share a creature type with it get +2/-1 until end of turn.",['B'],['B'],['Enchant'],common,134,0.09,0.25,,ons,
+140,Mage's Guile,{1}{U},2.0,,,Instant,0,1,0,"Target creature gains shroud until end of turn. (It can't be the target of spells or abilities.)
+Cycling {U} ({U}, Discard this card: Draw a card.)",['U'],['U'],['Cycling'],common,91,0.13,5.07,,ons,
+141,Mistform Stalker,{1}{U},2.0,1,1,Creature — Illusion,1,0,0,"{1}: Mistform Stalker becomes the creature type of your choice until end of turn.
+{2}{U}{U}: Mistform Stalker gets +2/+2 and gains flying until end of turn.",['U'],['U'],[],uncommon,98,0.09,0.29,,ons,
+142,Cabal Slaver,{2}{B},3.0,2,1,Creature — Human Cleric,1,0,0,"Whenever a Goblin deals combat damage to a player, that player discards a card.",['B'],['B'],[],uncommon,131,0.21,1.91,,ons,
+143,Mistform Shrieker,{3}{U}{U},5.0,3,3,Creature — Illusion,1,0,0,"Flying
+{1}: Mistform Shrieker becomes the creature type of your choice until end of turn.
+Morph {3}{U}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",['U'],['U'],"['Flying', 'Morph']",uncommon,96,0.09,0.66,,ons,
+144,Mistform Dreamer,{2}{U},3.0,2,1,Creature — Illusion,1,0,0,"Flying
+{1}: Mistform Dreamer becomes the creature type of your choice until end of turn.",['U'],['U'],['Flying'],common,93,0.05,0.42,,ons,
+145,Mistform Wall,{2}{U},3.0,1,4,Creature — Illusion Wall,1,0,0,"Mistform Wall has defender as long as it's a Wall.
+{1}: Mistform Wall becomes the creature type of your choice until end of turn.",['U'],['U'],[],common,99,0.1,0.48,,ons,
+146,Mistform Dreamer,{2}{U},3.0,2,1,Creature — Illusion,1,0,0,"Flying
+{1}: Mistform Dreamer becomes the creature type of your choice until end of turn.",['U'],['U'],['Flying'],common,93,0.05,0.42,,ons,
+147,Mistform Shrieker,{3}{U}{U},5.0,3,3,Creature — Illusion,1,0,0,"Flying
+{1}: Mistform Shrieker becomes the creature type of your choice until end of turn.
+Morph {3}{U}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",['U'],['U'],"['Flying', 'Morph']",uncommon,96,0.09,0.66,,ons,
+148,Peer Pressure,{3}{U},4.0,,,Sorcery,0,1,0,"Choose a creature type. If you control more creatures of that type than each other player, you gain control of all creatures of that type. (This effect lasts indefinitely.)",['U'],['U'],[],rare,101,1.0,18.97,,ons,
+149,Swat,{1}{B}{B},3.0,,,Instant,0,1,0,"Destroy target creature with power 2 or less.
+Cycling {2} ({2}, Discard this card: Draw a card.)",['B'],['B'],"['Cycling', 'Do Crime']",common,174,0.14,0.77,,ons,
+150,Ixidor's Will,{2}{U},3.0,,,Instant,0,1,0,Counter target spell unless its controller pays {2} for each Wizard on the battlefield.,['U'],['U'],['Do Crime'],common,90,0.16,0.3,,ons,
+151,Feeding Frenzy,{2}{B},3.0,,,Instant,0,1,0,"Target creature gets -X/-X until end of turn, where X is the number of Zombies on the battlefield.",['B'],['B'],[],uncommon,147,0.17,1.05,,ons,
+152,Endemic Plague,{3}{B},4.0,,,Sorcery,0,1,0,"As an additional cost to cast this spell, sacrifice a creature.
+Destroy all creatures that share a creature type with the sacrificed creature. They can't be regenerated.",['B'],['B'],[],rare,142,0.21,1.07,,ons,
+153,Lonely Sandbar,,0.0,,,Land,0,0,1,"Lonely Sandbar enters the battlefield tapped.
+{T}: Add {U}.
+Cycling {U} ({U}, Discard this card: Draw a card.)",['N'],['U'],['Cycling'],common,320,0.29,13.43,,ons,
+154,Lonely Sandbar,,0.0,,,Land,0,0,1,"Lonely Sandbar enters the battlefield tapped.
+{T}: Add {U}.
+Cycling {U} ({U}, Discard this card: Draw a card.)",['N'],['U'],['Cycling'],common,320,0.29,13.43,,ons,
+155,Barren Moor,,0.0,,,Land,0,0,1,"Barren Moor enters the battlefield tapped.
+{T}: Add {B}.
+Cycling {B} ({B}, Discard this card: Draw a card.)",['N'],['B'],['Cycling'],common,312,0.29,11.47,,ons,
+156,Airborne Aid,{3}{U},4.0,,,Sorcery,0,1,0,Draw a card for each Bird on the battlefield.,['U'],['U'],[],common,62,0.18,1.99,,ons,
+157,Mage's Guile,{1}{U},2.0,,,Instant,0,1,0,"Target creature gains shroud until end of turn. (It can't be the target of spells or abilities.)
+Cycling {U} ({U}, Discard this card: Draw a card.)",['U'],['U'],['Cycling'],common,91,0.13,5.07,,ons,
+158,Akroma's Blessing,{2}{W},3.0,,,Instant,0,1,0,"Choose a color. Creatures you control gain protection from the chosen color until end of turn.
+Cycling {W} ({W}, Discard this card: Draw a card.)",['W'],['W'],['Cycling'],uncommon,1,0.33,5.18,,ons,
+159,Unified Strike,{W},1.0,,,Instant,0,1,0,Exile target attacking creature if its power is less than or equal to the number of Soldiers on the battlefield.,['W'],['W'],['Do Crime'],common,58,0.14,0.77,,ons,
+160,Essence Fracture,{3}{U}{U},5.0,,,Sorcery,0,1,0,"Return two target creatures to their owners' hands.
+Cycling {2}{U} ({2}{U}, Discard this card: Draw a card.)",['U'],['U'],"['Cycling', 'Do Crime']",uncommon,82,0.06,0.22,,ons,
+161,Daru Cavalier,{3}{W},4.0,2,2,Creature — Human Soldier,1,0,0,"First strike
+When Daru Cavalier enters the battlefield, you may search your library for a card named Daru Cavalier, reveal it, put it into your hand, then shuffle.",['W'],['W'],['First strike'],common,18,0.35,0.36,,ons,
+162,Daru Cavalier,{3}{W},4.0,2,2,Creature — Human Soldier,1,0,0,"First strike
+When Daru Cavalier enters the battlefield, you may search your library for a card named Daru Cavalier, reveal it, put it into your hand, then shuffle.",['W'],['W'],['First strike'],common,18,0.35,0.36,,ons,
+163,Inspirit,{2}{W},3.0,,,Instant,0,1,0,Untap target creature. It gets +2/+4 until end of turn.,['W'],['W'],['Do Crime'],uncommon,41,0.13,0.23,,ons,
+164,Gustcloak Harrier,{1}{W}{W},3.0,2,2,Creature — Bird Soldier,1,0,0,"Flying
+Whenever Gustcloak Harrier becomes blocked, you may untap it and remove it from combat.",['W'],['W'],['Flying'],common,34,0.15,0.42,,ons,
+165,Dispersing Orb,{3}{U}{U},5.0,,,Enchantment,0,1,0,"{3}{U}, Sacrifice a permanent: Return target permanent to its owner's hand.",['U'],['U'],['Do Crime'],uncommon,80,0.18,1.77,,ons,
+166,Piety Charm,{W},1.0,,,Instant,0,1,0,"Choose one —
+• Destroy target Aura attached to a creature.
+• Target Soldier creature gets +2/+2 until end of turn.
+• Creatures you control gain vigilance until end of turn.",['W'],['W'],['Do Crime'],common,49,0.12,0.47,,ons,
+167,Seaside Haven,,0.0,,,Land,0,0,1,"{T}: Add {C}.
+{W}{U}, {T}, Sacrifice a Bird: Draw a card.",['N'],"['U', 'W']",[],uncommon,323,0.26,6.44,,ons,
+168,Ironfist Crusher,{4}{W},5.0,2,4,Creature — Human Soldier,1,0,0,"Ironfist Crusher can block any number of creatures.
+Morph {3}{W} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",['W'],['W'],['Morph'],uncommon,42,0.18,0.35,,ons,
+169,Screaming Seahawk,{4}{U},5.0,2,2,Creature — Bird,1,0,0,"Flying
+When Screaming Seahawk enters the battlefield, you may search your library for a card named Screaming Seahawk, reveal it, put it into your hand, then shuffle.",['U'],['U'],['Flying'],common,112,0.07,0.31,,ons,
+170,Meddle,{1}{U},2.0,,,Instant,0,1,0,"If target spell has only one target and that target is a creature, change that spell's target to another creature.",['U'],['U'],['Do Crime'],uncommon,92,0.09,0.57,,ons,
+171,Gustcloak Skirmisher,{3}{W},4.0,2,3,Creature — Bird Soldier,1,0,0,"Flying
+Whenever Gustcloak Skirmisher becomes blocked, you may untap it and remove it from combat.",['W'],['W'],['Flying'],uncommon,38,0.14,0.39,,ons,
+172,Ascending Aven,{2}{U}{U},4.0,3,2,Creature — Bird Soldier,1,0,0,"Flying
+Ascending Aven can block only creatures with flying.
+Morph {2}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",['U'],['U'],"['Flying', 'Morph']",common,68,0.09,0.33,,ons,
+173,Dive Bomber,{3}{W},4.0,2,2,Creature — Bird Soldier,1,0,0,"Flying
+{T}, Sacrifice Dive Bomber: It deals 2 damage to target attacking or blocking creature.",['W'],['W'],"['Flying', 'Do Crime']",common,26,0.07,0.32,,ons,
+174,Gustcloak Runner,{W},1.0,1,1,Creature — Human Soldier,1,0,0,"Whenever Gustcloak Runner becomes blocked, you may untap it and remove it from combat.",['W'],['W'],[],common,35,0.19,0.25,,ons,
+175,Piety Charm,{W},1.0,,,Instant,0,1,0,"Choose one —
+• Destroy target Aura attached to a creature.
+• Target Soldier creature gets +2/+2 until end of turn.
+• Creatures you control gain vigilance until end of turn.",['W'],['W'],['Do Crime'],common,49,0.12,0.47,,ons,
+176,Pearlspear Courier,{2}{W},3.0,2,1,Creature — Human Soldier,1,0,0,"You may choose not to untap Pearlspear Courier during your untap step.
+{2}{W}, {T}: Target Soldier creature gets +2/+2 and has vigilance for as long as Pearlspear Courier remains tapped.",['W'],['W'],[],uncommon,48,0.06,0.33,,ons,
+177,Inspirit,{2}{W},3.0,,,Instant,0,1,0,Untap target creature. It gets +2/+4 until end of turn.,['W'],['W'],['Do Crime'],uncommon,41,0.13,0.23,,ons,
+178,Sunfire Balm,{2}{W},3.0,,,Instant,0,1,0,"Prevent the next 4 damage that would be dealt to any target this turn.
+Cycling {1}{W} ({1}{W}, Discard this card: Draw a card.)
+When you cycle Sunfire Balm, you may prevent the next 1 damage that would be dealt to any target this turn.",['W'],['W'],"['Cycling', 'Do Crime']",uncommon,56,0.13,0.39,,ons,
+179,Defensive Maneuvers,{3}{W},4.0,,,Instant,0,1,0,Creatures of the creature type of your choice get +0/+4 until end of turn.,['W'],['W'],[],common,23,0.06,0.28,,ons,
+180,Unified Strike,{W},1.0,,,Instant,0,1,0,Exile target attacking creature if its power is less than or equal to the number of Soldiers on the battlefield.,['W'],['W'],['Do Crime'],common,58,0.14,0.77,,ons,
+181,Ascending Aven,{2}{U}{U},4.0,3,2,Creature — Bird Soldier,1,0,0,"Flying
+Ascending Aven can block only creatures with flying.
+Morph {2}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",['U'],['U'],"['Flying', 'Morph']",common,68,0.09,0.33,,ons,
+182,Ironfist Crusher,{4}{W},5.0,2,4,Creature — Human Soldier,1,0,0,"Ironfist Crusher can block any number of creatures.
+Morph {3}{W} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",['W'],['W'],['Morph'],uncommon,42,0.18,0.35,,ons,
+183,Dive Bomber,{3}{W},4.0,2,2,Creature — Bird Soldier,1,0,0,"Flying
+{T}, Sacrifice Dive Bomber: It deals 2 damage to target attacking or blocking creature.",['W'],['W'],"['Flying', 'Do Crime']",common,26,0.07,0.32,,ons,
+184,Sandskin,{2}{W},3.0,,,Enchantment — Aura,0,1,0,"Enchant creature
+Prevent all combat damage that would be dealt to and dealt by enchanted creature.",['W'],['W'],['Enchant'],common,52,0.05,0.47,,ons,
+185,Sandskin,{2}{W},3.0,,,Enchantment — Aura,0,1,0,"Enchant creature
+Prevent all combat damage that would be dealt to and dealt by enchanted creature.",['W'],['W'],['Enchant'],common,52,0.05,0.47,,ons,
+186,Gustcloak Sentinel,{2}{W}{W},4.0,3,3,Creature — Human Soldier,1,0,0,"Whenever Gustcloak Sentinel becomes blocked, you may untap it and remove it from combat.",['W'],['W'],[],uncommon,37,0.14,0.39,,ons,
+187,Mage's Guile,{1}{U},2.0,,,Instant,0,1,0,"Target creature gains shroud until end of turn. (It can't be the target of spells or abilities.)
+Cycling {U} ({U}, Discard this card: Draw a card.)",['U'],['U'],['Cycling'],common,91,0.13,5.07,,ons,
+188,Screaming Seahawk,{4}{U},5.0,2,2,Creature — Bird,1,0,0,"Flying
+When Screaming Seahawk enters the battlefield, you may search your library for a card named Screaming Seahawk, reveal it, put it into your hand, then shuffle.",['U'],['U'],['Flying'],common,112,0.07,0.31,,ons,
+189,Airborne Aid,{3}{U},4.0,,,Sorcery,0,1,0,Draw a card for each Bird on the battlefield.,['U'],['U'],[],common,62,0.18,1.99,,ons,
+190,Oblation,{2}{W},3.0,,,Instant,0,1,0,"The owner of target nonland permanent shuffles it into their library, then draws two cards.",['W'],['W'],['Do Crime'],rare,46,0.83,19.68,,ons,
+191,Gustcloak Savior,{4}{W},5.0,3,4,Creature — Bird Soldier,1,0,0,"Flying
+Whenever a creature you control becomes blocked, you may untap that creature and remove it from combat.",['W'],['W'],['Flying'],rare,36,0.4,4.36,,ons,
+192,Gustcloak Runner,{W},1.0,1,1,Creature — Human Soldier,1,0,0,"Whenever Gustcloak Runner becomes blocked, you may untap it and remove it from combat.",['W'],['W'],[],common,35,0.19,0.25,,ons,
+193,Daunting Defender,{4}{W},5.0,3,3,Creature — Human Cleric,1,0,0,"If a source would deal damage to a Cleric creature you control, prevent 1 of that damage.",['W'],['W'],[],common,21,0.04,0.33,,ons,
+194,Gangrenous Goliath,{3}{B}{B},5.0,4,4,Creature — Zombie Giant,1,0,0,Tap three untapped Clerics you control: Return Gangrenous Goliath from your graveyard to your hand.,['B'],['B'],[],rare,150,0.18,0.8,,ons,
+195,Daru Healer,{2}{W},3.0,1,2,Creature — Human Cleric,1,0,0,"{T}: Prevent the next 1 damage that would be dealt to any target this turn.
+Morph {W} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",['W'],['W'],"['Morph', 'Do Crime']",common,19,0.04,0.3,,ons,
+196,Aven Soulgazer,{3}{W}{W},5.0,3,3,Creature — Bird Cleric,1,0,0,"Flying
+{2}{W}: Look at target face-down creature.",['W'],['W'],"['Flying', 'Do Crime']",uncommon,8,0.1,0.47,,ons,
+197,Disciple of Grace,{1}{W},2.0,1,2,Creature — Human Cleric,1,0,0,"Protection from black
+Cycling {2} ({2}, Discard this card: Draw a card.)",['W'],['W'],"['Protection', 'Cycling']",common,25,0.06,0.39,,ons,
+198,Daru Healer,{2}{W},3.0,1,2,Creature — Human Cleric,1,0,0,"{T}: Prevent the next 1 damage that would be dealt to any target this turn.
+Morph {W} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",['W'],['W'],"['Morph', 'Do Crime']",common,19,0.04,0.3,,ons,
+199,Cabal Archon,{2}{B},3.0,2,2,Creature — Human Cleric,1,0,0,"{B}, Sacrifice a Cleric: Target player loses 2 life and you gain 2 life.",['B'],['B'],[],uncommon,129,0.22,13.79,,ons,
+200,Akroma's Blessing,{2}{W},3.0,,,Instant,0,1,0,"Choose a color. Creatures you control gain protection from the chosen color until end of turn.
+Cycling {W} ({W}, Discard this card: Draw a card.)",['W'],['W'],['Cycling'],uncommon,1,0.33,5.18,,ons,
+201,Doubtless One,{3}{W},4.0,*,*,Creature — Cleric Avatar,1,0,0,"Doubtless One's power and toughness are each equal to the number of Clerics on the battlefield.
+Whenever Doubtless One deals damage, you gain that much life.",['W'],['W'],[],uncommon,27,0.23,3.19,,ons,
+202,Disciple of Malice,{1}{B},2.0,1,2,Creature — Human Cleric,1,0,0,"Protection from white
+Cycling {2} ({2}, Discard this card: Draw a card.)",['B'],['B'],"['Protection', 'Cycling']",common,139,0.09,0.49,,ons,
+203,Disciple of Malice,{1}{B},2.0,1,2,Creature — Human Cleric,1,0,0,"Protection from white
+Cycling {2} ({2}, Discard this card: Draw a card.)",['B'],['B'],"['Protection', 'Cycling']",common,139,0.09,0.49,,ons,
+204,Disciple of Grace,{1}{W},2.0,1,2,Creature — Human Cleric,1,0,0,"Protection from black
+Cycling {2} ({2}, Discard this card: Draw a card.)",['W'],['W'],"['Protection', 'Cycling']",common,25,0.06,0.39,,ons,
+205,Cabal Archon,{2}{B},3.0,2,2,Creature — Human Cleric,1,0,0,"{B}, Sacrifice a Cleric: Target player loses 2 life and you gain 2 life.",['B'],['B'],[],uncommon,129,0.22,13.79,,ons,
+206,Daru Healer,{2}{W},3.0,1,2,Creature — Human Cleric,1,0,0,"{T}: Prevent the next 1 damage that would be dealt to any target this turn.
+Morph {W} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",['W'],['W'],"['Morph', 'Do Crime']",common,19,0.04,0.3,,ons,
+207,Foothill Guide,{W},1.0,1,1,Creature — Human Cleric,1,0,0,"Protection from Goblins
+Morph {W} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",['W'],['W'],"['Morph', 'Protection']",common,29,0.1,0.24,,ons,
+208,Cabal Executioner,{2}{B}{B},4.0,2,2,Creature — Human Cleric,1,0,0,"Whenever Cabal Executioner deals combat damage to a player, that player sacrifices a creature.
+Morph {3}{B}{B} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",['B'],['B'],['Morph'],uncommon,130,0.2,2.12,,ons,
+209,Sigil of the New Dawn,{3}{W},4.0,,,Enchantment,0,1,0,"Whenever a creature is put into your graveyard from the battlefield, you may pay {1}{W}. If you do, return that card to your hand.",['W'],['W'],[],rare,55,0.29,1.49,,ons,
+210,Death Pulse,{2}{B}{B},4.0,,,Instant,0,1,0,"Target creature gets -4/-4 until end of turn.
+Cycling {1}{B}{B} ({1}{B}{B}, Discard this card: Draw a card.)
+When you cycle Death Pulse, you may have target creature get -1/-1 until end of turn.",['B'],['B'],"['Cycling', 'Do Crime']",uncommon,137,0.18,0.61,,ons,
+211,Pacifism,{1}{W},2.0,,,Enchantment — Aura,0,1,0,"Enchant creature
+Enchanted creature can't attack or block.",['W'],['W'],['Enchant'],common,47,0.19,4.91,,ons,
+212,Swat,{1}{B}{B},3.0,,,Instant,0,1,0,"Destroy target creature with power 2 or less.
+Cycling {2} ({2}, Discard this card: Draw a card.)",['B'],['B'],"['Cycling', 'Do Crime']",common,174,0.14,0.77,,ons,
+213,Battlefield Medic,{1}{W},2.0,1,1,Creature — Human Cleric,1,0,0,"{T}: Prevent the next X damage that would be dealt to target creature this turn, where X is the number of Clerics on the battlefield.",['W'],['W'],['Do Crime'],common,9,0.12,0.36,,ons,
+214,Foothill Guide,{W},1.0,1,1,Creature — Human Cleric,1,0,0,"Protection from Goblins
+Morph {W} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",['W'],['W'],"['Morph', 'Protection']",common,29,0.1,0.24,,ons,
+215,Doubtless One,{3}{W},4.0,*,*,Creature — Cleric Avatar,1,0,0,"Doubtless One's power and toughness are each equal to the number of Clerics on the battlefield.
+Whenever Doubtless One deals damage, you gain that much life.",['W'],['W'],[],uncommon,27,0.23,3.19,,ons,
+216,Battlefield Medic,{1}{W},2.0,1,1,Creature — Human Cleric,1,0,0,"{T}: Prevent the next X damage that would be dealt to target creature this turn, where X is the number of Clerics on the battlefield.",['W'],['W'],['Do Crime'],common,9,0.12,0.36,,ons,
+217,Pacifism,{1}{W},2.0,,,Enchantment — Aura,0,1,0,"Enchant creature
+Enchanted creature can't attack or block.",['W'],['W'],['Enchant'],common,47,0.19,4.91,,ons,
+218,Starlit Sanctum,,0.0,,,Land,0,0,1,"{T}: Add {C}.
+{W}, {T}, Sacrifice a Cleric creature: You gain life equal to the sacrificed creature's toughness.
+{B}, {T}, Sacrifice a Cleric creature: Target player loses life equal to the sacrificed creature's power.",['N'],"['B', 'W']",[],uncommon,325,0.3,10.54,,ons,
+219,Secluded Steppe,,0.0,,,Land,0,0,1,"Secluded Steppe enters the battlefield tapped.
+{T}: Add {W}.
+Cycling {W} ({W}, Discard this card: Draw a card.)",['N'],['W'],['Cycling'],common,324,0.18,8.62,,ons,
+220,Smother,{1}{B},2.0,,,Instant,0,1,0,Destroy target creature with mana value 3 or less. It can't be regenerated.,['B'],['B'],['Do Crime'],uncommon,170,0.3,4.07,,ons,
+221,Swat,{1}{B}{B},3.0,,,Instant,0,1,0,"Destroy target creature with power 2 or less.
+Cycling {2} ({2}, Discard this card: Draw a card.)",['B'],['B'],"['Cycling', 'Do Crime']",common,174,0.14,0.77,,ons,
+222,Profane Prayers,{2}{B}{B},4.0,,,Sorcery,0,1,0,"Profane Prayers deals X damage to any target and you gain X life, where X is the number of Clerics on the battlefield.",['B'],['B'],['Do Crime'],common,162,0.18,0.96,,ons,
+223,Profane Prayers,{2}{B}{B},4.0,,,Sorcery,0,1,0,"Profane Prayers deals X damage to any target and you gain X life, where X is the number of Clerics on the battlefield.",['B'],['B'],['Do Crime'],common,162,0.18,0.96,,ons,
+224,Smother,{1}{B},2.0,,,Instant,0,1,0,Destroy target creature with mana value 3 or less. It can't be regenerated.,['B'],['B'],['Do Crime'],uncommon,170,0.3,4.07,,ons,
+225,Secluded Steppe,,0.0,,,Land,0,0,1,"Secluded Steppe enters the battlefield tapped.
+{T}: Add {W}.
+Cycling {W} ({W}, Discard this card: Draw a card.)",['N'],['W'],['Cycling'],common,324,0.18,8.62,,ons,
+226,Secluded Steppe,,0.0,,,Land,0,0,1,"Secluded Steppe enters the battlefield tapped.
+{T}: Add {W}.
+Cycling {W} ({W}, Discard this card: Draw a card.)",['N'],['W'],['Cycling'],common,324,0.18,8.62,,ons,
+227,Barren Moor,,0.0,,,Land,0,0,1,"Barren Moor enters the battlefield tapped.
+{T}: Add {B}.
+Cycling {B} ({B}, Discard this card: Draw a card.)",['N'],['B'],['Cycling'],common,312,0.29,11.47,,ons,
+228,Barren Moor,,0.0,,,Land,0,0,1,"Barren Moor enters the battlefield tapped.
+{T}: Add {B}.
+Cycling {B} ({B}, Discard this card: Draw a card.)",['N'],['B'],['Cycling'],common,312,0.29,11.47,,ons,
+229,Barren Moor,,0.0,,,Land,0,0,1,"Barren Moor enters the battlefield tapped.
+{T}: Add {B}.
+Cycling {B} ({B}, Discard this card: Draw a card.)",['N'],['B'],['Cycling'],common,312,0.29,11.47,,ons,
+230,Astral Slide,{2}{W},3.0,,,Enchantment,0,1,0,"Whenever a player cycles a card, you may exile target creature. If you do, return that card to the battlefield under its owner's control at the beginning of the next end step.",['W'],['W'],['Do Crime'],uncommon,4,0.33,8.67,,ons,
+231,Foothill Guide,{W},1.0,1,1,Creature — Human Cleric,1,0,0,"Protection from Goblins
+Morph {W} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",['W'],['W'],"['Morph', 'Protection']",common,29,0.1,0.24,,ons,
+232,Secluded Steppe,,0.0,,,Land,0,0,1,"Secluded Steppe enters the battlefield tapped.
+{T}: Add {W}.
+Cycling {W} ({W}, Discard this card: Draw a card.)",['N'],['W'],['Cycling'],common,324,0.18,8.62,,ons,
+233,Barren Moor,,0.0,,,Land,0,0,1,"Barren Moor enters the battlefield tapped.
+{T}: Add {B}.
+Cycling {B} ({B}, Discard this card: Draw a card.)",['N'],['B'],['Cycling'],common,312,0.29,11.47,,ons,
+234,Headhunter,{1}{B},2.0,1,1,Creature — Human Cleric,1,0,0,"Whenever Headhunter deals combat damage to a player, that player discards a card.
+Morph {B} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",['B'],['B'],['Morph'],uncommon,156,0.14,1.17,,ons,
+235,Disciple of Malice,{1}{B},2.0,1,2,Creature — Human Cleric,1,0,0,"Protection from white
+Cycling {2} ({2}, Discard this card: Draw a card.)",['B'],['B'],"['Protection', 'Cycling']",common,139,0.09,0.49,,ons,
+236,Disciple of Malice,{1}{B},2.0,1,2,Creature — Human Cleric,1,0,0,"Protection from white
+Cycling {2} ({2}, Discard this card: Draw a card.)",['B'],['B'],"['Protection', 'Cycling']",common,139,0.09,0.49,,ons,
+237,Tree of Tales,,0.0,,,Artifact Land,0,0,1,{T}: Add {G}.,['N'],['G'],[],common,285,1.18,11.34,,mir,
+238,Vault of Whispers,,0.0,,,Artifact Land,0,0,1,{T}: Add {B}.,['N'],['B'],[],common,286,2.28,23.69,,mir,
+239,Blinkmoth Well,,0.0,,,Land,0,0,1,"{T}: Add {C}.
+{2}, {T}: Tap target noncreature artifact.",['N'],[],['Do Crime'],uncommon,279,0.22,4.32,,mir,
+240,Neurok Familiar,{1}{U},2.0,1.0,1.0,Creature — Bird,1,0,0,"Flying
+When Neurok Familiar enters the battlefield, reveal the top card of your library. If it's an artifact card, put it into your hand. Otherwise, put it into your graveyard.",['U'],['U'],['Flying'],common,43,0.14,0.27,,mir,
+241,Lumengrid Warden,{1}{U},2.0,1.0,3.0,Creature — Human Wizard,1,0,0,,['U'],['U'],[],common,41,0.22,0.25,,mir,
+242,Leonin Sun Standard,{2},2.0,,,Artifact,0,1,0,{1}{W}: Creatures you control get +1/+1 until end of turn.,['N'],['W'],[],rare,194,0.41,1.62,,mir,
+243,Leaden Myr,{2},2.0,1.0,1.0,Artifact Creature — Myr,1,0,0,{T}: Add {B}.,['N'],['B'],[],common,191,0.33,15.28,,mir,
+244,Leaden Myr,{2},2.0,1.0,1.0,Artifact Creature — Myr,1,0,0,{T}: Add {B}.,['N'],['B'],[],common,191,0.33,15.28,,mir,
+245,Nim Replica,{3},3.0,3.0,1.0,Artifact Creature — Zombie,1,0,0,"{2}{B}, Sacrifice Nim Replica: Target creature gets -1/-1 until end of turn.",['N'],['B'],[],common,220,0.05,0.28,,mir,
+246,Gold Myr,{2},2.0,1.0,1.0,Artifact Creature — Myr,1,0,0,{T}: Add {W}.,['N'],['W'],[],common,180,0.31,13.8,,mir,
+247,Dream's Grip,{U},1.0,,,Instant,0,1,0,"Choose one —
+• Tap target permanent.
+• Untap target permanent.
+Entwine {1} (Choose both if you pay the entwine cost.)",['U'],['U'],"['Entwine', 'Do Crime']",common,34,0.41,5.03,,mir,
+248,Omega Myr,{2},2.0,1.0,2.0,Artifact Creature — Myr,1,0,0,,['N'],[],[],common,223,0.18,0.99,,mir,
+249,Goblin War Wagon,{4},4.0,3.0,3.0,Artifact Creature — Juggernaut,1,0,0,"Goblin War Wagon doesn't untap during your untap step.
+At the beginning of your upkeep, you may pay {2}. If you do, untap Goblin War Wagon.",['N'],[],[],common,179,0.09,0.26,,mir,
+250,Clockwork Vorrac,{5},5.0,0.0,0.0,Artifact Creature — Boar Beast,1,0,0,"Trample
+Clockwork Vorrac enters the battlefield with four +1/+1 counters on it.
+Whenever Clockwork Vorrac attacks or blocks, remove a +1/+1 counter from it at end of combat.
+{T}: Put a +1/+1 counter on Clockwork Vorrac.",['N'],[],['Trample'],uncommon,156,0.14,0.44,,mir,
+251,Slith Bloodletter,{B}{B},2.0,1.0,1.0,Creature — Slith,1,0,0,"Whenever Slith Bloodletter deals combat damage to a player, put a +1/+1 counter on it.
+{1}{B}: Regenerate Slith Bloodletter.",['B'],['B'],[],uncommon,77,0.17,0.49,,mir,
+252,Thoughtcast,{4}{U},5.0,,,Sorcery,0,1,0,"Affinity for artifacts (This spell costs {1} less to cast for each artifact you control.)
+Draw two cards.",['U'],['U'],['Affinity'],common,54,0.96,20.95,,mir,
+253,Fangren Hunter,{3}{G}{G},5.0,4.0,4.0,Creature — Beast,1,0,0,Trample,['G'],['G'],['Trample'],common,119,0.03,0.26,,mir,
+254,Wanderguard Sentry,{4}{U},5.0,3.0,3.0,Creature — Drone,1,0,0,"When Wanderguard Sentry enters the battlefield, look at target opponent's hand.",['U'],['U'],['Do Crime'],common,56,0.04,0.26,,mir,
+255,Fists of the Anvil,{1}{R},2.0,,,Instant,0,1,0,Target creature gets +4/+0 until end of turn.,['R'],['R'],[],common,91,0.17,0.99,,mir,
+256,Synod Sanctum,{1},1.0,,,Artifact,0,1,0,"{2}, {T}: Exile target permanent you control.
+{2}, Sacrifice Synod Sanctum: Return all cards exiled with Synod Sanctum to the battlefield under your control.",['N'],[],['Do Crime'],uncommon,252,0.28,0.59,,mir,
+257,Copper Myr,{2},2.0,1.0,1.0,Artifact Creature — Myr,1,0,0,{T}: Add {G}.,['N'],['G'],[],common,158,0.27,9.79,,mir,
+258,Terror,{1}{B},2.0,,,Instant,0,1,0,"Destroy target nonartifact, nonblack creature. It can't be regenerated.",['B'],['B'],['Do Crime'],common,79,0.11,0.35,,mir,
+259,Loxodon Warhammer,{3},3.0,,,Artifact — Equipment,0,1,0,"Equipped creature gets +3/+0 and has trample and lifelink.
+Equip {3}",['N'],[],['Equip'],uncommon,201,0.42,8.97,,mir,
+260,Bonesplitter,{1},1.0,,,Artifact — Equipment,0,1,0,"Equipped creature gets +2/+0.
+Equip {1}",['N'],[],['Equip'],common,146,0.18,13.14,,mir,
+261,Welding Jar,{0},0.0,,,Artifact,0,1,0,Sacrifice Welding Jar: Regenerate target artifact.,['N'],[],['Do Crime'],common,274,0.89,13.32,,mir,
+262,Rule of Law,{2}{W},3.0,,,Enchantment,0,1,0,Each player can't cast more than one spell each turn.,['W'],['W'],[],rare,19,1.62,19.38,,mir,
+263,Titanium Golem,{5},5.0,3.0,3.0,Artifact Creature — Golem,1,0,0,{1}{W}: Titanium Golem gains first strike until end of turn.,['N'],['W'],[],common,263,0.11,0.26,,mir,
+264,Heartwood Shard,{3},3.0,,,Artifact,0,1,0,"{3}, {T} or {G}, {T}: Target creature gains trample until end of turn.",['N'],['G'],[],uncommon,184,0.13,0.49,,mir,
+265,Arrest,{2}{W},3.0,,,Enchantment — Aura,0,1,0,"Enchant creature
+Enchanted creature can't attack or block, and its activated abilities can't be activated.",['W'],['W'],['Enchant'],common,2,0.08,0.33,,mir,
+266,Relic Bane,{1}{B}{B},3.0,,,Enchantment — Aura,0,1,0,"Enchant artifact
+Enchanted artifact has ""At the beginning of your upkeep, you lose 2 life.""",['B'],['B'],['Enchant'],uncommon,76,0.14,0.34,,mir,
+267,Vault of Whispers,,0.0,,,Artifact Land,0,0,1,{T}: Add {B}.,['N'],['B'],[],common,286,2.28,23.69,,mir,
+268,Leaden Myr,{2},2.0,1.0,1.0,Artifact Creature — Myr,1,0,0,{T}: Add {B}.,['N'],['B'],[],common,191,0.33,15.28,,mir,
+269,Wrench Mind,{B}{B},2.0,,,Sorcery,0,1,0,Target player discards two cards unless they discard an artifact card.,['B'],['B'],[],common,84,0.24,3.16,,mir,
+270,Cobalt Golem,{4},4.0,2.0,3.0,Artifact Creature — Golem,1,0,0,{1}{U}: Cobalt Golem gains flying until end of turn.,['N'],['U'],[],common,157,0.17,0.26,,mir,
+271,Barter in Blood,{2}{B}{B},4.0,,,Sorcery,0,1,0,Each player sacrifices two creatures.,['B'],['B'],[],uncommon,57,0.2,0.95,,mir,
+272,Relic Bane,{1}{B}{B},3.0,,,Enchantment — Aura,0,1,0,"Enchant artifact
+Enchanted artifact has ""At the beginning of your upkeep, you lose 2 life.""",['B'],['B'],['Enchant'],uncommon,76,0.14,0.34,,mir,
+273,Vulshok Berserker,{3}{R},4.0,3.0,2.0,Creature — Human Berserker,1,0,0,Haste (This creature can attack and {T} as soon as it comes under your control.),['R'],['R'],['Haste'],common,111,0.1,0.26,,mir,
+274,Wrench Mind,{B}{B},2.0,,,Sorcery,0,1,0,Target player discards two cards unless they discard an artifact card.,['B'],['B'],[],common,84,0.24,3.16,,mir,
+275,Wrench Mind,{B}{B},2.0,,,Sorcery,0,1,0,Target player discards two cards unless they discard an artifact card.,['B'],['B'],[],common,84,0.24,3.16,,mir,
+276,Fists of the Anvil,{1}{R},2.0,,,Instant,0,1,0,Target creature gets +4/+0 until end of turn.,['R'],['R'],[],common,91,0.17,0.99,,mir,
+277,Terror,{1}{B},2.0,,,Instant,0,1,0,"Destroy target nonartifact, nonblack creature. It can't be regenerated.",['B'],['B'],['Do Crime'],common,79,0.11,0.35,,mir,
+278,Terror,{1}{B},2.0,,,Instant,0,1,0,"Destroy target nonartifact, nonblack creature. It can't be regenerated.",['B'],['B'],['Do Crime'],common,79,0.11,0.35,,mir,
+279,Seething Song,{2}{R},3.0,,,Instant,0,1,0,Add {R}{R}{R}{R}{R}.,['R'],['R'],[],common,104,3.55,27.42,,mir,
+280,Skeleton Shard,{3},3.0,,,Artifact,0,1,0,"{3}, {T} or {B}, {T}: Return target artifact creature card from your graveyard to your hand.",['N'],['B'],[],uncommon,242,0.29,10.28,,mir,
+281,Extraplanar Lens,{3},3.0,,,Artifact,0,1,0,"Imprint — When Extraplanar Lens enters the battlefield, you may exile target land you control.
+Whenever a land with the same name as the exiled card is tapped for mana, its controller adds one mana of any type that land produced.",['N'],[],"['Imprint', 'Do Crime']",rare,169,6.75,22.97,,mir,
+282,Dross Scorpion,{4},4.0,3.0,1.0,Artifact Creature — Scorpion,1,0,0,"Whenever Dross Scorpion or another artifact creature dies, you may untap target artifact.",['N'],[],['Do Crime'],common,164,0.28,23.74,,mir,
+283,Malachite Golem,{6},6.0,5.0,3.0,Artifact Creature — Golem,1,0,0,{1}{G}: Malachite Golem gains trample until end of turn.,['N'],['G'],[],common,202,0.17,0.26,,mir,
+284,Leonin Scimitar,{1},1.0,,,Artifact — Equipment,0,1,0,"Equipped creature gets +1/+1.
+Equip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)",['N'],[],['Equip'],common,193,0.13,0.54,,mir,
+285,Vulshok Battlegear,{3},3.0,,,Artifact — Equipment,0,1,0,"Equipped creature gets +3/+3.
+Equip {3} ({3}: Attach to target creature you control. Equip only as a sorcery. This card enters the battlefield unattached and stays on the battlefield if the creature leaves.)",['N'],[],['Equip'],uncommon,272,0.11,0.38,,mir,
+286,Vault of Whispers,,0.0,,,Artifact Land,0,0,1,{T}: Add {B}.,['N'],['B'],[],common,286,2.28,23.69,,mir,
+287,Vault of Whispers,,0.0,,,Artifact Land,0,0,1,{T}: Add {B}.,['N'],['B'],[],common,286,2.28,23.69,,mir,
+288,Elder Cathar,{2}{W},3.0,2,2,Creature — Human Soldier,1,0,0,"When Elder Cathar dies, put a +1/+1 counter on target creature you control. If that creature is a Human, put two +1/+1 counters on it instead.",['W'],['W'],[],common,12,0.03,0.24,,,
+289,Village Cannibals,{2}{B},3.0,2,2,Creature — Human,1,0,0,"Whenever another Human creature dies, put a +1/+1 counter on Village Cannibals.",['B'],['B'],[],uncommon,125,0.11,0.5,,,
+290,Kessig Wolf,{2}{R},3.0,3,1,Creature — Wolf,1,0,0,{1}{R}: Kessig Wolf gains first strike until end of turn.,['R'],['R'],[],common,151,0.05,0.23,,,
+291,Crimson Muckwader,{1}{R},2.0,2,1,Creature — Lizard,1,0,0,"Crimson Muckwader gets +1/+1 as long as you control a Swamp.
+{2}{B}: Regenerate Crimson Muckwader. (The next time this creature would be destroyed this turn, it isn't. Instead tap it, remove all damage from it, and remove it from combat.)",['R'],"['B', 'R']",[],uncommon,127,0.04,0.32,,,

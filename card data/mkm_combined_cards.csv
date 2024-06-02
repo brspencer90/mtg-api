@@ -1,0 +1,247 @@
+Name,Mana Cost,CMC,Power,Toughness,Type,Creature,Non-Creature,Land,Text,Colours,Colour Identity,Keywords,Rarity,Collector No.,Price,Price STD,Price Foil,Price Etched
+Gearbane Orangutan,{2}{R},3.0,2,2,Creature — Ape,1,0,0,"Reach
+When Gearbane Orangutan enters the battlefield, choose one —
+• Destroy up to one target artifact.
+• Sacrifice an artifact. If you do, put two +1/+1 counters on Gearbane Orangutan.",['R'],['R'],"['Reach', 'Do Crime']",common,129,0.05,0.03,0.05,
+Rubblebelt Maverick,{G},1.0,1,1,Creature — Human Detective,1,0,0,"When Rubblebelt Maverick enters the battlefield, surveil 2. (Look at the top two cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)
+{G}, Exile Rubblebelt Maverick from your graveyard: Put a +1/+1 counter on target creature. Activate only as a sorcery.",['G'],['G'],['Surveil'],common,174,0.05,0.04,0.05,
+Ill-Timed Explosion,{2}{U}{R},4.0,,,Sorcery,0,1,0,"Draw two cards. Then you may discard two cards. When you do, Ill-Timed Explosion deals X damage to each creature, where X is the greatest mana value among cards discarded this way.","['R', 'U']","['R', 'U']",[],rare,207,0.28,0.29,0.28,
+"Voja, Jaws of the Conclave",{2}{R}{G}{W},5.0,5,5,Legendary Creature — Wolf,1,0,0,"Vigilance, trample, ward {3}
+Whenever Voja, Jaws of the Conclave attacks, put X +1/+1 counters on each creature you control, where X is the number of Elves you control. Draw a card for each Wolf you control.","['G', 'R', 'W']","['G', 'R', 'W']","['Vigilance', 'Trample', 'Ward']",mythic,432,7.49,,7.49,
+Cerebral Confiscation,{2}{B},3.0,,,Sorcery,0,1,0,"Choose one —
+• Target opponent discards two cards.
+• Target opponent reveals their hand. You choose a nonland card from it. That player discards that card.",['B'],['B'],[],common,81,0.03,0.02,0.03,
+Out Cold,{3}{U},4.0,,,Instant,0,1,0,"This spell can't be countered. (This includes by the ward ability.)
+Tap up to two target creatures and put a stun counter on each of them. Investigate. (If a permanent with a stun counter would become untapped, remove one from it instead.)",['U'],['U'],"['Investigate', 'Do Crime']",common,66,0.05,0.01,0.05,
+Case of the Filched Falcon,{U},1.0,,,Enchantment — Case,0,1,0,"When this Case enters the battlefield, investigate. (Create a Clue token. It's an artifact with ""{2}, Sacrifice this artifact: Draw a card."")
+To solve — You control three or more artifacts. (If unsolved, solve at the beginning of your end step.)
+Solved — {2}{U}, Sacrifice this Case: Put four +1/+1 counters on target noncreature artifact. It becomes a 0/0 Bird creature with flying in addition to its other types.",['U'],['U'],['Investigate'],uncommon,44,0.12,0.08,0.12,
+Cryptic Coat,{2}{U},3.0,,,Artifact — Equipment,0,1,0,"When Cryptic Coat enters the battlefield, cloak the top card of your library, then attach Cryptic Coat to it. (To cloak a card, put it onto the battlefield face down as a 2/2 creature with ward {2}. Turn it face up any time for its mana cost if it's a creature card.)
+Equipped creature gets +1/+0 and can't be blocked.
+{1}{U}: Return Cryptic Coat to its owner's hand.",['U'],['U'],['Cloak'],rare,50,1.62,1.17,1.62,
+Hedge Whisperer,{G},1.0,0,3,Creature — Elf Druid Detective,1,0,0,"You may choose not to untap Hedge Whisperer during your untap step.
+{3}{G}, {T}, Collect evidence 4: Target land you control becomes a 5/5 green Plant Boar creature with haste for as long as Hedge Whisperer remains tapped. It's still a land. Activate only as a sorcery. (To collect evidence 4, exile cards with total mana value 4 or greater from your graveyard.)",['G'],['G'],['Collect evidence'],uncommon,165,0.03,0.03,0.01,
+The Pride of Hull Clade,{10}{G},11.0,2,15,Legendary Creature — Crocodile Elk Turtle,1,0,0,"This spell costs {X} less to cast, where X is the total toughness of creatures you control.
+Defender
+{2}{U}{U}: Until end of turn, target creature you control gets +1/+0, gains ""Whenever this creature deals combat damage to a player, draw cards equal to its toughness,"" and can attack as though it didn't have defender.",['G'],"['G', 'U']",['Defender'],mythic,172,1.92,1.92,2.07,
+Unauthorized Exit,{1}{U},2.0,,,Instant,0,1,0,Return target nonland permanent to its owner's hand. Surveil 1. (Look at the top card of your library. You may put it into your graveyard.),['U'],['U'],"['Surveil', 'Do Crime']",common,298,0.04,0.04,0.05,
+Unauthorized Exit,{1}{U},2.0,,,Instant,0,1,0,Return target nonland permanent to its owner's hand. Surveil 1. (Look at the top card of your library. You may put it into your graveyard.),['U'],['U'],"['Surveil', 'Do Crime']",common,74,0.03,0.03,0.04,
+Agency Outfitter,{4}{U}{U},6.0,4,3,Creature — Sphinx Detective,1,0,0,"Flying
+When Agency Outfitter enters the battlefield, you may search your graveyard, hand and/or library for a card named Magnifying Glass and/or a card named Thinking Cap and put them onto the battlefield. If you search your library this way, shuffle.",['U'],['U'],['Flying'],uncommon,38,0.01,0.01,0.03,
+Eliminate the Impossible,{1}{U},2.0,,,Instant,0,1,0,"Investigate. Creatures your opponents control get -2/-0 until end of turn. If any of them are suspected, they're no longer suspected. (To investigate, create a Clue token. It's an artifact with ""{2}, Sacrifice this artifact: Draw a card."")",['U'],['U'],['Investigate'],uncommon,54,0.01,0.01,0.04,
+Hotshot Investigators,{5}{U},6.0,4,4,Creature — Vedalken Detective,1,0,0,"When Hotshot Investigators enters the battlefield, return up to one other target creature to its owner's hand. If you controlled it, investigate. (Create a Clue token. It's an artifact with ""{2}, Sacrifice this artifact: Draw a card."")",['U'],['U'],"['Investigate', 'Do Crime']",common,60,0.01,0.01,0.03,
+Deduce,{1}{U},2.0,,,Instant,0,1,0,"Draw a card. Investigate. (Create a Clue token. It's an artifact with ""{2}, Sacrifice this artifact: Draw a card."")",['U'],['U'],['Investigate'],common,52,0.11,0.11,0.10,
+Jaded Analyst,{1}{U},2.0,3,2,Creature — Human Detective,1,0,0,"Defender
+Whenever you draw your second card each turn, Jaded Analyst loses defender and gains vigilance until end of turn.",['U'],['U'],['Defender'],common,62,0.02,0.02,0.01,
+Exit Specialist,{1}{U},2.0,2,1,Creature — Human Detective,1,0,0,"Exit Specialist can't be blocked by creatures with power 3 or greater.
+Disguise {1}{U} (You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.)
+When Exit Specialist is turned face up, return another target creature to its owner's hand.",['U'],['U'],"['Disguise', 'Do Crime']",uncommon,55,0.05,0.05,0.04,
+Hotshot Investigators,{5}{U},6.0,4,4,Creature — Vedalken Detective,1,0,0,"When Hotshot Investigators enters the battlefield, return up to one other target creature to its owner's hand. If you controlled it, investigate. (Create a Clue token. It's an artifact with ""{2}, Sacrifice this artifact: Draw a card."")",['U'],['U'],"['Investigate', 'Do Crime']",common,60,0.01,0.01,0.03,
+Repeat Offender,{1}{B},2.0,2,1,Creature — Human Assassin,1,0,0,"{2}{B}: If Repeat Offender is suspected, put a +1/+1 counter on it. Otherwise, suspect it. (A suspected creature has menace and can't block.)",['B'],['B'],"['Suspect', 'Outlaw']",common,101,0.02,0.02,0.01,
+Case of the Gorgon's Kiss,{B},1.0,,,Enchantment — Case,0,1,0,"When this Case enters the battlefield, destroy up to one target creature that was dealt damage this turn.
+To solve — Three or more creature cards were put into graveyards from anywhere this turn. (If unsolved, solve at the beginning of your end step.)
+Solved — This Case is a 4/4 Gorgon creature with deathtouch and lifelink in addition to its other types.",['B'],['B'],['Do Crime'],uncommon,79,0.02,0.02,0.05,
+Festerleech,{B},1.0,1,1,Creature — Zombie Leech,1,0,0,"Whenever Festerleech deals combat damage to a player, you mill two cards.
+{1}{B}: Festerleech gets +2/+2 until end of turn. Activate only once each turn.",['B'],['B'],['Mill'],uncommon,85,0.02,0.02,0.02,
+Cerebral Confiscation,{2}{B},3.0,,,Sorcery,0,1,0,"Choose one —
+• Target opponent discards two cards.
+• Target opponent reveals their hand. You choose a nonland card from it. That player discards that card.",['B'],['B'],[],common,81,0.02,0.02,0.03,
+Snarling Gorehound,{B},1.0,1,1,Creature — Dog,1,0,0,"Menace
+Whenever another creature with power 2 or less enters the battlefield under your control, surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",['B'],['B'],"['Surveil', 'Menace']",common,105,0.08,0.08,0.10,
+Macabre Reconstruction,{3}{B},4.0,,,Sorcery,0,1,0,"This spell costs {2} less to cast if a creature card was put into your graveyard from anywhere this turn.
+Return up to two target creature cards from your graveyard to your hand.",['B'],['B'],[],common,93,0.02,0.02,0.01,
+Festerleech,{B},1.0,1,1,Creature — Zombie Leech,1,0,0,"Whenever Festerleech deals combat damage to a player, you mill two cards.
+{1}{B}: Festerleech gets +2/+2 until end of turn. Activate only once each turn.",['B'],['B'],['Mill'],uncommon,85,0.02,0.02,0.02,
+Repeat Offender,{1}{B},2.0,2,1,Creature — Human Assassin,1,0,0,"{2}{B}: If Repeat Offender is suspected, put a +1/+1 counter on it. Otherwise, suspect it. (A suspected creature has menace and can't block.)",['B'],['B'],"['Suspect', 'Outlaw']",common,101,0.02,0.02,0.01,
+Repeat Offender,{1}{B},2.0,2,1,Creature — Human Assassin,1,0,0,"{2}{B}: If Repeat Offender is suspected, put a +1/+1 counter on it. Otherwise, suspect it. (A suspected creature has menace and can't block.)",['B'],['B'],"['Suspect', 'Outlaw']",common,101,0.02,0.02,0.01,
+It Doesn't Add Up,{3}{B}{B},5.0,,,Instant,0,1,0,Return target creature card from your graveyard to the battlefield. Suspect it. (It has menace and can't block.),['B'],['B'],['Suspect'],uncommon,89,0.02,0.02,0.03,
+Offender at Large,{4}{R},5.0,5,4,Creature — Giant Rogue,1,0,0,"Disguise {4}{R} (You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.)
+When Offender at Large enters the battlefield or is turned face up, up to one target creature gets +2/+0 until end of turn.",['R'],['R'],"['Disguise', 'Outlaw', 'Do Crime']",common,138,0.01,0.01,0.01,
+Rubblebelt Braggart,{4}{R},5.0,5,5,Creature — Viashino Warrior,1,0,0,"Whenever Rubblebelt Braggart attacks, if it's not suspected, you may suspect it. (A suspected creature has menace and can't block.)",['R'],['R'],['Suspect'],common,143,0.02,0.02,0.03,
+Lumbering Laundry,{5},5.0,4,5,Artifact Creature — Golem,1,0,0,"{2}: Until end of turn, you may look at face-down creatures you don't control any time.
+Disguise {5} (You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.)",[],[],['Disguise'],uncommon,253,0.01,0.01,0.02,
+Magnetic Snuffler,{5},5.0,4,4,Artifact Creature — Construct,1,0,0,"When Magnetic Snuffler enters the battlefield, return target Equipment card from your graveyard to the battlefield attached to Magnetic Snuffler.
+Whenever you sacrifice an artifact, put a +1/+1 counter on Magnetic Snuffler.",[],[],[],uncommon,254,0.03,0.03,0.03,
+Deadly Complication,{1}{B}{R},3.0,,,Sorcery,0,1,0,"Choose one or both —
+• Destroy target creature.
+• Put a +1/+1 counter on target suspected creature you control. You may have it become no longer suspected.","['B', 'R']","['B', 'R']",['Do Crime'],uncommon,195,0.02,0.02,0.03,
+Rakish Scoundrel,{2}{B}{G},4.0,3,3,Creature — Elf Rogue,1,0,0,"Deathtouch
+When Rakish Scoundrel enters the battlefield or is turned face up, target creature gains indestructible until end of turn.
+Disguise {4}{B/G}{B/G} (You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.)","['B', 'G']","['B', 'G']","['Disguise', 'Deathtouch', 'Outlaw']",common,225,0.01,0.01,0.01,
+Faerie Snoop,{1}{U}{B},3.0,1,4,Creature — Faerie Detective,1,0,0,"Flying
+Disguise {1}{U/B}{U/B} (You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.)
+When Faerie Snoop is turned face up, look at the top two cards of your library. Put one into your hand and the other into your graveyard.","['B', 'U']","['B', 'U']","['Flying', 'Disguise']",common,203,0.03,0.03,0.01,
+"['Flotsam', 'Jetsam']",{1}{G/U} // {4}{U/B}{U/B},8.0,,,"['Instant', 'Sorcery']",0,1,0,"['Mill three cards. Investigate. (Create a Clue token. It\'s an artifact with ""{2}, Sacrifice this artifact: Draw a card."")', ""Each opponent mills three cards, then you may cast a spell from each opponent's graveyard without paying its mana cost. If a spell cast this way would be put into a graveyard, exile it instead.""]","['B', 'G', 'U']","['B', 'G', 'U']","['Investigate', 'Mill']",uncommon,247,0.05,0.05,0.12,
+Shady Informant,{3}{B}{R},5.0,4,2,Creature — Ogre Rogue,1,0,0,"When Shady Informant dies, it deals 2 damage to any target.
+Disguise {2}{B/R}{B/R} (You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.)","['B', 'R']","['B', 'R']","['Disguise', 'Outlaw', 'Do Crime']",common,231,0.01,0.01,0.01,
+Sanguine Savior,{1}{W}{B},3.0,2,1,Creature — Vampire Cleric,1,0,0,"Flying, lifelink
+Disguise {W/B}{W/B} (You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.)
+When Sanguine Savior is turned face up, another target creature you control gains lifelink until end of turn.","['B', 'W']","['B', 'W']","['Flying', 'Lifelink', 'Disguise']",common,230,0.03,0.03,0.03,
+Curious Cadaver,{2}{U}{B},4.0,3,1,Creature — Zombie Detective,1,0,0,"Flying
+When you sacrifice a Clue, return Curious Cadaver from your graveyard to your hand.","['B', 'U']","['B', 'U']",['Flying'],uncommon,194,0.01,0.01,0.03,
+Gadget Technician,{2}{U}{R},4.0,3,2,Creature — Goblin Artificer,1,0,0,"When Gadget Technician enters the battlefield or is turned face up, create a 1/1 colorless Thopter artifact creature token with flying.
+Disguise {U/R}{U/R} (You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.)","['R', 'U']","['R', 'U']",['Disguise'],common,204,0.01,0.01,0.01,
+Rakish Scoundrel,{2}{B}{G},4.0,3,3,Creature — Elf Rogue,1,0,0,"Deathtouch
+When Rakish Scoundrel enters the battlefield or is turned face up, target creature gains indestructible until end of turn.
+Disguise {4}{B/G}{B/G} (You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.)","['B', 'G']","['B', 'G']","['Disguise', 'Deathtouch', 'Outlaw']",common,225,0.01,0.01,0.01,
+Dog Walker,{R}{W},2.0,3,1,Creature — Human Citizen,1,0,0,"Vigilance
+Disguise {R/W}{R/W} (You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.)
+When Dog Walker is turned face up, create two tapped 1/1 white Dog creature tokens.","['R', 'W']","['R', 'W']","['Vigilance', 'Disguise']",common,197,0.01,0.01,0.05,
+Make Your Move,{2}{W},3.0,,,Instant,0,1,0,"Destroy target artifact, enchantment, or creature with power 4 or greater.",['W'],['W'],['Do Crime'],common,22,0.03,0.03,0.06,
+Rubblebelt Maverick,{G},1.0,1,1,Creature — Human Detective,1,0,0,"When Rubblebelt Maverick enters the battlefield, surveil 2. (Look at the top two cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)
+{G}, Exile Rubblebelt Maverick from your graveyard: Put a +1/+1 counter on target creature. Activate only as a sorcery.",['G'],['G'],['Surveil'],common,174,0.04,0.04,0.05,
+Make Your Move,{2}{W},3.0,,,Instant,0,1,0,"Destroy target artifact, enchantment, or creature with power 4 or greater.",['W'],['W'],['Do Crime'],common,22,0.03,0.03,0.06,
+Karlov Watchdog,{3}{W},4.0,3,2,Creature — Dog,1,0,0,"Vigilance
+Permanents your opponents control can't be turned face up during your turn.
+Whenever you attack with three or more creatures, creatures you control get +1/+1 until end of turn.",['W'],['W'],['Vigilance'],uncommon,20,0.02,0.02,0.04,
+Sanctuary Wall,{1}{W},2.0,0,4,Artifact Creature — Wall,1,0,0,"Defender
+{2}{W}, {T}: Tap target creature. You may put a stun counter on it. If you do, put a stun counter on Sanctuary Wall. (If a permanent with a stun counter would become untapped, remove one from it instead.)",['W'],['W'],"['Defender', 'Do Crime']",uncommon,32,0.02,0.02,0.02,
+Sanctuary Wall,{1}{W},2.0,0,4,Artifact Creature — Wall,1,0,0,"Defender
+{2}{W}, {T}: Tap target creature. You may put a stun counter on it. If you do, put a stun counter on Sanctuary Wall. (If a permanent with a stun counter would become untapped, remove one from it instead.)",['W'],['W'],"['Defender', 'Do Crime']",uncommon,32,0.02,0.02,0.02,
+Auspicious Arrival,{1}{W},2.0,,,Instant,0,1,0,"Target creature gets +2/+2 until end of turn. Investigate. (Create a Clue token. It's an artifact with ""{2}, Sacrifice this artifact: Draw a card."")",['W'],['W'],['Investigate'],common,5,0.02,0.02,0.01,
+Auspicious Arrival,{1}{W},2.0,,,Instant,0,1,0,"Target creature gets +2/+2 until end of turn. Investigate. (Create a Clue token. It's an artifact with ""{2}, Sacrifice this artifact: Draw a card."")",['W'],['W'],['Investigate'],common,288,0.03,0.03,0.01,
+Marketwatch Phantom,{1}{W},2.0,2,2,Creature — Spirit Detective,1,0,0,"Whenever another creature with power 2 or less enters the battlefield under your control, Marketwatch Phantom gains flying until end of turn.",['W'],['W'],[],common,24,0.02,0.02,0.01,
+Tenth District Hero,{1}{W},2.0,2,3,Creature — Human,1,0,0,"{1}{W}, Collect evidence 2: Tenth District Hero becomes a Human Detective with base power and toughness 4/4 and gains vigilance.
+{2}{W}, Collect evidence 4: If Tenth District Hero is a Detective, it becomes a legendary creature named Mileva, the Stalwart, it has base power and toughness 5/5, and it gains ""Other creatures you control have indestructible.""",['W'],['W'],['Collect evidence'],rare,34,0.07,0.07,0.13,
+Unyielding Gatekeeper,{1}{W},2.0,3,2,Creature — Elephant Cleric,1,0,0,"Disguise {1}{W} (You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.)
+When Unyielding Gatekeeper is turned face up, exile another target nonland permanent. If you controlled it, return it to the battlefield tapped. Otherwise, its controller creates a 2/2 white and blue Detective creature token.",['W'],['W'],"['Disguise', 'Do Crime']",rare,35,0.10,0.10,0.09,
+Griffnaut Tracker,{3}{W},4.0,3,2,Creature — Human Detective,1,0,0,"Flying
+When Griffnaut Tracker enters the battlefield, exile up to two target cards from a single graveyard.",['W'],['W'],"['Flying', 'Do Crime']",common,17,0.01,0.01,0.02,
+Make Your Move,{2}{W},3.0,,,Instant,0,1,0,"Destroy target artifact, enchantment, or creature with power 4 or greater.",['W'],['W'],['Do Crime'],common,22,0.03,0.03,0.06,
+A Killer Among Us,{4}{G},5.0,,,Enchantment,0,1,0,"When A Killer Among Us enters the battlefield, create a 1/1 white Human creature token, a 1/1 blue Merfolk creature token, and a 1/1 red Goblin creature token. Then secretly choose Human, Merfolk, or Goblin.
+Sacrifice A Killer Among Us, Reveal the creature type you chose: If target attacking creature token is the chosen type, put three +1/+1 counters on it and it gains deathtouch until end of turn.",['G'],['G'],[],uncommon,167,0.01,0.01,0.07,
+Vengeful Creeper,{4}{G},5.0,5,5,Creature — Plant Elemental,1,0,0,"Disguise {5}{G} (You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.)
+When Vengeful Creeper is turned face up, destroy target artifact or enchantment an opponent controls.",['G'],['G'],"['Disguise', 'Do Crime']",common,182,0.03,0.03,0.03,
+Slime Against Humanity,{2}{G},3.0,,,Sorcery,0,1,0,"Create a 0/0 green Ooze creature token with trample. Put X +1/+1 counters on it, where X is two plus the total number of cards you own in exile and in your graveyard that are Oozes or are named Slime Against Humanity.
+A deck can have any number of cards named Slime Against Humanity.",['G'],['G'],[],common,177,2.39,2.39,2.59,
+Flourishing Bloom-Kin,{1}{G},2.0,0,0,Creature — Plant Elemental,1,0,0,"Flourishing Bloom-Kin gets +1/+1 for each Forest you control.
+Disguise {4}{G}
+When Flourishing Bloom-Kin is turned face up, search your library for up to two Forest cards and reveal them. Put one of them onto the battlefield tapped and the other into your hand, then shuffle.",['G'],['G'],['Disguise'],uncommon,160,0.10,0.10,0.11,
+Offender at Large,{4}{R},5.0,5,4,Creature — Giant Rogue,1,0,0,"Disguise {4}{R} (You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.)
+When Offender at Large enters the battlefield or is turned face up, up to one target creature gets +2/+0 until end of turn.",['R'],['R'],"['Disguise', 'Outlaw', 'Do Crime']",common,138,0.01,0.01,0.01,
+Tunnel Tipster,{1}{G},2.0,1,1,Creature — Mole Scout,1,0,0,"At the beginning of your end step, if a face-down creature entered the battlefield under your control this turn, put a +1/+1 counter on Tunnel Tipster.
+{T}: Add {G}.",['G'],['G'],[],common,180,0.01,0.01,0.01,
+Incinerator of the Guilty,{4}{R}{R},6.0,6,6,Creature — Dragon,1,0,0,"Flying, trample
+Whenever Incinerator of the Guilty deals combat damage to a player, you may collect evidence X. When you do, Incinerator of the Guilty deals X damage to each creature and planeswalker that player controls. (To collect evidence X, exile cards with total mana value X or greater from your graveyard.)",['R'],['R'],"['Flying', 'Trample']",mythic,132,0.73,0.73,0.97,
+Culvert Ambusher,{3}{G}{G},5.0,4,5,Creature — Wurm Horror,1,0,0,"When Culvert Ambusher enters the battlefield or is turned face up, target creature blocks this turn if able.
+Disguise {4}{G} (You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.)",['G'],['G'],"['Disguise', 'Do Crime']",uncommon,158,0.01,0.01,0.02,
+Greenbelt Radical,{3}{G},4.0,4,4,Creature — Centaur Citizen,1,0,0,"Disguise {5}{G}{G} (You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.)
+When Greenbelt Radical is turned face up, put a +1/+1 counter on each creature you control. Creatures you control gain trample until end of turn.",['G'],['G'],['Disguise'],uncommon,163,0.02,0.02,0.07,
+Tin Street Gossip,{2}{R}{G},4.0,4,4,Creature — Viashino Advisor,1,0,0,"Vigilance
+{T}: Add {R}{G}. Spend this mana only to cast face-down spells or to turn creatures face up.","['G', 'R']","['G', 'R']",['Vigilance'],uncommon,235,0.02,0.02,0.01,
+Dog Walker,{R}{W},2.0,3,1,Creature — Human Citizen,1,0,0,"Vigilance
+Disguise {R/W}{R/W} (You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.)
+When Dog Walker is turned face up, create two tapped 1/1 white Dog creature tokens.","['R', 'W']","['R', 'W']","['Vigilance', 'Disguise']",common,197,0.01,0.01,0.05,
+Convenient Target,{R},1.0,,,Enchantment — Aura,0,1,0,"Enchant creature
+When Convenient Target enters the battlefield, suspect enchanted creature. (It has menace and can't block.)
+Enchanted creature gets +1/+1.
+{2}{R}: Return Convenient Target from your graveyard to your hand.",['R'],['R'],['Enchant'],uncommon,119,0.04,0.04,0.06,
+Pick Your Poison,{G},1.0,,,Sorcery,0,1,0,"Choose one —
+• Each opponent sacrifices an artifact.
+• Each opponent sacrifices an enchantment.
+• Each opponent sacrifices a creature with flying.",['G'],['G'],[],common,170,2.14,2.14,3.14,
+Connecting the Dots,{1}{R},2.0,,,Enchantment,0,1,0,"Whenever a creature you control attacks, exile the top card of your library face down. (You can't look at it.)
+{1}{R}, Discard your hand, Sacrifice Connecting the Dots: Put all cards exiled with Connecting the Dots into their owners' hands.",['R'],['R'],[],rare,118,0.11,0.11,0.26,
+Tunnel Tipster,{1}{G},2.0,1,1,Creature — Mole Scout,1,0,0,"At the beginning of your end step, if a face-down creature entered the battlefield under your control this turn, put a +1/+1 counter on Tunnel Tipster.
+{T}: Add {G}.",['G'],['G'],[],common,180,0.01,0.01,0.01,
+Vengeful Creeper,{4}{G},5.0,5,5,Creature — Plant Elemental,1,0,0,"Disguise {5}{G} (You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.)
+When Vengeful Creeper is turned face up, destroy target artifact or enchantment an opponent controls.",['G'],['G'],"['Disguise', 'Do Crime']",common,182,0.03,0.03,0.03,
+"Aurelia, the Law Above",{3}{R}{W},5.0,4,4,Legendary Creature — Angel,1,0,0,"Flying, vigilance, haste
+Whenever a player attacks with three or more creatures, you draw a card.
+Whenever a player attacks with five or more creatures, Aurelia, the Law Above deals 3 damage to each of your opponents and you gain 3 life.","['R', 'W']","['R', 'W']","['Flying', 'Vigilance', 'Haste']",rare,188,1.25,1.25,1.40,
+Analyze the Pollen,{G},1.0,,,Sorcery,0,1,0,"As an additional cost to cast this spell, you may collect evidence 8. (Exile cards with total mana value 8 or greater from your graveyard.)
+Search your library for a basic land card. If evidence was collected, instead search your library for a creature or land card. Reveal that card, put it into your hand, then shuffle.",['G'],['G'],['Collect evidence'],rare,150,0.11,0.11,0.27,
+Dog Walker,{R}{W},2.0,3,1,Creature — Human Citizen,1,0,0,"Vigilance
+Disguise {R/W}{R/W} (You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.)
+When Dog Walker is turned face up, create two tapped 1/1 white Dog creature tokens.","['R', 'W']","['R', 'W']","['Vigilance', 'Disguise']",common,197,0.01,0.01,0.05,
+Thinking Cap,{1},1.0,,,Artifact — Equipment,0,1,0,"Equipped creature gets +1/+2.
+Equip Detective {1}
+Equip {3} ({3}: Attach to target creature you control. Equip only as a sorcery.)",[],[],['Equip'],common,257,0.01,0.01,0.02,
+Glint Weaver,{5}{G}{G},7.0,3,3,Creature — Spider,1,0,0,"Reach
+When Glint Weaver enters the battlefield, distribute three +1/+1 counters among one, two, or three target creatures, then you gain life equal to the greatest toughness among creatures you control.",['G'],['G'],['Reach'],uncommon,162,0.04,0.04,0.07,
+Offender at Large,{4}{R},5.0,5,4,Creature — Giant Rogue,1,0,0,"Disguise {4}{R} (You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.)
+When Offender at Large enters the battlefield or is turned face up, up to one target creature gets +2/+0 until end of turn.",['R'],['R'],"['Disguise', 'Outlaw', 'Do Crime']",common,138,0.01,0.01,0.01,
+Gearbane Orangutan,{2}{R},3.0,2,2,Creature — Ape,1,0,0,"Reach
+When Gearbane Orangutan enters the battlefield, choose one —
+• Destroy up to one target artifact.
+• Sacrifice an artifact. If you do, put two +1/+1 counters on Gearbane Orangutan.",['R'],['R'],"['Reach', 'Do Crime']",common,129,0.03,0.03,0.05,
+Tunnel Tipster,{1}{G},2.0,1,1,Creature — Mole Scout,1,0,0,"At the beginning of your end step, if a face-down creature entered the battlefield under your control this turn, put a +1/+1 counter on Tunnel Tipster.
+{T}: Add {G}.",['G'],['G'],[],common,180,0.01,0.01,0.01,
+Public Thoroughfare,,0.0,,,Land,0,0,1,"Public Thoroughfare enters the battlefield tapped.
+When Public Thoroughfare enters the battlefield, sacrifice it unless you tap an untapped artifact or land you control.
+{T}: Add one mana of any color.",[],[],[],common,265,0.03,0.03,0.06,
+Hedge Whisperer,{G},1.0,0,3,Creature — Elf Druid Detective,1,0,0,"You may choose not to untap Hedge Whisperer during your untap step.
+{3}{G}, {T}, Collect evidence 4: Target land you control becomes a 5/5 green Plant Boar creature with haste for as long as Hedge Whisperer remains tapped. It's still a land. Activate only as a sorcery. (To collect evidence 4, exile cards with total mana value 4 or greater from your graveyard.)",['G'],['G'],['Collect evidence'],uncommon,165,0.03,0.03,0.01,
+Out Cold,{3}{U},4.0,,,Instant,0,1,0,"This spell can't be countered. (This includes by the ward ability.)
+Tap up to two target creatures and put a stun counter on each of them. Investigate. (If a permanent with a stun counter would become untapped, remove one from it instead.)",['U'],['U'],"['Investigate', 'Do Crime']",common,66,0.01,0.01,0.05,
+Axebane Ferox,{2}{G}{G},4.0,4,4,Creature — Beast,1,0,0,"Deathtouch, haste
+Ward—Collect evidence 4. (Whenever this creature becomes the target of a spell or ability an opponent controls, counter it unless that player exiles cards with total mana value 4 or greater from their graveyard.)",['G'],['G'],"['Collect evidence', 'Haste', 'Ward', 'Deathtouch']",rare,153,0.11,0.11,0.20,
+Evidence Examiner,{G}{U},2.0,2,2,Creature — Merfolk Detective,1,0,0,"At the beginning of combat on your turn, you may collect evidence 4. (Exile cards with total mana value 4 or greater from your graveyard.)
+Whenever you collect evidence, investigate. (Create a Clue token. It's an artifact with ""{2}, Sacrifice this artifact: Draw a card."")","['G', 'U']","['G', 'U']","['Collect evidence', 'Investigate']",uncommon,201,0.03,0.02,0.03,
+Hedge Whisperer,{G},1.0,0,3,Creature — Elf Druid Detective,1,0,0,"You may choose not to untap Hedge Whisperer during your untap step.
+{3}{G}, {T}, Collect evidence 4: Target land you control becomes a 5/5 green Plant Boar creature with haste for as long as Hedge Whisperer remains tapped. It's still a land. Activate only as a sorcery. (To collect evidence 4, exile cards with total mana value 4 or greater from your graveyard.)",['G'],['G'],['Collect evidence'],uncommon,165,0.03,0.03,0.01,
+Loxodon Eavesdropper,{3}{G},4.0,3,3,Creature — Elephant Detective,1,0,0,"When Loxodon Eavesdropper enters the battlefield, investigate. (Create a Clue token. It's an artifact with ""{2}, Sacrifice this artifact: Draw a card."")
+Whenever you draw your second card each turn, Loxodon Eavesdropper gets +1/+1 and gains vigilance until end of turn.",['G'],['G'],['Investigate'],common,168,0.02,0.02,0.02,
+Tunnel Tipster,{1}{G},2.0,1,1,Creature — Mole Scout,1,0,0,"At the beginning of your end step, if a face-down creature entered the battlefield under your control this turn, put a +1/+1 counter on Tunnel Tipster.
+{T}: Add {G}.",['G'],['G'],[],common,180,0.01,0.01,0.01,
+Granite Witness,{2}{W}{U},4.0,3,2,Artifact Creature — Gargoyle Detective,1,0,0,"Flying, vigilance
+Disguise {W/U}{W/U} (You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.)
+When Granite Witness is turned face up, you may tap or untap target creature.","['U', 'W']","['U', 'W']","['Flying', 'Vigilance', 'Disguise', 'Do Crime']",common,206,0.02,0.02,0.01,
+Mistway Spy,{U},1.0,1,1,Creature — Merfolk Detective,1,0,0,"Flying
+Disguise {1}{U} (You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.)
+When Mistway Spy is turned face up, until end of turn, whenever a creature you control deals combat damage to a player, investigate.",['U'],['U'],"['Flying', 'Investigate', 'Disguise']",uncommon,65,0.02,0.02,0.03,
+Deduce,{1}{U},2.0,,,Instant,0,1,0,"Draw a card. Investigate. (Create a Clue token. It's an artifact with ""{2}, Sacrifice this artifact: Draw a card."")",['U'],['U'],['Investigate'],common,52,0.11,0.11,0.10,
+Tunnel Tipster,{1}{G},2.0,1,1,Creature — Mole Scout,1,0,0,"At the beginning of your end step, if a face-down creature entered the battlefield under your control this turn, put a +1/+1 counter on Tunnel Tipster.
+{T}: Add {G}.",['G'],['G'],[],common,180,0.01,0.01,0.01,
+Granite Witness,{2}{W}{U},4.0,3,2,Artifact Creature — Gargoyle Detective,1,0,0,"Flying, vigilance
+Disguise {W/U}{W/U} (You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.)
+When Granite Witness is turned face up, you may tap or untap target creature.","['U', 'W']","['U', 'W']","['Flying', 'Vigilance', 'Disguise', 'Do Crime']",common,206,0.02,0.02,0.01,
+Nervous Gardener,{1}{G},2.0,2,2,Creature — Dryad,1,0,0,"Disguise {G} (You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.)
+When Nervous Gardener is turned face up, search your library for a land card with a basic land type, reveal it, put it into your hand, then shuffle.",['G'],['G'],['Disguise'],common,169,0.01,0.01,0.04,
+Crowd-Control Warden,{3}{G}{W},5.0,4,4,Creature — Centaur Soldier,1,0,0,"As Crowd-Control Warden enters the battlefield or is turned face up, put X +1/+1 counters on it, where X is the number of other creatures you control.
+Disguise {3}{G/W}{G/W} (You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.)","['G', 'W']","['G', 'W']",['Disguise'],common,193,0.03,0.03,0.02,
+Projektor Inspector,{2}{U},3.0,3,2,Creature — Human Detective,1,0,0,"Whenever Projektor Inspector or another Detective enters the battlefield under your control and whenever a Detective you control is turned face up, you may draw a card. If you do, discard a card.",['U'],['U'],[],common,68,0.02,0.02,0.02,
+Jaded Analyst,{1}{U},2.0,3,2,Creature — Human Detective,1,0,0,"Defender
+Whenever you draw your second card each turn, Jaded Analyst loses defender and gains vigilance until end of turn.",['U'],['U'],['Defender'],common,62,0.02,0.02,0.01,
+Fanatical Strength,{1}{G},2.0,,,Instant,0,1,0,Target creature gets +3/+3 and gains trample until end of turn.,['G'],['G'],[],common,159,0.02,0.02,0.02,
+Dramatic Accusation,{2}{U},3.0,,,Enchantment — Aura,0,1,0,"Enchant creature
+When Dramatic Accusation enters the battlefield, tap enchanted creature.
+Enchanted creature doesn't untap during its controller's untap step.
+{U}{U}: Shuffle enchanted creature into its owner's library.",['U'],['U'],['Enchant'],common,294,0.03,0.03,0.02,
+Nervous Gardener,{1}{G},2.0,2,2,Creature — Dryad,1,0,0,"Disguise {G} (You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.)
+When Nervous Gardener is turned face up, search your library for a land card with a basic land type, reveal it, put it into your hand, then shuffle.",['G'],['G'],['Disguise'],common,169,0.01,0.01,0.04,
+"Izoni, Center of the Web",{4}{B}{G},6.0,5,4,Legendary Creature — Elf Detective,1,0,0,"Menace
+Whenever Izoni, Center of the Web enters the battlefield or attacks, you may collect evidence 4. If you do, create two 2/1 black and green Spider creature tokens with menace and reach.
+Sacrifice four tokens: Surveil 2, then draw two cards. You gain 2 life.","['B', 'G']","['B', 'G']","['Collect evidence', 'Surveil', 'Menace']",rare,209,0.11,0.11,0.20,
+Pick Your Poison,{G},1.0,,,Sorcery,0,1,0,"Choose one —
+• Each opponent sacrifices an artifact.
+• Each opponent sacrifices an enchantment.
+• Each opponent sacrifices a creature with flying.",['G'],['G'],[],common,170,2.14,2.14,3.14,
+Behind the Mask,{U},1.0,,,Instant,0,1,0,"As an additional cost to cast this spell, you may collect evidence 6. (Exile cards with total mana value 6 or greater from your graveyard.)
+Until end of turn, target artifact or creature becomes an artifact creature with base power and toughness 4/3. If evidence was collected, it has base power and toughness 1/1 until end of turn instead.",['U'],['U'],"['Collect evidence', 'Do Crime']",common,39,0.02,0.02,0.02,
+Sanitation Automaton,{2},2.0,2,1,Artifact Creature — Construct,1,0,0,"When Sanitation Automaton enters the battlefield, surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",[],[],['Surveil'],common,256,0.01,0.01,0.01,
+Private Eye,{1}{W}{U},3.0,3,3,Creature — Homunculus Detective,1,0,0,"Other Detectives you control get +1/+1.
+Whenever you draw your second card each turn, target Detective can't be blocked this turn.","['U', 'W']","['U', 'W']",['Do Crime'],uncommon,223,0.09,0.04,0.09,
+Novice Inspector,{W},1.0,1,2,Creature — Human Detective,1,0,0,"When Novice Inspector enters the battlefield, investigate. (Create a Clue token. It's an artifact with ""{2}, Sacrifice this artifact: Draw a card."")",['W'],['W'],['Investigate'],common,29,0.21,0.21,0.30,
+Lumbering Laundry,{5},5.0,4,5,Artifact Creature — Golem,1,0,0,"{2}: Until end of turn, you may look at face-down creatures you don't control any time.
+Disguise {5} (You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.)",[],[],['Disguise'],uncommon,253,0.01,0.01,0.02,
+Lumbering Laundry,{5},5.0,4,5,Artifact Creature — Golem,1,0,0,"{2}: Until end of turn, you may look at face-down creatures you don't control any time.
+Disguise {5} (You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.)",[],[],['Disguise'],uncommon,253,0.01,0.01,0.02,
+Riftburst Hellion,{5}{R}{G},7.0,6,7,Creature — Hellion,1,0,0,"Reach
+Disguise {4}{R/G}{R/G} (You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.)","['G', 'R']","['G', 'R']","['Reach', 'Disguise']",common,228,0.03,0.03,0.02,
+Riftburst Hellion,{5}{R}{G},7.0,6,7,Creature — Hellion,1,0,0,"Reach
+Disguise {4}{R/G}{R/G} (You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.)","['G', 'R']","['G', 'R']","['Reach', 'Disguise']",common,228,0.03,0.03,0.02,
+Bubble Smuggler,{1}{U},2.0,2,1,Creature — Octopus Fish,1,0,0,"Disguise {5}{U} (You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.)
+As Bubble Smuggler is turned face up, put four +1/+1 counters on it.",['U'],['U'],['Disguise'],common,41,0.02,0.02,0.03,
+Reenact the Crime,{1}{U}{U}{U},4.0,,,Instant,0,1,0,Exile target nonland card in a graveyard that was put there from anywhere this turn. Copy it. You may cast the copy without paying its mana cost.,['U'],['U'],['Do Crime'],rare,70,0.27,0.27,0.96,
+Gadget Technician,{2}{U}{R},4.0,3,2,Creature — Goblin Artificer,1,0,0,"When Gadget Technician enters the battlefield or is turned face up, create a 1/1 colorless Thopter artifact creature token with flying.
+Disguise {U/R}{U/R} (You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.)","['R', 'U']","['R', 'U']",['Disguise'],common,204,0.01,0.01,0.01,
+Gleaming Geardrake,{U}{R},2.0,1,1,Artifact Creature — Drake,1,0,0,"Flying
+When Gleaming Geardrake enters the battlefield, investigate. (Create a Clue token. It's an artifact with ""{2}, Sacrifice this artifact: Draw a card."")
+Whenever you sacrifice an artifact, put a +1/+1 counter on Gleaming Geardrake.","['R', 'U']","['R', 'U']","['Flying', 'Investigate']",uncommon,205,0.08,0.08,0.16,
+Museum Nightwatch,{3}{W},4.0,3,2,Creature — Centaur Soldier,1,0,0,"When Museum Nightwatch dies, create a 2/2 white and blue Detective creature token.
+Disguise {1}{W} (You may cast this card face down for {3} as a 2/2 creature with ward {2}. Turn it face up any time for its disguise cost.)",['W'],['W'],['Disguise'],common,25,0.01,0.01,0.01,
+Sanctuary Wall,{1}{W},2.0,0,4,Artifact Creature — Wall,1,0,0,"Defender
+{2}{W}, {T}: Tap target creature. You may put a stun counter on it. If you do, put a stun counter on Sanctuary Wall. (If a permanent with a stun counter would become untapped, remove one from it instead.)",['W'],['W'],"['Defender', 'Do Crime']",uncommon,32,0.02,0.02,0.02,
+Hotshot Investigators,{5}{U},6.0,4,4,Creature — Vedalken Detective,1,0,0,"When Hotshot Investigators enters the battlefield, return up to one other target creature to its owner's hand. If you controlled it, investigate. (Create a Clue token. It's an artifact with ""{2}, Sacrifice this artifact: Draw a card."")",['U'],['U'],"['Investigate', 'Do Crime']",common,60,0.01,0.01,0.03,
+Benthic Criminologists,{4}{U},5.0,4,5,Creature — Merfolk Wizard,1,0,0,"Whenever Benthic Criminologists enters the battlefield or attacks, you may sacrifice an artifact. If you do, draw a card.",['U'],['U'],[],common,40,0.02,0.02,0.01,

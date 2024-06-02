@@ -1,7 +1,7 @@
 import pandas as pd
 
 class Constants():
-    col = ['Name','Mana Cost','CMC','Power','Toughness','Type','Creature','Non-Creature','Land','Text','Colours','Colour Identity','Keywords','Rarity','Collector No.','Price STD','Price Foil','Price Etched']
+    col = ['Name','Mana Cost','CMC','Power','Toughness','Type','Creature','Non-Creature','Land','Text','Colours','Colour Identity','Keywords','Rarity','Collector No.','Price','Price STD','Price Foil','Price Etched']
 
     list_kw = ['Enchant', 'Collect evidence', 'Flying', 'Double strike', 'Haste', 'Mill', 'Hexproof from', 'Trample', 'Vigilance', 'Defender', 'Landcycling',
                 'Disguise', 'Basic landcycling', 'Ward', 'Investigate', 'Suspect', 'Cloak', 'Deathtouch', 'Indestructible', 'Cycling', 'Menace', 'Prowess',
