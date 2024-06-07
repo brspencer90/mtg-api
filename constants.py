@@ -19,7 +19,7 @@ class Constants():
     list_colour_abbr = ['B','W','R','G','U','N']
     list_colour = ['Black','White','Red','Green','Blue','Uncoloured']
 
-    list_rarity = ['uncommon', 'common', 'mythic', 'rare']
+    list_rarity = ['uncommon', 'common', 'rare', 'mythic']
 
     list_card_type = ['Creature','Non-Creature','Land']
 
