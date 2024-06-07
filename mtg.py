@@ -7,6 +7,9 @@ from sklearn.preprocessing import MultiLabelBinarizer
 
 from constants import Constants as c
 
+import warnings
+warnings.simplefilter(action='ignore')
+
 import itertools
 import plotly.graph_objects as go
 import numpy as np
@@ -70,21 +73,12 @@ def get_card_info(id,set_id,foil=False,etch=False):
             # clean text from parentheticals, keywords
             clean_text = [re.sub(r'\([^)]*\)', '', text) for text in oracle_text]
 
-            # otj specific : 
-            # add keyword for outlaw definition
-            if any([True for outlaw in ['Assassin','Mercenary','Warlock','Pirate','Rogue','Warlock'] if outlaw in type_line]):
-                keywords.append('Outlaw')
+            # add otj specific keywords
+            keywords = otj_keywords(keywords,type_line,clean_text,double_face=True)
 
-            for r in c.on_crime_regex_list:
-                clean_text = [re.sub(r,'',text) for text in clean_text]
+            # add mh3 keywords
+            keywords = mh3_keywords(keywords,type_line,clean_text,double_face=True)
 
-            # add keyword for cause_crime
-            if any([True for text in clean_text if 'target' in text]):
-                keywords.append('Do Crime')
-
-            # add keyword for on_crime
-            if any([[True for key in ['committed a crime','commit a crime'] if key in text] for text in clean_text]):
-                keywords.append('On Crime')
         else:
             name = card_json['name']
             type_line = card_json['type_line']
@@ -95,21 +89,11 @@ def get_card_info(id,set_id,foil=False,etch=False):
             # clean text from parentheticals, keywords
             clean_text = re.sub(r'\([^)]*\)', '', oracle_text)
 
-            # otj specific : 
-            # add keyword for outlaw definition
-            if any([True for outlaw in ['Assassin','Mercenary','Warlock','Pirate','Rogue','Warlock'] if outlaw in type_line]):
-                keywords.append('Outlaw')
+            # add otj specific keywords
+            keywords = otj_keywords(keywords,type_line,clean_text,double_face=False)
 
-            for r in c.on_crime_regex_list:
-                clean_text = re.sub(r,'',clean_text)
-
-            # add keyword for cause_crime
-            if 'target' in clean_text:
-                keywords.append('Do Crime')
-
-            # add keyword for on_crime
-            if any([True for x in ['committed a crime','commit a crime'] if x in clean_text]):
-                keywords.append('On Crime')
+            # add mh3 keywords
+            keywords = mh3_keywords(keywords,type_line,clean_text,double_face=False)
 
         # Enocde types
         type_creature = 0
@@ -130,7 +114,7 @@ def get_card_info(id,set_id,foil=False,etch=False):
             colours = card_json['colors']
 
         if len(colours) == 0: # ['B','W','R','G','U']:
-            card_json['colors'] = ['N']            
+            colours = ['N']            
 
         # Extract mana cost
         if 'mana_cost' in card_json.keys():
@@ -179,12 +163,11 @@ def encode_features(df):
 
     mlb = MultiLabelBinarizer()
     # One-hot encode creature type
-    df_creature = df[df['Creature'] == 1]
+    df_creature = df[df['Creature'] == 1].copy()
     df_creature['Creature_Type'] = [re.sub('Creature — ','',x).split() for x in df_creature['Type']]
     df = df.join(pd.DataFrame(mlb.fit_transform(df_creature.pop('Creature_Type')),
                             columns=['Creature_'+x for x in list(mlb.classes_)],
                             index=df_creature.index))
-
 
     # One-hot encode keywords
     df = df.join(pd.DataFrame(mlb.fit_transform(df.pop('Keywords')),
@@ -197,6 +180,8 @@ def encode_features(df):
                             columns=[c.dict_colour[x] for x in mlb.classes_],
                             index=df.index))
     df['Colour'] = df[c.list_colour].idxmax(1)
+
+    df = df.drop_duplicates(subset='Name')
 
     return df
 
@@ -221,6 +206,107 @@ def loop_cards(id_r,set_id):
         list_set.append(list_card)
 
     return list_set
+
+def otj_keywords(keywords,type_line,clean_text,double_face=False):
+    # otj specific : 
+    if double_face:
+        # add keyword for outlaw definition
+        if any([True for outlaw in ['Assassin','Mercenary','Warlock','Pirate','Rogue'] if outlaw in type_line]):
+            keywords.append('Outlaw')
+
+        for r in c.on_crime_regex_list:
+            clean_text = [re.sub(r,'',text) for text in clean_text]
+
+        # add keyword for cause_crime
+        if any([True for text in clean_text if 'target' in text]):
+            keywords.append('Do Crime')
+
+        # add keyword for on_crime
+        if any([[True for key in ['committed a crime','commit a crime'] if key in text] for text in clean_text]):
+            keywords.append('On Crime')
+    else:
+        # add keyword for outlaw definition
+        if any([True for outlaw in ['Assassin','Mercenary','Warlock','Pirate','Rogue'] if outlaw in type_line]):
+            keywords.append('Outlaw')
+
+        for r in c.on_crime_regex_list:
+            clean_text = re.sub(r,'',clean_text)
+
+        # add keyword for cause_crime
+        if 'target' in clean_text:
+            keywords.append('Do Crime')
+
+        # add keyword for on_crime
+        if any([True for x in ['committed a crime','commit a crime'] if x in clean_text]):
+            keywords.append('On Crime')
+
+    return keywords
+
+def mh3_keywords(keywords,type_line,clean_text,double_face=False):
+    if double_face:
+        # Energy Archetypes
+        if any([True for text in clean_text if '{E}' in text]):
+            keywords.append('Energy')
+
+        if any([True for text in clean_text if re.search(r'[Pp]ay.*{[Ee]}',text)]):
+            keywords.append('Use Energy')
+
+        if any([True for text in clean_text if re.search(r'[Gg]et.*{[Ee]}',text)]):
+            keywords.append('Get Energy')
+
+        # Eldrazi Archetypes
+        if any(True for text in clean_text if (('Eldrazi' in type_line) | ('Devoid' in keywords))):
+            keywords.append('Eldrazi')
+
+                # Modified Archetype
+        if (
+                (('Enchantment Creature','Enchantment - Aura') in type_line) \
+                | any([True for key in ['Bestow','Landfall','Outlast','Mentor','Adapt','Modular','Reinforce','Proliferate'] if key in keywords]) \
+                | any([bool(re.search(r'[\+\-]\d\/[\+\-]\d counter',text)) for text in clean_text]) \
+                | any([bool(re.search(r'[Mm]odified',text)) for text in clean_text]) \
+                | any([bool(re.search(r'(?<!energy)(?<!oil) counter',text)) for text in clean_text])
+            ):
+            keywords.append('Modified')
+
+        # Artifact Archetype
+        if (
+                (any([True for key in ['Artifact','Equipment'] if key in type_line])) \
+                | ('Affinity for artifacts' in clean_text)
+            ):
+            keywords.append('Artifacts')
+    else:
+        # Energy Archetypes
+        if '{E}' in clean_text:
+            keywords.append('Energy')
+
+        if re.search(r'[Pp]ay.*{[Ee]}',clean_text):
+            keywords.append('Use Energy')
+
+        if re.search(r'[Gg]et.*{[Ee]}',clean_text):
+            keywords.append('Get Energy')
+
+        # Eldrazi Archetypes
+        if (('Eldrazi' in type_line) | ('Devoid' in keywords)):
+            keywords.append('Eldrazi')
+
+        # Modified Archetype
+        if (
+                any(True for key in ['Enchantment Creature','Enchantment - Aura'] if key in type_line) \
+                | any([True for key in ['Bestow','Landfall','Outlast','Mentor','Adapt','Modular','Reinforce'] if key in keywords]) \
+                | bool(re.search(r'[\+\-]\d\/[\+\-]\d counter',clean_text)) \
+                | bool(re.search(r'[Mm]odified',clean_text)) \
+                | bool(re.search(r'(?<!energy)(?<!oil) counter',clean_text))
+            ):
+            keywords.append('Modified')
+
+        # Artifact Archetype
+        if (
+                (any([True for key in ['Artifact','Equipment'] if key in type_line])) \
+                | ('Affinity for artifacts' in clean_text)
+            ):
+            keywords.append('Artifacts')
+
+    return keywords
 
 def visualize_deck(df):
 
@@ -371,28 +457,63 @@ def get_scores(df,set_id):
     for idx in df['Score Combined'].dropna().index.to_list():
         df.loc[idx,'GPA Average'] = np.mean([c.dict_scores[x] for x in df.loc[idx,'Score Combined']])
 
-def get_word_frequency(df):
-    text = df['Text'].str.lower().replace(r'\n',' ',regex=True).str.cat(sep=' ')
-    text_no_paranth = re.sub(r'\([^)]*\)', '', text)
-    text_no_bracket = re.sub(r'\{[^}]*}', '', text_no_paranth)
-    words = nltk.tokenize.word_tokenize(text_no_bracket)
-    words_no_punc = [x for x in words if re.compile(r'\w+').match(x)]
+def get_word_frequency(set_list):
+    if isinstance(set_list,str):
+        set_list = [set_list]
 
-    word_dist = nltk.FreqDist(words_no_punc)
+    word_list = [] 
 
-    stopwords = nltk.corpus.stopwords.words('english')
-    words_except_stop_dist = nltk.FreqDist(w for w in words_no_punc if w not in stopwords) 
+    for set_id in set_list:
+        print(f'start {set_id}')
+        df = get_all_from_set(set_id)
+    
+        text = df['Text'].str.lower().replace(r'\n',' ',regex=True).str.cat(sep=' ')
+        text_no_paranth = re.sub(r'\([^)]*\)', '', text)
+        text_no_bracket = re.sub(r'\{[^}]*}', '', text_no_paranth)
+        words = nltk.tokenize.word_tokenize(text_no_bracket)
+        words_no_punc = [x for x in words if re.compile(r'\w+').match(x)]
 
-    rslt = pd.DataFrame(words_except_stop_dist.most_common(10),
-                        columns=['Word', 'Frequency']).set_index('Word')
+        stopwords = nltk.corpus.stopwords.words('english')
+        word_list_sub = [w for w in words_no_punc if w not in stopwords]
+
+        word_list.extend(word_list_sub)    
+
+    word_list_dist = nltk.FreqDist(word_list)
+
+    rslt = pd.DataFrame.from_dict(
+                        data=dict(word_list_dist),
+                        columns=['Count'],
+                        orient='index'
+                    )
+
+    return rslt.sort_values('Count',ascending=False)
 
 def get_list_of_sets():
     from datetime import datetime as dt 
     set_json = json.loads(req.get(f'https://api.scryfall.com/sets').text)
-    [x['parent_set_code'] for x in set_json['data'] if ((dt.strptime(x['released_at'],'%Y-%m-%d') < dt.now()) & (x['set_type'] == 'expansion'))]    
+    
+    return [x['scryfall_uri'].split('/sets/')[1] for x in set_json['data'] if ((dt.strptime(x['released_at'],'%Y-%m-%d') < dt.now()) & (x['set_type'] == 'expansion'))]
 
 # %%
 
+
+# Energy : 
+    # keywords : get / pay {E}
+    # use_energy
+    # pay_energy
+
+# Modified : 
+    # keywords : 
+        # adapt, enchantment creature, counter, bestow, counter[s]
+    # Enchantment Auras
+    # Enchantment Creatures
+    # Counters
+    # Adapt / Modified / 
+
+# Artifacts : 
+    # Living weapons
+    # Equipment
+    # Artifacts
 
 #Additional keywords : 
     #'Energy': 'Pay {E}'
