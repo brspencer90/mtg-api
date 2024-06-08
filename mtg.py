@@ -332,11 +332,22 @@ def visualize_deck(df):
     fig.show()
 
     # Explore rarity by colour
-    df_colourtype_gb = df.groupby('Rarity')[c.list_colour].sum().T
-    df_colourtype_gb_labels = df_colourtype_gb.index
+    list_x = c.list_colour
+    df_values = df.groupby('Rarity')[list_x].sum().T
 
     fig = go.Figure(
-        [go.Bar(name=x,x=df_colourtype_gb_labels,y=df_colourtype_gb[x]) for x in c.list_rarity]
+        [go.Bar(name=x,x=list_x,y=df_values[x]) for x in c.list_rarity]
+    )
+    fig.update_layout(height = 600, width = 800,barmode='stack')
+    fig.update(layout_title_text='Rarity by Colours')
+    fig.show()
+
+    # Explore rarity by card type
+    list_x = c.list_card_type
+    df_values = df.groupby('Rarity')[list_x].sum().T
+
+    fig = go.Figure(
+        [go.Bar(name=x,x=list_x,y=df_values[x]) for x in c.list_rarity]
     )
     fig.update_layout(height = 600, width = 800,barmode='stack')
     fig.update(layout_title_text='Rarity by Colours')
@@ -355,7 +366,6 @@ def visualize_deck(df):
 
     # # Explore Crime by Colours
     # df_do_crime_gb = df[df['Key_Do Crime'] == 1][c.list_colour].sum().T
-    # df_on_crime_gb = df[df['Key_On Crime'] == 1][c.list_colour].sum().T
     # df_crime_labels = c.list_colour 
 
     # fig = go.Figure(
@@ -387,25 +397,25 @@ def visualize_deck(df):
 
     # fig.show()
 
-    # Explore Archetypes by Count
-    list_arche = ['Key_Energy','Key_Modified','Key_Eldrazi','Key_Artifacts']
-    df_arche_labels = [label.split('Key_')[1] for label in ['Key_Energy','Key_Modified','Key_Eldrazi','Key_Artifacts']]
+    # # Explore Archetypes by Count
+    # list_arche = ['Key_Energy','Key_Modified','Key_Eldrazi','Key_Artifacts']
+    # df_arche_labels = [label.split('Key_')[1] for label in ['Key_Energy','Key_Modified','Key_Eldrazi','Key_Artifacts']]
     
-    mask = (df['Key_Energy'] == 1) | (df['Key_Modified'] == 1) | (df['Key_Eldrazi'] == 1) | (df['Key_Artifacts'] == 1) 
-    df_plot_gb = df[mask][list_arche].sum().T
-    df_plot_creatures = df[mask & (df['Card Type'] == 'Creature')][list_arche].sum().T
-    df_plot_noncreatures = df[mask & (df['Card Type'] == 'Non-Creature')][list_arche].sum().T
+    # mask = (df['Key_Energy'] == 1) | (df['Key_Modified'] == 1) | (df['Key_Eldrazi'] == 1) | (df['Key_Artifacts'] == 1) 
+    # df_plot_gb = df[mask][list_arche].sum().T
+    # df_plot_creatures = df[mask & (df['Card Type'] == 'Creature')][list_arche].sum().T
+    # df_plot_noncreatures = df[mask & (df['Card Type'] == 'Non-Creature')][list_arche].sum().T
     
-    fig = go.Figure(
-        [
-            go.Bar(name='Creatures Archetype',x=df_arche_labels,y=df_plot_creatures),
-            go.Bar(name='Non-Creatures Archetype',x=df_arche_labels,y=df_plot_noncreatures),
-        ]
-    )
-    fig.update_layout(height = 600, width = 800,barmode='group')
-    fig.update(layout_title_text='Count of Archetype Cards')
+    # fig = go.Figure(
+    #     [
+    #         go.Bar(name='Creatures Archetype',x=df_arche_labels,y=df_plot_creatures),
+    #         go.Bar(name='Non-Creatures Archetype',x=df_arche_labels,y=df_plot_noncreatures),
+    #     ]
+    # )
+    # fig.update_layout(height = 600, width = 800,barmode='group')
+    # fig.update(layout_title_text='Count of Archetype Cards')
 
-    fig.show()
+    # fig.show()
 
     # Explore mana curve by colour
     df_colourmana_creatures_gb = df[df['Card Type'] == 'Creature'].groupby('CMC')[c.list_colour].sum().T
@@ -517,27 +527,7 @@ def get_list_of_sets():
 # %%
 
 
-# Energy : 
-    # keywords : get / pay {E}
-    # use_energy
-    # pay_energy
-
-# Modified : 
-    # keywords : 
-        # adapt, enchantment creature, counter, bestow, counter[s]
-    # Enchantment Auras
-    # Enchantment Creatures
-    # Counters
-    # Adapt / Modified / 
-
-# Artifacts : 
-    # Living weapons
-    # Equipment
-    # Artifacts
-
-#Additional keywords : 
-    #'Energy': 'Pay {E}'
-    #'Modified':'Equipment, auras you control, and counters are modifications'
-    #'Devoid':'Card has no color' ### ---???? black collector #58
-    #'Colourless':
-    #'Bestow': #????????????
+# To Do : 
+    # how to visualize deck if no creature types are available (Eldrazi)
+    # rarity by card type
+    # include lands / card type
