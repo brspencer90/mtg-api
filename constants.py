@@ -19,6 +19,15 @@ class Constants():
     list_colour_abbr = ['B','W','R','G','U','N']
     list_colour = ['Black','White','Red','Green','Blue','Uncoloured']
 
+    list_mana_colour = [
+                        'Mana_Black',
+                        'Mana_White',
+                        'Mana_Red',
+                        'Mana_Green',
+                        'Mana_Blue',
+                        'Mana_Uncoloured'
+                    ]
+
     list_rarity = ['uncommon', 'common', 'rare', 'mythic']
 
     list_card_type = ['Creature','Non-Creature','Land']
@@ -47,4 +56,4 @@ class Constants():
                     r'(target)[\s\S]*(gains)'
                 ]
 
-    expansion_list = list(pd.read_csv('card_data.csv')['expansion'].unique())
+    expansion_list = list(pd.read_csv('mtga_card_data.csv')['expansion'].unique())

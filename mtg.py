@@ -120,7 +120,9 @@ def get_card_info(id,set_id,foil=False,etch=False):
         if 'mana_cost' in card_json.keys():
             mana_cost = card_json['mana_cost']
         else:
-            mana_cost = [card['mana_cost'] for card in card_json['card_faces']]
+            mana_cost = [card['mana_cost'] for card in card_json['card_faces'] if len(card['mana_cost'])>0]
+
+            mana_cost = mana_cost[0] if len(mana_cost) == 1 else mana_cost
 
         # Extract power / toughness
         if ('power' in card_json) | ('toughness' in card_json):
@@ -131,9 +133,9 @@ def get_card_info(id,set_id,foil=False,etch=False):
             toughness = ''
 
         # Extract prices
-        price_std = card_json['prices']['usd']
-        price_foil = card_json['prices']['usd_foil']
-        price_etch = card_json['prices']['usd_etched']
+        price_std = float(card_json['prices']['usd']) if bool(card_json['prices']['usd']) else None
+        price_foil = float(card_json['prices']['usd_foil']) if bool(card_json['prices']['usd_foil']) else None
+        price_etch = float(card_json['prices']['usd_etched']) if bool(card_json['prices']['usd_etched']) else None
 
         if foil : 
             price = price_foil
@@ -141,6 +143,8 @@ def get_card_info(id,set_id,foil=False,etch=False):
             price = price_etch
         else: 
             price = price_std
+
+        price = price if price else 0
 
         list_card = [name,mana_cost,card_json['cmc'],power,toughness,
                         type_line,type_creature,type_noncreature,type_land,oracle_text,
@@ -181,7 +185,9 @@ def encode_features(df):
                             index=df.index))
     df['Colour'] = df[c.list_colour].idxmax(1)
 
-    df = df.drop_duplicates(subset='Name')
+    # Encode colours (count)
+    for colour in c.list_colour:
+        df[f'Mana_{colour}'] = df['Mana Cost'].apply(lambda col: col.count(colour))
 
     return df
 
@@ -321,37 +327,31 @@ def visualize_deck(df):
     fig.show()
 
     # Explore card type by colour
-    df_colourtype_gb = df.groupby('Card Type')[c.list_colour].sum().T
-    df_colourtype_gb_labels = df_colourtype_gb.index
-
-    fig = go.Figure(
-        [go.Bar(name=x,x=df_colourtype_gb_labels,y=df_colourtype_gb[x]) for x in c.list_card_type[:2]]
+    plot_simple_bar(
+        df,
+        x_axes = c.list_colour,
+        y_col_name = 'Card Type',
+        y_stack = c.list_card_type[:2],
+        title = 'Card Type by Colours'
     )
-    fig.update_layout(height = 600, width = 800,barmode='stack')
-    fig.update(layout_title_text='Card Type by Colours')
-    fig.show()
 
     # Explore rarity by colour
-    list_x = c.list_colour
-    df_values = df.groupby('Rarity')[list_x].sum().T
-
-    fig = go.Figure(
-        [go.Bar(name=x,x=list_x,y=df_values[x]) for x in c.list_rarity]
+    plot_simple_bar(
+        df,
+        x_axes = c.list_colour,
+        y_col_name = 'Rarity',
+        y_stack = c.list_rarity,
+        title = 'Rarity by Colours'
     )
-    fig.update_layout(height = 600, width = 800,barmode='stack')
-    fig.update(layout_title_text='Rarity by Colours')
-    fig.show()
 
     # Explore rarity by card type
-    list_x = c.list_card_type
-    df_values = df.groupby('Rarity')[list_x].sum().T
-
-    fig = go.Figure(
-        [go.Bar(name=x,x=list_x,y=df_values[x]) for x in c.list_rarity]
+    plot_simple_bar(
+        df,
+        x_axes = c.list_card_type,
+        y_col_name = 'Rarity',
+        y_stack = c.list_rarity,
+        title = 'Rarity by Card Type'
     )
-    fig.update_layout(height = 600, width = 800,barmode='stack')
-    fig.update(layout_title_text='Rarity by Colours')
-    fig.show()
 
     # # Explore by Outlaw
     # df_outlaw_gb = df[df['Key_Outlaw'] == 1][c.list_colour].sum().T
@@ -397,25 +397,25 @@ def visualize_deck(df):
 
     # fig.show()
 
-    # # Explore Archetypes by Count
-    # list_arche = ['Key_Energy','Key_Modified','Key_Eldrazi','Key_Artifacts']
-    # df_arche_labels = [label.split('Key_')[1] for label in ['Key_Energy','Key_Modified','Key_Eldrazi','Key_Artifacts']]
+    # Explore Archetypes by Count
+    list_arche = ['Key_Energy','Key_Modified','Key_Eldrazi','Key_Artifacts']
+    df_arche_labels = [label.split('Key_')[1] for label in ['Key_Energy','Key_Modified','Key_Eldrazi','Key_Artifacts']]
     
-    # mask = (df['Key_Energy'] == 1) | (df['Key_Modified'] == 1) | (df['Key_Eldrazi'] == 1) | (df['Key_Artifacts'] == 1) 
-    # df_plot_gb = df[mask][list_arche].sum().T
-    # df_plot_creatures = df[mask & (df['Card Type'] == 'Creature')][list_arche].sum().T
-    # df_plot_noncreatures = df[mask & (df['Card Type'] == 'Non-Creature')][list_arche].sum().T
+    mask = (df['Key_Energy'] == 1) | (df['Key_Modified'] == 1) | (df['Key_Eldrazi'] == 1) | (df['Key_Artifacts'] == 1) 
+    df_plot_gb = df[mask][list_arche].sum().T
+    df_plot_creatures = df[mask & (df['Card Type'] == 'Creature')][list_arche].sum().T
+    df_plot_noncreatures = df[mask & (df['Card Type'] == 'Non-Creature')][list_arche].sum().T
     
-    # fig = go.Figure(
-    #     [
-    #         go.Bar(name='Creatures Archetype',x=df_arche_labels,y=df_plot_creatures),
-    #         go.Bar(name='Non-Creatures Archetype',x=df_arche_labels,y=df_plot_noncreatures),
-    #     ]
-    # )
-    # fig.update_layout(height = 600, width = 800,barmode='group')
-    # fig.update(layout_title_text='Count of Archetype Cards')
+    fig = go.Figure(
+        [
+            go.Bar(name='Creatures Archetype',x=df_arche_labels,y=df_plot_creatures),
+            go.Bar(name='Non-Creatures Archetype',x=df_arche_labels,y=df_plot_noncreatures),
+        ]
+    )
+    fig.update_layout(height = 600, width = 800,barmode='group')
+    fig.update(layout_title_text='Count of Archetype Cards')
 
-    # fig.show()
+    fig.show()
 
     # Explore mana curve by colour
     df_colourmana_creatures_gb = df[df['Card Type'] == 'Creature'].groupby('CMC')[c.list_colour].sum().T
@@ -452,6 +452,24 @@ def visualize_deck(df):
     fig.update(layout_title_text=f'Overall Mana Curve by Colour')
     fig.show()
 
+def plot_simple_bar(df:pd.DataFrame,x_axes:list,y_col_name:str,y_stack:list=None,title:str=''):
+    list_x = x_axes
+    df_values = df.groupby(y_col_name)[list_x].sum().T
+
+    if y_stack:
+        fig = go.Figure(
+            [go.Bar(name=x,x=list_x,y=df_values[x]) for x in y_stack]
+        )
+    else:
+        fig = go.Figure(
+            go.Bar(x=list_x,y=df_values)
+        )
+
+    fig.update_layout(height = 600, width = 800,barmode='stack')
+    fig.update(layout_title_text=title)
+    
+    return fig.show()
+
 # %%
 def get_all_from_set(set_id):
     set_json = json.loads(req.get(f'https://api.scryfall.com/sets/{set_id}').text)
@@ -475,6 +493,8 @@ def get_all_from_set(set_id):
             cons_errors += 1
 
         id += 1
+
+    df = df.drop_duplicates(subset='Name')
 
     return encode_features(df)
     
@@ -531,3 +551,6 @@ def get_list_of_sets():
     # how to visualize deck if no creature types are available (Eldrazi)
     # rarity by card type
     # include lands / card type
+    # mana pings for land distribution
+    # card type for dual faced cards
+    # card type for planeswalker
