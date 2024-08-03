@@ -59,5 +59,5 @@ class Constants():
     expansion_list = list(pd.read_csv('mtga_card_data.csv')['expansion'].unique())
 
     blb_creatures_list = ['Creature_Frog','Creature_Wolverine','Creature_Possum','Creature_Rabbit', 'Creature_Mouse', 'Creature_Otter', 'Creature_Bird', 'Creature_Squirrel', 'Creature_Rat','Creature_Knight', 'Creature_Weasel','Creature_Mole', 'Creature_Skunk', 'Creature_Badger', 'Creature_Bear', 'Creature_Boar', 'Creature_Turtle', 'Creature_Coyote', 'Creature_Snake', 'Creature_Crab', 'Creature_Dragon', 'Creature_Fish', 'Creature_Hamster', 'Creature_Insect','Creature_Raccoon']
-    blb_archetype_creatures = ['Creature_Frog', 'Creature_Rabbit', 'Creature_Mouse', 'Creature_Otter', 'Creature_Bird', 'Creature_Squirrel', 'Creature_Rat', 'Creature_Raccoon']
+    blb_archetype_creatures = ['Creature_Frog', 'Creature_Bat', 'Creature_Rabbit', 'Creature_Mouse', 'Creature_Otter', 'Creature_Bird', 'Creature_Squirrel', 'Creature_Rat', 'Creature_Raccoon','Creature_Lizard']
     blb_archetype_keys = ['Key_Valiant','Key_Offspring','Key_Flying','Key_Threshold','Key_Forage','Key_Expend']
