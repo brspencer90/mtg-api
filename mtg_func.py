@@ -110,6 +110,10 @@ def get_card_info(id,set_id,foil=False,etch=False):
         type_noncreature = 0
         type_land = 0
         type_plane = 0
+        type_instant = 0
+        type_sorcery = 0
+        type_enchantment = 0
+        type_artifact = 0
 
         if 'Creature' in type_line:
             type_creature = 1
@@ -119,6 +123,15 @@ def get_card_info(id,set_id,foil=False,etch=False):
             type_plane = 1
         else:
             type_noncreature = 1
+        
+        if 'Instant' in type_line:
+            type_instant = 1
+        if 'Sorcery' in type_line:
+            type_sorcery = 1
+        if 'Enchantment' in type_line:
+            type_enchantment = 1
+        if 'Artifact' in type_line:
+            type_artifact = 1
 
         # Encode colours
         if 'colors' not in card_json.keys():
@@ -160,7 +173,7 @@ def get_card_info(id,set_id,foil=False,etch=False):
         price = price if price else 0
 
         list_card = [name,mana_cost,card_json['cmc'],power,toughness,
-                        type_line,type_creature,type_noncreature,type_plane,type_land,oracle_text,
+                        type_line,type_creature,type_noncreature,type_plane,type_land,type_instant,type_sorcery,type_enchantment,type_artifact,oracle_text,
                         colours,card_json['color_identity'],keywords,card_json['rarity'],card_json['collector_number'],
                         price,price_std,price_foil,price_etch]
         
@@ -196,6 +209,9 @@ def encode_features(df):
     df = df.join(pd.DataFrame(mlb.fit_transform(df.pop('Colours')),
                             columns=[c.dict_colour[x] for x in mlb.classes_],
                             index=df.index))
+    
+    # if sum c.list_colour > 1 -> gold
+
     df['Colour'] = df[c.list_colour].idxmax(1)
 
     # Encode colours (count)
@@ -235,3 +251,13 @@ def get_scores(df,set_id):
 
     for idx in df['Score Combined'].dropna().index.to_list():
         df.loc[idx,'GPA Average'] = np.mean([c.dict_scores[x] for x in df.loc[idx,'Score Combined']])
+
+def parse_dm_file(file_name):
+    df_id = pd.read_csv(file_name,sep=' ',header=None)
+    list_id = []
+    for idx in df_id.index.to_list():
+        list_id += [int(df_id.loc[idx,1])]*int(df_id.loc[idx,0])
+
+    with open("output.txt", "w") as file:
+        for item in list_id:
+            file.write(f"{item}\n")

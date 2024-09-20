@@ -116,3 +116,23 @@ def mh3_keywords(keywords,type_line,clean_text,double_face=False):
             keywords.append('Artifacts')
 
     return keywords
+
+def dsk_keywords(keywords,type_line,clean_text,double_face=False):
+    if double_face:
+
+    else:
+        # Delerium - RGWB - mill, graveyard, surveil, manifest dread
+            # RG - Delerium stompy
+            # WB - Reanimator
+            # GB - Manifest dread
+
+        # Eerie - UBWR - enchantment, rooms
+            # BU - control
+            # WU - tempo
+            # RU - rooms
+
+        # Survival - GW - 
+
+        # Sacrifice - RB 
+
+        # Aggro - RW

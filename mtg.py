@@ -16,7 +16,7 @@ import numpy as np
 import nltk
 
 from mtg_plot import blb_plots, mh3_plots, otj_plots, plot_simple_bar
-from mtg_func import get_card_info, encode_features
+from mtg_func import get_card_info, encode_features, pull_parse_file
 
 # %%
 def get_all_from_set(set_id):
