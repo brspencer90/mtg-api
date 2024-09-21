@@ -15,15 +15,16 @@ import plotly.graph_objects as go
 import numpy as np
 import nltk
 
-from mtg_keywords import otj_keywords, mh3_keywords
+from mtg_keywords import otj_keywords, mh3_keywords,dsk_keywords
  
 # %%
 
 def get_list_of_sets():
     from datetime import datetime as dt 
+    from datetime import timedelta
     set_json = json.loads(req.get(f'https://api.scryfall.com/sets').text)
     
-    return [x['scryfall_uri'].split('/sets/')[1] for x in set_json['data'] if ((dt.strptime(x['released_at'],'%Y-%m-%d') < dt.now()) & (x['set_type'] == 'expansion'))]
+    return [x['scryfall_uri'].split('/sets/')[1] for x in set_json['data'] if ((dt.strptime(x['released_at'],'%Y-%m-%d') < dt.now()+timedelta(weeks=2)) & (x['set_type'] == 'expansion'))]
 
 def parse_mtga_export(fn='mtga_export.txt'):
     list_card = open(fn,'r').read().split('\n')[1:]
@@ -42,30 +43,6 @@ def parse_mtga_export(fn='mtga_export.txt'):
             ] for x in list_card]
 
     return id_r
-
-def pull_parse_file(source:str = 'deck',set_id='otj'):
-
-    if source == 'deck':
-        fn = 'Deck.txt'
-        id_r = open(fn,'r').read().split('\n')
-
-        list_set = loop_cards(id_r,set_id)
-    elif source == 'mtga':
-        df = pd.DataFrame(parse_mtga_export(),columns=['qty','name','deck','id'])
-
-        for idx in list(df.index):
-            id = df.loc[idx,'id']
-            set_id = df.loc[idx,'deck'].lower()
-
-            list_card = get_card_info(id,set_id)
-            list_set.append(list_card)
-    else:
-        fn = source
-        id_r = open(fn,'r').read().split('\n')
-
-        list_set = loop_cards(id_r,set_id)
-
-    return pd.DataFrame(columns=c.col,data=list_set)
 
 def get_card_info(id,set_id,foil=False,etch=False):
     time.sleep(.1)
@@ -89,6 +66,9 @@ def get_card_info(id,set_id,foil=False,etch=False):
             # add mh3 keywords
             keywords = mh3_keywords(keywords,type_line,clean_text,double_face=True)
 
+            # add dsk specific keywords
+            keywords = dsk_keywords(keywords,type_line,clean_text,double_face=True)
+
         else:
             name = card_json['name']
             type_line = card_json['type_line']
@@ -105,7 +85,11 @@ def get_card_info(id,set_id,foil=False,etch=False):
             # add mh3 keywords
             keywords = mh3_keywords(keywords,type_line,clean_text,double_face=False)
 
+            # add dsk specific keywords
+            keywords = dsk_keywords(keywords,type_line,clean_text,double_face=False)
+
         # Enocde types
+        
         type_creature = 0
         type_noncreature = 0
         type_land = 0
@@ -174,7 +158,7 @@ def get_card_info(id,set_id,foil=False,etch=False):
 
         list_card = [name,mana_cost,card_json['cmc'],power,toughness,
                         type_line,type_creature,type_noncreature,type_plane,type_land,type_instant,type_sorcery,type_enchantment,type_artifact,oracle_text,
-                        colours,card_json['color_identity'],keywords,card_json['rarity'],card_json['collector_number'],
+                        colours,card_json['color_identity'],keywords,card_json['rarity'],card_json['collector_number'],set_id,
                         price,price_std,price_foil,price_etch]
         
         list_gf = [card_json['name'],set_id,card_json['set_name'],1,'','']
@@ -185,6 +169,7 @@ def get_card_info(id,set_id,foil=False,etch=False):
         return card_json
 
 def encode_features(df):
+    
 
     list_kw = list(set(df['Keywords'].sum()))
     list_crea_type = list(set(itertools.chain(*[re.sub('Creature — ','',x).split() for x in df[df['Creature'] == 1]['Type']])))
@@ -210,13 +195,13 @@ def encode_features(df):
                             columns=[c.dict_colour[x] for x in mlb.classes_],
                             index=df.index))
     
-    # if sum c.list_colour > 1 -> gold
+    # sum c.list_colour > 1 -> gold
 
     df['Colour'] = df[c.list_colour].idxmax(1)
 
     # Encode colours (count)
-    for colour in c.list_colour:
-        df[f'Mana_{colour}'] = df['Mana Cost'].apply(lambda col: col.count(colour))
+    for colour in c.list_colour_abbr:
+        df[f'Mana_{c.dict_colour[colour]}'] = df['Mana Cost'].apply(lambda col: col.count(colour))
 
     return df
 
@@ -224,7 +209,7 @@ def loop_cards(id_r,set_id):
     list_set = []
     
     for id in id_r:
-
+        print(id)
         if 'f' in id:
             foil = True
             etch = False
@@ -261,3 +246,34 @@ def parse_dm_file(file_name):
     with open("output.txt", "w") as file:
         for item in list_id:
             file.write(f"{item}\n")
+
+def output_dm_file(df):
+    col_list = ['Name','Set','Collector No.']
+    col_list_count = ['Count'] + col_list
+
+    df_gb = df[col_list].groupby('Collector No.')['Name'].count().reset_index()
+    df_gb.columns = ['Collector No.','Count']
+
+    for col in col_list:
+        df[col] = df[col].astype(str)
+
+    df = pd.merge(left=df_gb,right=df[col_list],on='Collector No.',how='left').drop_duplicates()
+
+    for col in ['Count']:
+        df[col] = df[col].astype(str)
+
+    df_comb = (df[['Count','Name']].apply(' '.join, axis=1).replace(r"',.*|(?<= )'|(?<=\w)'(?=\W)|(?<=\W)'(?=\w)|\[|\]",'',regex=True) + ' (' + df['Set'].str.upper() + ') ' + df['Collector No.'])
+    
+    with open('output_dm.txt', 'w') as f:
+        for line in df_comb.to_list():
+            f.write(line)
+            f.write('\n')
+
+def get_sideboard(fn_deck,fn_pool):
+    pool_list = pd.read_csv(f'card data/{fn_pool}',header=None)[0].to_list() 
+    deck_list = pd.read_csv(f'card data/{fn_deck}',header=None)[0].to_list()
+
+    pop_list = [pool_list.pop(pool_list.index(card)) for card in deck_list if card in pool_list]
+
+    return pool_list
+# %%

@@ -1,0 +1,83 @@
+1 Acrobatic Cheerleader (DSK) 1
+1 Fear of Immobility (DSK) 10
+1 Friendly Ghost (DSK) 12
+1 Betrayer's Bargain (DSK) 126
+1 Boilerbilges Ripper (DSK) 127
+1 Clockwork Percussionist (DSK) 130
+1 Grab the Prize (DSK) 138
+1 Hand That Feeds (DSK) 139
+1 Impossible Inferno (DSK) 140
+1 Piggy Bank (DSK) 148
+1 Ragged Playmate (DSK) 150
+1 Razorkin Hordecaller (DSK) 152
+1 The Rollercrusher Ride (DSK) 155
+1 Scorching Dragonfire (DSK) 156
+1 Ticket Booth (DSK) 158
+1 Cult Healer (DSK) 2
+1 Orphans of the Wheat (DSK) 22
+1 Reluctant Role Model (DSK) 26
+1 Terramorphic Expanse (DSK) 269
+8 Plains (DSK) 272
+6 Mountain (DSK) 275
+1 Seized from Slumber (DSK) 28
+1 Shardmage's Rescue (DSK) 29
+1 Shepherding Spirits (DSK) 31
+1 Splitskin Doll (DSK) 33
+1 Trapped in the Screen (DSK) 36
+1 Unidentified Hovership (DSK) 37
+1 Veteran Survivor (DSK) 40
+
+Sideboard
+1 Grievous Wound (DSK) 102
+1 Innocuous Rat (DSK) 103
+1 Let's Play a Game (DSK) 105
+1 Live or Die (DSK) 107
+1 Sporogenic Infection (DSK) 117
+1 Valgavoth's Faithful (DSK) 121
+1 Winter's Intervention (DSK) 123
+2 Grand Entryway (DSK) 15
+1 Bashful Beastie (DSK) 169
+1 Cautious Survivor (DSK) 172
+1 Cryptid Inspector (DSK) 174
+1 Enduring Vitality (DSK) 176
+1 House Cartographer (DSK) 185
+1 Leyline of Mutation (DSK) 188
+1 Manifest Dread (DSK) 189
+1 Moldering Gym (DSK) 190
+1 Monstrous Emergence (DSK) 191
+1 Spineseeker Centipede (DSK) 199
+1 Living Phone (DSK) 20
+2 Wary Watchdog (DSK) 206
+1 Beastie Beatdown (DSK) 210
+1 Disturbing Mirth (DSK) 212
+1 Inquisitive Glimmer (DSK) 217
+1 Kaito, Bane of Nightmares (DSK) 220
+1 Marina Vendrell (DSK) 221
+1 Rite of the Moth (DSK) 229
+1 Bear Trap (DSK) 243
+1 Dissection Tools (DSK) 245
+1 Haunted Screen (DSK) 250
+1 Malevolent Chandelier (DSK) 252
+1 Saw (DSK) 254
+2 Bleeding Woods (DSK) 257
+1 Razortrap Gorge (DSK) 267
+1 Oblivious Bookworm (DSK) 300
+1 Creeping Peeper (DSK) 46
+1 Daggermaw Megalodon (DSK) 48
+1 Enter the Enigma (DSK) 52
+1 Erratic Apparition (DSK) 54
+1 Fear of Impostors (DSK) 57
+1 Ghostly Keybearer (DSK) 61
+1 Glimmerburst (DSK) 62
+1 Marina Vendrell's Grimoire (DSK) 64
+1 The Mindskinner (DSK) 66
+1 Stalked Researcher (DSK) 73
+1 Twist Reality (DSK) 77
+1 Unable to Scream (DSK) 78
+1 Vanish from Sight (DSK) 82
+1 Appendage Amalgam (DSK) 83
+1 Balemurk Leech (DSK) 84
+1 Cackling Slasher (DSK) 85
+1 Defiled Crypt (DSK) 91
+1 Derelict Attic (DSK) 93
+1 Fear of Lost Teeth (DSK) 97
