@@ -46,6 +46,32 @@ def get_all_from_set(set_id):
 
     return encode_features(df)
 
+def pull_parse_file(set_id,source:str = 'deck'):
+
+    if source == 'deck':
+        fn = 'Deck.txt'
+        id_r = [id for id in open(fn,'r').read().split('\n') if len(id)>0]
+
+        list_set = loop_cards(id_r,set_id)
+    elif source == 'mtga':
+        df = pd.DataFrame(parse_mtga_export(),columns=['qty','name','deck','id'])
+
+        for idx in list(df.index):
+            id = df.loc[idx,'id']
+            set_id = df.loc[idx,'deck'].lower()
+
+            list_card = get_card_info(id,set_id)
+            list_set.append(list_card)
+    else:
+        fn = source
+        id_r = [id for id in open(fn,'r').read().split('\n') if len(id)>0]
+
+        list_set = loop_cards(id_r,set_id)
+
+    return pd.DataFrame(columns=c.col,data=list_set)
+
+# %%
+
 def visualize_deck(df,set_id):
 
     # Explore by colour
