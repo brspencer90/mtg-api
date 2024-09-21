@@ -16,7 +16,7 @@ import numpy as np
 import nltk
 
 from mtg_plot import blb_plots, mh3_plots, otj_plots, plot_simple_bar
-from mtg_func import get_card_info, encode_features, pull_parse_file
+from mtg_func import get_card_info, encode_features, loop_cards, parse_mtga_export
 
 # %%
 def get_all_from_set(set_id):
@@ -45,6 +45,30 @@ def get_all_from_set(set_id):
     df = df.drop_duplicates(subset='Name')
 
     return encode_features(df)
+
+def pull_parse_file(source:str = 'deck',set_id='otj'):
+
+    if source == 'deck':
+        fn = 'Deck.txt'
+        id_r = open(fn,'r').read().split('\n')
+
+        list_set = loop_cards(id_r,set_id)
+    elif source == 'mtga':
+        df = pd.DataFrame(parse_mtga_export(),columns=['qty','name','deck','id'])
+
+        for idx in list(df.index):
+            id = df.loc[idx,'id']
+            set_id = df.loc[idx,'deck'].lower()
+
+            list_card = get_card_info(id,set_id)
+            list_set.append(list_card)
+    else:
+        fn = source
+        id_r = open(fn,'r').read().split('\n')
+
+        list_set = loop_cards(id_r,set_id)
+
+    return pd.DataFrame(columns=c.col,data=list_set)
 
 def visualize_deck(df,set_id):
 
