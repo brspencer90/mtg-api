@@ -1,7 +1,7 @@
 import pandas as pd
 
 class Constants():
-    col = ['Name','Mana Cost','CMC','Power','Toughness','Type','Creature','Non-Creature','Planeswalker','Land','Instant','Sorcery','Enchantment','Artifact','Text','Colours','Colour Identity','Keywords','Rarity','Collector No.','Price','Price STD','Price Foil','Price Etched']
+    col = ['Name','Mana Cost','CMC','Power','Toughness','Type','Creature','Non-Creature','Planeswalker','Land','Instant','Sorcery','Enchantment','Artifact','Text','Colours','Colour Identity','Keywords','Rarity','Collector No.','Set','Price','Price STD','Price Foil','Price Etched']
 
     list_kw = ['Enchant', 'Collect evidence', 'Flying', 'Double strike', 'Haste', 'Mill', 'Hexproof from', 'Trample', 'Vigilance', 'Defender', 'Landcycling',
                 'Disguise', 'Basic landcycling', 'Ward', 'Investigate', 'Suspect', 'Cloak', 'Deathtouch', 'Indestructible', 'Cycling', 'Menace', 'Prowess',
@@ -61,3 +61,5 @@ class Constants():
     blb_creatures_list = ['Creature_Frog','Creature_Wolverine','Creature_Possum','Creature_Rabbit', 'Creature_Mouse', 'Creature_Otter', 'Creature_Bird', 'Creature_Squirrel', 'Creature_Rat','Creature_Knight', 'Creature_Weasel','Creature_Mole', 'Creature_Skunk', 'Creature_Badger', 'Creature_Bear', 'Creature_Boar', 'Creature_Turtle', 'Creature_Coyote', 'Creature_Snake', 'Creature_Crab', 'Creature_Dragon', 'Creature_Fish', 'Creature_Hamster', 'Creature_Insect','Creature_Raccoon']
     blb_archetype_creatures = ['Creature_Frog', 'Creature_Bat', 'Creature_Rabbit', 'Creature_Mouse', 'Creature_Otter', 'Creature_Bird', 'Creature_Squirrel', 'Creature_Rat', 'Creature_Raccoon','Creature_Lizard']
     blb_archetype_keys = ['Key_Valiant','Key_Offspring','Key_Flying','Key_Threshold','Key_Forage','Key_Expend']
+
+    dsk_archetype_keys = ['Key_Survival','Key_Eerie','Key_Delerium']

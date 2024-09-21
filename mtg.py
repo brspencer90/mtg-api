@@ -15,8 +15,8 @@ import plotly.graph_objects as go
 import numpy as np
 import nltk
 
-from mtg_plot import blb_plots, mh3_plots, otj_plots, plot_simple_bar
-from mtg_func import get_card_info, encode_features, pull_parse_file
+from mtg_plot import plot_set_specific, plot_simple_bar, plot_cp_manacurve
+from mtg_func import get_card_info, encode_features, loop_cards, parse_mtga_export
 
 # %%
 def get_all_from_set(set_id):
@@ -46,6 +46,32 @@ def get_all_from_set(set_id):
 
     return encode_features(df)
 
+def pull_parse_file(set_id,source:str = 'deck'):
+
+    if source == 'deck':
+        fn = 'Deck.txt'
+        id_r = [id for id in open(fn,'r').read().split('\n') if len(id)>0]
+
+        list_set = loop_cards(id_r,set_id)
+    elif source == 'mtga':
+        df = pd.DataFrame(parse_mtga_export(),columns=['qty','name','deck','id'])
+
+        for idx in list(df.index):
+            id = df.loc[idx,'id']
+            set_id = df.loc[idx,'deck'].lower()
+
+            list_card = get_card_info(id,set_id)
+            list_set.append(list_card)
+    else:
+        fn = source
+        id_r = [id for id in open(fn,'r').read().split('\n') if len(id)>0]
+
+        list_set = loop_cards(id_r,set_id)
+
+    return pd.DataFrame(columns=c.col,data=list_set)
+
+# %%
+
 def visualize_deck(df,set_id):
 
     # Explore by colour
@@ -54,8 +80,22 @@ def visualize_deck(df,set_id):
     fig = go.Figure(
             data=go.Pie(values=df_colour.values,labels=df_colour.index,marker_colors=[c.dict_colour_map[x] for x in df_colour.index])
     )
-    fig.update_layout(height = 600, width = 800)
+    fig.update_layout(height = 600, width = 800,template='plotly_dark')
     fig.update(layout_title_text='Card Colours')
+    fig.show()
+
+    # Explore by mana pings : 
+    df_mana_ping = df[c.list_mana_colour].sum()
+
+    fig = go.Figure(
+            data=go.Pie(
+                    values=df_mana_ping.values,
+                    labels=[x.split('_')[1] for x in df_mana_ping.index],
+                    marker_colors=[c.dict_colour_map[x.split('_')[1]] for x in df_mana_ping.index]
+                )
+    )
+    fig.update_layout(height = 600, width = 800,template='plotly_dark')
+    fig.update(layout_title_text='Mana Pings')
     fig.show()
 
     # Explore card type by colour
@@ -85,12 +125,7 @@ def visualize_deck(df,set_id):
         title = 'Rarity by Card Type'
     )
 
-    if set_id == 'otj':
-        otj_plots(df)
-    elif set_id == 'mh3':
-        mh3_plots(df)
-    elif set_id == 'blb':
-        blb_plots(df)
+    plot_set_specific(df,set_id)
 
     # Explore mana curve by colour
     df_colourmana_creatures_gb = df[df['Card Type'] == 'Creature'].groupby('CMC')[c.list_colour].sum().T
@@ -106,7 +141,7 @@ def visualize_deck(df,set_id):
             go.Bar(name='Non-Creatures',x=list_cmc,y=df_noncreatures.values,marker_color='crimson')]
         )
 
-        fig.update_layout(height = 600, width = 1000,barmode='stack')
+        fig.update_layout(height = 600, width = 1000,barmode='stack',template='plotly_dark')
         fig.update(layout_title_text=f'Mana Curve by Colour : {color}')
         fig.show()
 
@@ -123,7 +158,7 @@ def visualize_deck(df,set_id):
         go.Bar(name='Non-Creatures',x=list_cmc,y=df_noncreatures.values,marker_color='crimson')]
     )
 
-    fig.update_layout(height = 600, width = 1000,barmode='stack')
+    fig.update_layout(height = 600, width = 1000,barmode='stack',template='plotly_dark')
     fig.update(layout_title_text=f'Overall Mana Curve by Colour')
     fig.show()
 
@@ -167,5 +202,7 @@ def get_word_frequency(set_list):
     # include lands / card type
     # mana pings for land distribution
     # card type for dual faced cards
+    # encode_features : 
+    #   how to label gold cards : sum c.list_colour > 1 -> gold
 
 # blb : 

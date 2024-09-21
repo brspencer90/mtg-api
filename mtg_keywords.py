@@ -119,20 +119,102 @@ def mh3_keywords(keywords,type_line,clean_text,double_face=False):
 
 def dsk_keywords(keywords,type_line,clean_text,double_face=False):
     if double_face:
+        # Delerium - RGWB - mill, graveyard, surveil, manifest dread
+            # RG - Delerium stompy
+            # WB - Reanimator
+            # GB - Manifest dread
+        if (
+            any(True for key in ['Manifest','Manifest dread','Delerium','Mill','Surveil'] if key in keywords) \
+            | any([[True for regex in [
+                                r'return.*from.*graveyard',
+                                r'put.*into your graveyard',
+                                r'leave.*your graveyard',
+                                r'graveyard.*return.*to the battlefield'
+                            ] if bool(re.search(regex,text,re.IGNORECASE))] for text in clean_text]
+                )
+            ):
+            keywords.append('Delerium')
+        
+        # Eerie - UBWR - enchantment, rooms
+            # BU - control
+            # WU - tempo
+            # RU - rooms
+        if (
+            any([[True for line in type_line if type in line] for type in ['Enchantment','Room']]) \
+            | ('Eerie' in keywords)
+            ):
+            keywords.append('Eerie')
 
+
+        # Survival - GW
+        if (
+            ('Survival' in keywords) \
+            | any([[True for regex in [ 
+                                r'hexproof',
+                                r'tap.*creature.*you control',
+                                r'indestructible'
+                            ] if bool(re.search(regex,text,re.IGNORECASE))] for text in clean_text])
+            ):
+            keywords.append('Survival')
+
+        # Sacrifice - RB 
+        if (
+             any([[True for regex in [
+                                r'sacrifice',
+                                r'create.*token'
+                            ] if bool(re.search(regex,text,re.IGNORECASE))] for text in clean_text])
+            ):
+            keywords.append('Sacrifice')
+
+        # Aggro - RW
     else:
         # Delerium - RGWB - mill, graveyard, surveil, manifest dread
             # RG - Delerium stompy
             # WB - Reanimator
             # GB - Manifest dread
-
+        if (
+            any(True for key in ['Manifest','Manifest dread','Delerium','Mill','Surveil'] if key in keywords) \
+            | any([True for regex in [
+                                r'return.*from.*graveyard',
+                                r'put.*into your graveyard',
+                                r'leave.*your graveyard',
+                                r'graveyard.*return.*to the battlefield'
+                            ] if bool(re.search(regex,clean_text,re.IGNORECASE))]
+                )
+            ):
+            keywords.append('Delerium')
+        
         # Eerie - UBWR - enchantment, rooms
             # BU - control
             # WU - tempo
             # RU - rooms
+        if (
+            ('Eerie' in keywords) \
+            | any([True for type in ['Enchantment','Room'] if type in type_line])
+            ):
+            keywords.append('Eerie')
 
-        # Survival - GW - 
+
+        # Survival - GW
+        if (
+            ('Survival' in keywords) \
+            | any([True for regex in [ 
+                                r'hexproof',
+                                r'tap.*creature.*you control',
+                                r'indestructible'
+                            ] if bool(re.search(regex,clean_text,re.IGNORECASE))])
+            ):
+            keywords.append('Survival')
 
         # Sacrifice - RB 
+        if (
+            any([True for regex in [
+                                r'sacrifice',
+                                r'create.*token'
+                            ] if bool(re.search(regex,clean_text,re.IGNORECASE))])
+            ):
+            keywords.append('Sacrifice')
 
         # Aggro - RW
+
+    return keywords

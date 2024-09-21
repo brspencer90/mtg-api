@@ -16,6 +16,23 @@ import numpy as np
 import nltk
 
 # %%
+def plot_set_specific(df,set_id):
+    if set_id == 'otj':
+        otj_plots(df)
+    elif set_id == 'mh3':
+        mh3_plots(df)
+    elif set_id == 'blb':
+        blb_plots(df)
+    elif set_id == 'dsk':
+        plot_simple_bar(
+            df,
+            x_axes = c.dsk_archetype_keys,
+            y_col_name = 'Colour',
+            y_stack = c.list_colour,
+            title = 'Archetype by Colours'
+        )
+    
+
 def plot_simple_bar(df:pd.DataFrame,x_axes:list,y_col_name:str,y_stack:list=None,title:str=''):
     list_x = x_axes
 
@@ -38,7 +55,13 @@ def plot_simple_bar(df:pd.DataFrame,x_axes:list,y_col_name:str,y_stack:list=None
             go.Bar(x=list_x,y=df_values)
         )
 
-    fig.update_layout(height = 600, width = 800,barmode='stack')
+    fig.update_layout(
+                height = 600, 
+                width = 800,
+                barmode='stack',
+                template='plotly_dark'
+            )
+    
     fig.update(layout_title_text=title)
     
     return fig.show()
@@ -125,4 +148,29 @@ def mh3_plots(df):
     fig.update_layout(height = 600, width = 800,barmode='group')
     fig.update(layout_title_text='Count of Archetype Cards')
 
+    fig.show()
+
+def plot_cp_manacurve(df,set_id,cp:str='WR'):
+    color_pair_list = [c.dict_colour[color] for color in cp]
+    cp_title = str(color_pair_list).replace("'",'')[1:-1]
+
+    df_cp = df[pd.DataFrame(data=[df[color] == 1 for color in color_pair_list]).any()]
+
+    plot_set_specific(df_cp,set_id)
+
+    # Explore combined mana curve
+    df_colourmana_creatures_gb = df[df['Card Type'] == 'Creature'].groupby('CMC')[color_pair_list].sum().T
+    df_colourmana_noncreatures_gb = df[df['Card Type'] == 'Non-Creature'].groupby('CMC')[color_pair_list].sum().T
+    list_cmc = list(np.arange(1,df['CMC'].max()+1))
+
+    df_creatures = df_colourmana_creatures_gb.sum().reindex(list_cmc,fill_value=0)
+    df_noncreatures = df_colourmana_noncreatures_gb.sum().reindex(list_cmc,fill_value=0)
+
+    fig = go.Figure(
+        [go.Bar(name='Creatures',x=list_cmc,y=df_creatures.values,marker_color='slategrey'),
+        go.Bar(name='Non-Creatures',x=list_cmc,y=df_noncreatures.values,marker_color='crimson')]
+    )
+
+    fig.update_layout(height = 600, width = 1000,barmode='stack',template='plotly_dark')
+    fig.update(layout_title_text=f'Overall Mana Curve for {cp_title}')
     fig.show()
