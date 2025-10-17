@@ -218,3 +218,35 @@ def dsk_keywords(keywords,type_line,clean_text,double_face=False):
         # Aggro - RW
 
     return keywords
+
+def dft_keywords(keywords,type_line,clean_text,double_face=False):
+
+
+    # Vehicle / Mount
+        # Pilot
+        # target vehicle
+        # target mount
+        # Enchant vehicle
+
+    # Artifacts
+        # create artifact token
+        # affinity for artifacts
+
+    # black - discard / graveyard
+
+    # Create ...artifact (creature/vehicle) token
+    # Vehicle - (If Key_Crew = 1)
+    # Key_Max speed == Key_Start your engines!
+
+    # on_cycle : when ... cycle this card
+    # on_exhaust : whenever you activate an exhaust
+
+    # keyword - draw a card
+    # keyword - removal
+        # destroy
+        # target creature... gets -X/-X
+        # exile
+        # return ... to its owner's hand
+        # target ... puts it on the top... of their library
+
+    return keywords
