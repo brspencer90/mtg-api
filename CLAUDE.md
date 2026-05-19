@@ -4,7 +4,24 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Python toolkit for Magic: The Gathering card analysis. It fetches card data from the Scryfall API, encodes card attributes into a feature-rich pandas DataFrame, and generates Plotly visualizations for sealed/draft pool evaluation.
+Full-stack MTG collection manager and card analysis tool. The project has two layers:
+
+1. **Python analysis toolkit** (original) — fetches card data from Scryfall, encodes attributes into a pandas DataFrame, and generates Plotly visualizations for sealed/draft pool evaluation.
+2. **Web application** (added) — FastAPI backend + Vite/React frontend for managing a physical card collection.
+
+### Current state (as of 2026-05-19)
+
+The web app is the active focus. Key features built so far:
+
+- **Collection browser** — paginated table of owned cards, sortable by name/set/type/rarity/price/condition/location, filterable by set, location, rarity, card type, color. Inline edit modal (updates condition, foil, etched, purchase info; refreshes price from Scryfall). Move modal to relocate cards between locations.
+- **Card adder** — three modes: by name (Scryfall autocomplete → printing picker), by set+ID (collector number lookup), and bulk add (paste a list of collector numbers, preview, then save). All modes support inline location creation via `LocationSelect`.
+- **Location management** — physical locations tracked in DB. Default locations seeded on startup: "Card Pool" (pool), "Storage" (storage), "Trade Pile" (trade). Old import-source location names (e.g. "BLB Play Booster") are stored as `purchase_source` on each copy after the migration.
+- **Moxfield deck import** — SSE-streaming import that fetches each card from Scryfall and adds it to the collection. Preview endpoint returns deck metadata without writing to DB.
+- **Movement history** — every card placement change is logged in `card_movements`.
+
+### Data migration note
+
+All 1,669 existing cards were migrated to "Black Storage Box" (physical storage location). The old location names (e.g. "BLB Play Booster", "DSK Sealed Pool") now live in `owned_copies.purchase_source` as provenance/source info. Old source-style locations are archived in the DB (won't appear in UI) but remain for movement history integrity.
 
 ## Environment Setup
 
@@ -17,13 +34,32 @@ The virtual environment lives at `.env_mtg/`. Activate it before running any scr
 Install dependencies if needed:
 
 ```powershell
-pip install pandas numpy plotly requests scikit-learn nltk sqlalchemy
+pip install pandas numpy plotly requests scikit-learn nltk sqlalchemy fastapi uvicorn
 ```
 
 NLTK stopwords must also be downloaded once:
 
 ```python
 import nltk; nltk.download('stopwords'); nltk.download('punkt')
+```
+
+### Running the web app
+
+**Backend** (FastAPI, port 8000):
+```powershell
+uvicorn api.main:app --reload
+```
+
+**Frontend** (Vite + React, port 5173):
+```powershell
+cd frontend && npm run dev
+```
+
+The frontend proxies `/api`, `/collection`, and `/pools` to `localhost:8000` via `vite.config.ts`.
+
+**Database** — SQLite at `db/mtg.db` (gitignored; copy manually between machines). Initialized automatically on first backend startup. To re-run the legacy card data import:
+```powershell
+python -m db.migrations.import_legacy
 ```
 
 ## Running the Code
@@ -87,3 +123,53 @@ Scryfall API → get_card_info() → encode_features() → visualize_deck() / pl
 
 - Scryfall: `https://api.scryfall.com` — rate-limited via `time.sleep(0.1)` per card in `get_card_info`
 - 17Lands S3: `https://17lands-public.s3.amazonaws.com` — bulk download in `17lands.py`
+
+## Web App Architecture
+
+### Backend (`api/`)
+
+```
+api/
+  main.py                    # FastAPI app, CORS, router registration, startup hooks
+  routers/
+    collection.py            # CRUD for copies, locations, movements
+    import_router.py         # Moxfield preview + SSE-streaming save
+    pools.py                 # Sealed/draft pool analysis
+    sets.py                  # Set-level analysis
+    analysis.py              # Chart endpoints
+  services/
+    collection_service.py    # All DB reads/writes (plain sqlite3, no ORM)
+  models/
+    requests.py              # Pydantic input models
+  core/
+    config.py                # CORS settings
+```
+
+**DB schema** (5 tables, `db/mtg.db`):
+- `cards` — Scryfall card catalog (UUID PK, name, set_id, collector_no, prices, etc.)
+- `owned_copies` — one row per physical card you own (foil, condition, purchase info)
+- `locations` — named physical places (type: pool/deck/storage/trade/wishlist; archived flag)
+- `card_placements` — current location of each copy (1:1 with owned_copies)
+- `card_movements` — audit log of every location change
+
+**Important conventions:**
+- Plain `sqlite3` (stdlib) only — no SQLAlchemy ORM
+- Sort columns are whitelisted in `_SORT_COLS` dict to prevent SQL injection
+- `ensure_default_locations()` is called on startup to seed Card Pool, Storage, Trade Pile
+- `purchase_source` on `owned_copies` stores where the card came from (e.g. "BLB Play Booster"); `location_id` in `card_placements` tracks where it physically lives now
+
+### Frontend (`frontend/`)
+
+```
+frontend/src/
+  App.tsx                    # Tab shell: Collection | Import Deck
+  pages/
+    Collection.tsx           # Sub-tabs: Browse | Add Card
+  components/
+    CollectionBrowser.tsx    # Sortable/filterable table, edit + move modals
+    CollectionAdder.tsx      # By Name / By Set+ID / Bulk Add modes
+    LocationSelect.tsx       # Reusable dropdown with inline "+ New" creation
+    ImportDeck.tsx           # Moxfield URL import with SSE progress bar
+  api/
+    client.ts                # Typed fetch wrappers for all endpoints
+```
