@@ -15,7 +15,7 @@ import plotly.graph_objects as go
 import numpy as np
 import nltk
 
-from mtg_keywords import otj_keywords, mh3_keywords,dsk_keywords
+from mtg_keywords import otj_keywords, mh3_keywords, dsk_keywords, dft_keywords
  
 # %%
 
@@ -26,21 +26,24 @@ def get_list_of_sets():
     
     return [x['scryfall_uri'].split('/sets/')[1] for x in set_json['data'] if ((dt.strptime(x['released_at'],'%Y-%m-%d') < dt.now()+timedelta(weeks=2)) & (x['set_type'] == 'expansion'))]
 
-def parse_mtga_export(fn='mtga_export.txt'):
-    list_card = open(fn,'r').read().split('\n')[1:]
+def parse_mtga_export(fn='mtga_export.txt', raw_text=None):
+    if raw_text is not None:
+        lines = raw_text.strip().split('\n')[1:]
+    else:
+        lines = open(fn, 'r').read().split('\n')[1:]
 
-    quantity = '^\d{1}'
-    card_id = '\d{1,4}$'
-    card_name = '\d (.*?) \('
-    deck = '\((.*?)\)'
+    quantity = r'^\d{1}'
+    card_id = r'\d{1,4}$'
+    card_name = r'\d (.*?) \('
+    deck = r'\((.*?)\)'
 
     id_r = [
             [
-                re.findall(quantity,x)[0],
-                re.findall(card_name,x)[0],
-                re.findall(deck,x)[0],
-                re.findall(card_id,x)[0]
-            ] for x in list_card]
+                re.findall(quantity, x)[0],
+                re.findall(card_name, x)[0],
+                re.findall(deck, x)[0],
+                re.findall(card_id, x)[0]
+            ] for x in lines if x.strip()]
 
     return id_r
 
@@ -69,6 +72,9 @@ def get_card_info(id,set_id,foil=False,etch=False):
             # add dsk specific keywords
             keywords = dsk_keywords(keywords,type_line,clean_text,double_face=True)
 
+            # add dft specific keywords
+            keywords = dft_keywords(keywords,type_line,clean_text,double_face=True)
+
         else:
             name = card_json['name']
             type_line = card_json['type_line']
@@ -87,6 +93,9 @@ def get_card_info(id,set_id,foil=False,etch=False):
 
             # add dsk specific keywords
             keywords = dsk_keywords(keywords,type_line,clean_text,double_face=False)
+
+            # add dft specific keywords
+            keywords = dft_keywords(keywords,type_line,clean_text,double_face=False)
 
         # Enocde types
         

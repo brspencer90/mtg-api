@@ -220,33 +220,45 @@ def dsk_keywords(keywords,type_line,clean_text,double_face=False):
     return keywords
 
 def dft_keywords(keywords,type_line,clean_text,double_face=False):
+    if double_face:
+        text = ' '.join(clean_text)
+        tl = ' '.join(type_line) if isinstance(type_line, list) else type_line
+    else:
+        text = clean_text
+        tl = type_line
 
+    # Vehicle / Mount archetype
+    if any(t in tl for t in ['Vehicle', 'Mount']):
+        keywords.append('Vehicle')
+    if re.search(r'(target vehicle|enchant vehicle|pilot)', text, re.IGNORECASE):
+        keywords.append('Vehicle')
 
-    # Vehicle / Mount
-        # Pilot
-        # target vehicle
-        # target mount
-        # Enchant vehicle
+    # Start Your Engines! / Max Speed
+    if re.search(r'(start your engines|max speed|speed counter)', text, re.IGNORECASE):
+        keywords.append('Max Speed')
 
-    # Artifacts
-        # create artifact token
-        # affinity for artifacts
+    # Exhaust mechanic
+    if re.search(r'\bexhaust\b', text, re.IGNORECASE):
+        keywords.append('Exhaust')
 
-    # black - discard / graveyard
+    # Cycling payoff
+    if re.search(r'(when you cycle|whenever.*cycle)', text, re.IGNORECASE):
+        keywords.append('On Cycle')
 
-    # Create ...artifact (creature/vehicle) token
-    # Vehicle - (If Key_Crew = 1)
-    # Key_Max speed == Key_Start your engines!
+    # Artifact / Vehicle token creation
+    if re.search(r'create.*artifact.*token', text, re.IGNORECASE):
+        keywords.append('Artifacts')
 
-    # on_cycle : when ... cycle this card
-    # on_exhaust : whenever you activate an exhaust
+    # Graveyard / Discard (black theme)
+    if re.search(r'(discard|from.*graveyard|put.*into.*graveyard)', text, re.IGNORECASE):
+        keywords.append('Discard')
 
-    # keyword - draw a card
-    # keyword - removal
-        # destroy
-        # target creature... gets -X/-X
-        # exile
-        # return ... to its owner's hand
-        # target ... puts it on the top... of their library
+    # Card draw
+    if re.search(r'draw (a|two|three) card', text, re.IGNORECASE):
+        keywords.append('Draw')
+
+    # Removal
+    if re.search(r'(destroy target|exile target|gets -\d/-\d|return.*to.*owner.*hand)', text, re.IGNORECASE):
+        keywords.append('Removal')
 
     return keywords

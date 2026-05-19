@@ -73,95 +73,68 @@ def pull_parse_file(set_id,source:str = 'deck'):
 
 # %%
 
-def visualize_deck(df,set_id):
+def visualize_deck(df, set_id):
+    """Return a list of go.Figure objects. Notebook callers can ignore the return value."""
+    figs = []
 
-    # Explore by colour
+    # Colour distribution
     df_colour = df[c.list_colour].sum()
-
-    fig = go.Figure(
-            data=go.Pie(values=df_colour.values,labels=df_colour.index,marker_colors=[c.dict_colour_map[x] for x in df_colour.index])
-    )
-    fig.update_layout(height = 600, width = 800,template='plotly_dark')
+    fig = go.Figure(data=go.Pie(
+        values=df_colour.values, labels=df_colour.index,
+        marker_colors=[c.dict_colour_map[x] for x in df_colour.index],
+    ))
+    fig.update_layout(height=600, width=800, template='plotly_dark')
     fig.update(layout_title_text='Card Colours')
-    fig.show()
+    figs.append(fig)
 
-    # Explore by mana pings : 
+    # Mana pip distribution
     df_mana_ping = df[c.list_mana_colour].sum()
-
-    fig = go.Figure(
-            data=go.Pie(
-                    values=df_mana_ping.values,
-                    labels=[x.split('_')[1] for x in df_mana_ping.index],
-                    marker_colors=[c.dict_colour_map[x.split('_')[1]] for x in df_mana_ping.index]
-                )
-    )
-    fig.update_layout(height = 600, width = 800,template='plotly_dark')
+    fig = go.Figure(data=go.Pie(
+        values=df_mana_ping.values,
+        labels=[x.split('_')[1] for x in df_mana_ping.index],
+        marker_colors=[c.dict_colour_map[x.split('_')[1]] for x in df_mana_ping.index],
+    ))
+    fig.update_layout(height=600, width=800, template='plotly_dark')
     fig.update(layout_title_text='Mana Pings')
-    fig.show()
+    figs.append(fig)
 
-    # Explore card type by colour
-    plot_simple_bar(
-        df,
-        x_axes = c.list_colour,
-        y_col_name = 'Card Type',
-        y_stack = c.list_card_type[:2],
-        title = 'Card Type by Colours'
-    )
+    figs.append(plot_simple_bar(df, x_axes=c.list_colour, y_col_name='Card Type',
+                                y_stack=c.list_card_type[:2], title='Card Type by Colours'))
+    figs.append(plot_simple_bar(df, x_axes=c.list_colour, y_col_name='Rarity',
+                                y_stack=c.list_rarity, title='Rarity by Colours'))
+    figs.append(plot_simple_bar(df, x_axes=c.list_card_type, y_col_name='Rarity',
+                                y_stack=c.list_rarity, title='Rarity by Card Type'))
 
-    # Explore rarity by colour
-    plot_simple_bar(
-        df,
-        x_axes = c.list_colour,
-        y_col_name = 'Rarity',
-        y_stack = c.list_rarity,
-        title = 'Rarity by Colours'
-    )
+    figs.extend(plot_set_specific(df, set_id) or [])
 
-    # Explore rarity by card type
-    plot_simple_bar(
-        df,
-        x_axes = c.list_card_type,
-        y_col_name = 'Rarity',
-        y_stack = c.list_rarity,
-        title = 'Rarity by Card Type'
-    )
-
-    plot_set_specific(df,set_id)
-
-    # Explore mana curve by colour
-    df_colourmana_creatures_gb = df[df['Card Type'] == 'Creature'].groupby('CMC')[c.list_colour].sum().T
-    df_colourmana_noncreatures_gb = df[df['Card Type'] == 'Non-Creature'].groupby('CMC')[c.list_colour].sum().T
-    list_cmc = list(np.arange(1,df['CMC'].max()+1))
+    # Per-colour mana curves
+    df_c_gb = df[df['Card Type'] == 'Creature'].groupby('CMC')[c.list_colour].sum().T
+    df_nc_gb = df[df['Card Type'] == 'Non-Creature'].groupby('CMC')[c.list_colour].sum().T
+    list_cmc = list(np.arange(1, df['CMC'].max() + 1))
 
     for color in c.list_colour:
-        df_creatures = df_colourmana_creatures_gb.loc[color,:].reindex(list_cmc,fill_value=0)
-        df_noncreatures = df_colourmana_noncreatures_gb.loc[color,:].reindex(list_cmc,fill_value=0)
-
-        fig = go.Figure(
-            [go.Bar(name='Creatures',x=list_cmc,y=df_creatures.values,marker_color='slategrey'),
-            go.Bar(name='Non-Creatures',x=list_cmc,y=df_noncreatures.values,marker_color='crimson')]
-        )
-
-        fig.update_layout(height = 600, width = 1000,barmode='stack',template='plotly_dark')
+        df_creatures = df_c_gb.loc[color, :].reindex(list_cmc, fill_value=0)
+        df_noncreatures = df_nc_gb.loc[color, :].reindex(list_cmc, fill_value=0)
+        fig = go.Figure([
+            go.Bar(name='Creatures', x=list_cmc, y=df_creatures.values, marker_color='slategrey'),
+            go.Bar(name='Non-Creatures', x=list_cmc, y=df_noncreatures.values, marker_color='crimson'),
+        ])
+        fig.update_layout(height=600, width=1000, barmode='stack', template='plotly_dark')
         fig.update(layout_title_text=f'Mana Curve by Colour : {color}')
-        fig.show()
+        figs.append(fig)
 
-    # Explore combined mana curve
-    df_colourmana_creatures_gb = df[df['Card Type'] == 'Creature'].groupby('CMC')[c.list_colour].sum().T
-    df_colourmana_noncreatures_gb = df[df['Card Type'] == 'Non-Creature'].groupby('CMC')[c.list_colour].sum().T
-    list_cmc = list(np.arange(1,df['CMC'].max()+1))
+    # Combined mana curve
+    c_sum = df_c_gb.sum().reindex(list_cmc, fill_value=0)
+    nc_sum = df_nc_gb.sum().reindex(list_cmc, fill_value=0)
+    fig = go.Figure([
+        go.Bar(name='Creatures', x=list_cmc, y=c_sum.values, marker_color='slategrey'),
+        go.Bar(name='Non-Creatures', x=list_cmc, y=nc_sum.values, marker_color='crimson'),
+    ])
+    fig.update_layout(height=600, width=1000, barmode='stack', template='plotly_dark')
+    fig.update(layout_title_text='Overall Mana Curve by Colour')
+    figs.append(fig)
 
-    df_creatures = df_colourmana_creatures_gb.sum().reindex(list_cmc,fill_value=0)
-    df_noncreatures = df_colourmana_noncreatures_gb.sum().reindex(list_cmc,fill_value=0)
-
-    fig = go.Figure(
-        [go.Bar(name='Creatures',x=list_cmc,y=df_creatures.values,marker_color='slategrey'),
-        go.Bar(name='Non-Creatures',x=list_cmc,y=df_noncreatures.values,marker_color='crimson')]
-    )
-
-    fig.update_layout(height = 600, width = 1000,barmode='stack',template='plotly_dark')
-    fig.update(layout_title_text=f'Overall Mana Curve by Colour')
-    fig.show()
+    return figs
 
 def get_word_frequency(set_list):
     if isinstance(set_list,str):
