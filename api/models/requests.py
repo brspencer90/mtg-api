@@ -34,3 +34,7 @@ class UpdateCopyRequest(BaseModel):
     condition: Literal['NM', 'LP', 'MP', 'HP', 'DMG'] | None = None
     notes: str | None = None
     purchase_price: float | None = None
+    foil: bool | None = None
+    etched: bool | None = None
+    purchase_date: str | None = None
+    purchase_source: str | None = None

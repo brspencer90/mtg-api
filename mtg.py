@@ -181,21 +181,22 @@ def get_word_frequency(set_list):
 
 # blb : 
 
-# %% 
-# get list of file names from 'card data' folder
-list_files = ['card data/' + fn for fn in os.listdir('card data') if ((fn.endswith('.txt')) and ('deck' not in fn))]
+# %%
+if __name__ == '__main__':
+    # get list of file names from 'card data' folder
+    list_files = ['card data/' + fn for fn in os.listdir('card data') if ((fn.endswith('.txt')) and ('deck' not in fn))]
 
-# list_files = [
-    # 'card data/260402_ecl_costco_booster.txt', 
-    # 'card data/260402_fdn_costco_booster.txt', 
-    # 'card data/260402_lci_costco_booster.txt',
-    # 'card data/260402_spg_costco_booster.txt',
-    # 'card data/260402_tdm_costco_booster.txt']
+    # list_files = [
+        # 'card data/260402_ecl_costco_booster.txt',
+        # 'card data/260402_fdn_costco_booster.txt',
+        # 'card data/260402_lci_costco_booster.txt',
+        # 'card data/260402_spg_costco_booster.txt',
+        # 'card data/260402_tdm_costco_booster.txt']
 
-df_comb = pd.DataFrame()
+    df_comb = pd.DataFrame()
 
-for file in list_files:
-    set_id = file.split('_')[1]
-    df = pull_parse_file(set_id=set_id,source=file)
-    df_comb = pd.concat([df,df_comb],axis=0)
+    for file in list_files:
+        set_id = file.split('_')[1]
+        df = pull_parse_file(set_id=set_id,source=file)
+        df_comb = pd.concat([df,df_comb],axis=0)
 # %%

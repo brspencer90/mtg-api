@@ -130,7 +130,7 @@ def get_or_create_location(conn, name: str, loc_type: str) -> int:
 
 def import_file(conn, txt_path: Path) -> int:
     set_id, purchase_date, location_name = parse_filename(txt_path)
-    print(f'\n→ {txt_path.name}  [set={set_id}, date={purchase_date}, loc="{location_name}"]')
+    print(f'\n>> {txt_path.name}  [set={set_id}, date={purchase_date}, loc="{location_name}"]')
 
     loc_type = 'pool' if 'sealed' in txt_path.stem else 'storage'
     location_id = get_or_create_location(conn, location_name, loc_type)
